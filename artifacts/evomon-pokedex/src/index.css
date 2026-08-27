@@ -263,6 +263,7 @@
 .section-kicker { display: flex; align-items: center; gap: 11px; margin-bottom: 22px; }
 .section-kicker > span { color: hsl(var(--primary)); font-family: var(--app-font-mono); font-size: 9px; }
 .section-kicker h2 { margin: 0; font-size: 32px; line-height: .9; letter-spacing: -.04em; font-weight: 600; }
+.section-caption { margin: 7px 0 0; color: hsl(var(--muted-foreground)); font-family: var(--app-font-mono); font-size: 8px; letter-spacing: .04em; text-transform: uppercase; }
 .stat-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 23px; }
 .stat-columns h3 { font-family: var(--app-font-mono); font-weight: 400; font-size: 8px; letter-spacing: .1em; text-transform: uppercase; color: hsl(var(--muted-foreground)); margin: 0 0 16px; }
 .stat-table { border-top: 1px solid hsl(var(--device-deep) / .18); }
@@ -271,6 +272,18 @@
 .stat-row b { font-family: var(--app-font-mono); color: hsl(var(--primary)); font-size: 9px; text-align: right; }
 .stat-track { height: 4px; background: hsl(var(--screen-deep)); overflow: hidden; }
 .stat-track i { display: block; height: 100%; width: 100%; transform-origin: left; background: hsl(var(--accent)); }
+.radar-readout { width: min(100%, 540px); padding: 2px 0 0; }
+.stat-radar { display: block; width: 100%; height: auto; overflow: visible; }
+.radar-grid { fill: hsl(var(--accent) / .035); stroke: hsl(var(--device-deep) / .2); stroke-width: 1; }
+.radar-spoke { stroke: hsl(var(--device-deep) / .2); stroke-width: 1; }
+.radar-value { stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+.radar-value-normal { fill: hsl(var(--primary) / .16); stroke: hsl(var(--primary)); }
+.radar-value-shiny { fill: hsl(var(--accent) / .16); stroke: hsl(var(--accent)); }
+.radar-dot { stroke: hsl(var(--screen)); stroke-width: 2; }
+.radar-dot-normal { fill: hsl(var(--primary)); }
+.radar-dot-shiny { fill: hsl(var(--accent)); }
+.radar-label { fill: hsl(var(--device-deep) / .72); font-family: var(--app-font-mono); font-size: 9px; letter-spacing: .06em; }
+.radar-label .radar-number { fill: hsl(var(--primary)); font-size: 15px; font-weight: 700; letter-spacing: 0; }
 .missing-panel { border: 1px dashed hsl(var(--device-deep) / .25); color: hsl(var(--muted-foreground)); font-size: 11px; line-height: 1.55; padding: 17px; }
 .trait-card { background: hsl(var(--accent)); color: hsl(var(--screen)); padding: 23px; position: relative; overflow: hidden; }
 .trait-card:after { content: '+'; position: absolute; right: 6px; bottom: -30px; color: hsl(var(--secondary) / .35); font-family: var(--app-font-mono); font-size: 115px; line-height: 1; }

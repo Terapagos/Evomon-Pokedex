@@ -204,12 +204,63 @@ function Home() {
   );
 }
 
-function StatTable({ entry, variant }: { entry: Evomon; variant: Variant }) {
+const RADAR_STATS = [
+  { key: 'hp', label: 'HP' },
+  { key: 'spatk', label: 'SP. ATK' },
+  { key: 'spdef', label: 'SP. DEF' },
+  { key: 'speed', label: 'SPEED' },
+  { key: 'def', label: 'DEFENSE' },
+  { key: 'atk', label: 'ATTACK' },
+] as const;
+
+function radarPoint(cx: number, cy: number, radius: number, index: number, value = 1) {
+  const angle = (-90 + index * 60) * (Math.PI / 180);
+  return {
+    x: cx + Math.cos(angle) * radius * value,
+    y: cy + Math.sin(angle) * radius * value,
+  };
+}
+
+function pointsForRadar(radius: number, value = 1) {
+  return RADAR_STATS.map((_, index) => {
+    const point = radarPoint(180, 151, radius, index, value);
+    return `${point.x},${point.y}`;
+  }).join(' ');
+}
+
+function StatRadar({ entry, variant }: { entry: Evomon; variant: Variant }) {
   const stats = statsFor(entry, variant);
-  const allStats = Object.entries(stats);
-  if (!allStats.length) return <div className="missing-panel" data-testid={`status-stats-missing-${variant}`}>Base stats for the {variant} plate are not recorded in the current wiki notes.</div>;
-  const max = Math.max(...allStats.map(([, value]) => value), 1);
-  return <div className="stat-table" data-testid={`table-stats-${variant}`}>{allStats.map(([label, value]) => <div className="stat-row" key={label}><span>{label}</span><div className="stat-track"><i style={{ transform: `scaleX(${Math.min(value / max, 1)})` }} /></div><b>{value}</b></div>)}</div>;
+  if (!Object.keys(stats).length) return <div className="missing-panel" data-testid={`status-stats-missing-${variant}`}>Base stats for the {variant} plate are not recorded in the current wiki notes.</div>;
+  const max = Math.max(100, ...RADAR_STATS.map(({ key }) => stats[key] ?? 0));
+  const values = RADAR_STATS.map(({ key }) => Math.min((stats[key] ?? 0) / max, 1));
+  return (
+    <div className="radar-readout" data-testid={`table-stats-${variant}`}>
+      <svg className="stat-radar" viewBox="0 0 360 330" role="img" aria-label={`${entry.name} ${variant} base stats radar`}>
+        <title>{entry.name} {variant} base stats</title>
+        {[1, .75, .5, .25].map((scale) => <polygon className="radar-grid" points={pointsForRadar(105, scale)} key={scale} />)}
+        {RADAR_STATS.map((stat, index) => {
+          const spoke = radarPoint(180, 151, 105, index);
+          return <line className="radar-spoke" key={stat.key} x1="180" y1="151" x2={spoke.x} y2={spoke.y} />;
+        })}
+        <polygon className={`radar-value radar-value-${variant}`} points={values.map((value, index) => { const point = radarPoint(180, 151, 105, index, value); return `${point.x},${point.y}`; }).join(' ')} />
+        {RADAR_STATS.map((stat, index) => {
+          const label = radarPoint(180, 151, 137, index);
+          const value = stats[stat.key] ?? 0;
+          return (
+            <text className="radar-label" x={label.x} y={label.y} textAnchor="middle" key={stat.key}>
+              <tspan>{stat.label}</tspan>
+              <tspan className="radar-number" x={label.x} dy="16">{value}</tspan>
+            </text>
+          );
+        })}
+        {values.map((value, index) => {
+          const point = radarPoint(180, 151, 105, index, value);
+          return <circle className={`radar-dot radar-dot-${variant}`} cx={point.x} cy={point.y} r="4.5" key={RADAR_STATS[index].key} />;
+        })}
+      </svg>
+      {variant === 'shiny' && !entry.shinyStatsRecorded ? <p className="stats-note">Separate shiny stats are not listed by the wiki; normal base stats shown.</p> : null}
+    </div>
+  );
 }
 
 function DetailField({ label, value, testId }: { label: string; value?: string; testId: string }) {
@@ -240,7 +291,7 @@ function Detail() {
             <div className="detail-title"><p className="eyebrow">{stageFor(entry)} <span>·</span> {entry.eventStatus || 'Event status unrecorded'}</p><h1 className="font-display">{entry.name}</h1><p className="detail-subline">Archive specimen {entry.dexNumber !== undefined ? String(entry.dexNumber).padStart(3, '0') : 'unrecorded'}<span className="title-dot" />{entry.catchLocation || 'Location unrecorded'}</p><div className="detail-variant-toggle"><button type="button" className={variant === 'normal' ? 'selected' : ''} onClick={() => setVariant('normal')} aria-pressed={variant === 'normal'} data-testid="button-detail-normal">Normal form</button><button type="button" className={variant === 'shiny' ? 'selected shiny' : ''} onClick={() => setVariant('shiny')} aria-pressed={variant === 'shiny'} data-testid="button-detail-shiny"><Sparkles size={14} /> Shiny form</button></div></div>
           </div>
           <section className="detail-content">
-            <div className="stats-section"><div className="section-kicker"><span>01</span><h2 className="font-display">Base readings</h2></div><div className="stat-columns"><div><h3>Normal plate</h3><StatTable entry={entry} variant="normal" /></div><div><h3>Shiny plate</h3><StatTable entry={entry} variant="shiny" /></div></div></div>
+            <div className="stats-section"><div className="section-kicker"><span>01</span><div><h2 className="font-display">Base readings</h2><p className="section-caption">{variant === 'shiny' ? 'Shiny plate selected' : 'Standard plate selected'} · values shown on radar</p></div></div><StatRadar entry={entry} variant={variant} /></div>
             <aside className="journal-sidebar"><div className="trait-card"><div className="trait-heading"><Sparkles size={17} /><span>Legendary trait</span></div><h2 className="font-display" data-testid="text-legendary-trait">{entry.legendaryTrait || missing}</h2><p data-testid="text-legendary-effect">{entry.legendaryTraitEffect || missing}</p></div><div className="details-list"><DetailField label="Catch location" value={entry.catchLocation} testId="text-catch-location" /><DetailField label="Event status" value={entry.eventStatus} testId="text-event-status" /></div></aside>
           </section>
           <section className="evolution-section"><div className="section-kicker"><span>02</span><h2 className="font-display">Evolution line</h2></div>{line.length ? <div className="evolution-line">{line.map((item, index) => <div className={`evolution-node ${item === entry.name ? 'current' : ''}`} key={`${item}-${index}`}><span>{String(index + 1).padStart(2, '0')}</span><b>{item}</b>{index < line.length - 1 && <ArrowRight size={15} />}</div>)}</div> : <div className="missing-panel">Evolution line not recorded in the current wiki notes.</div>}</section>
