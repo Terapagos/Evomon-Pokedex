@@ -178,6 +178,28 @@ async function createCatalog(): Promise<unknown> {
     for (const item of results) if (item) details.set(item[0], item[1]);
   }
 
+  const directTraitsByName = new Map<string, readonly [string, string][]>();
+  const traitsById = new Map<string, readonly [string, string][]>();
+  for (const pet of pets) {
+    const id = asString(pet.id);
+    const name = asString(pet.name);
+    if (!id || !name) continue;
+    const directTraits = legendaryByMonster.get(wikiSlug(name)) ?? legendaryByMonster.get(id) ?? [];
+    directTraitsByName.set(wikiSlug(name), directTraits);
+    traitsById.set(id, directTraits);
+  }
+
+  const lineTraitsById = new Map<string, readonly [string, string][]>();
+  for (const pet of pets) {
+    const id = asString(pet.id);
+    const name = asString(pet.name);
+    if (!id || !name) continue;
+    const line = details.get(id)?.line.length ? details.get(id)?.line ?? [] : [name];
+    const inheritedTraits = line.flatMap((lineName) => directTraitsByName.get(wikiSlug(lineName)) ?? []);
+    const uniqueTraits = [...new Map(inheritedTraits.map((trait) => [trait[0], trait] as const)).values()];
+    lineTraitsById.set(id, uniqueTraits.length ? uniqueTraits : traitsById.get(id) ?? []);
+  }
+
   const mons = pets
     .map((pet) => {
       const id = asString(pet.id);
@@ -186,7 +208,7 @@ async function createCatalog(): Promise<unknown> {
       if (!id || dexNumber === undefined || !name) return undefined;
       const normalStats = asStats(pet.baseStats);
       const detail = details.get(id);
-      const traitsForMonster = legendaryByMonster.get(wikiSlug(name)) ?? legendaryByMonster.get(id) ?? [];
+      const traitsForMonster = lineTraitsById.get(id) ?? [];
       const traitNames = traitsForMonster.map(([trait]) => trait).join(" · ") || null;
       const traitEffects = traitsForMonster.map(([, effect]) => effect).join(" ") || null;
       const primary = asString(pet.element);
