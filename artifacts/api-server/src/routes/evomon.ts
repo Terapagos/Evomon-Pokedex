@@ -150,7 +150,7 @@ async function createCatalog(): Promise<unknown> {
   const legendaryByMonster = new Map<string, readonly [string, string][]>();
   const monstersByTrait = isObject(traitsData?.monsters) ? traitsData.monsters : {};
   for (const [traitSlug, entries] of Object.entries(monstersByTrait)) {
-    const effect = [...legendaryEffects.entries()].find(([name]) => name.toLowerCase() === traitSlug);
+    const effect = [...legendaryEffects.entries()].find(([name]) => wikiSlug(name) === traitSlug);
     if (!effect || !Array.isArray(entries)) continue;
     for (const monster of entries.filter(isObject)) {
       const slug = asString(monster.slug);
@@ -186,7 +186,7 @@ async function createCatalog(): Promise<unknown> {
       if (!id || dexNumber === undefined || !name) return undefined;
       const normalStats = asStats(pet.baseStats);
       const detail = details.get(id);
-      const traitsForMonster = legendaryByMonster.get(id) ?? [];
+      const traitsForMonster = legendaryByMonster.get(wikiSlug(name)) ?? legendaryByMonster.get(id) ?? [];
       const traitNames = traitsForMonster.map(([trait]) => trait).join(" · ") || null;
       const traitEffects = traitsForMonster.map(([, effect]) => effect).join(" ") || null;
       const primary = asString(pet.element);

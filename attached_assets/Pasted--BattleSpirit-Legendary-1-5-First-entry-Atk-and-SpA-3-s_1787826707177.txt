@@ -1,0 +1,327 @@
+
+BattleSpirit
+Legendary · 1.5%
+First entry: Atk and SpA +3 stages.
+MONSTERS WITH THIS TRAIT · 1
+
+Astraknight
+
+Blight
+Legendary · 1.5%
+Foe's active switch-out: passes stat drops to its replacement.
+MONSTERS WITH THIS TRAIT · 3
+
+Flutterby
+Humding
+Twirlby
+
+Blind
+Legendary · 1.5%
+Inflicts 1 extra [Psymark] stack.
+MONSTERS WITH THIS TRAIT · 4
+
+Datunymph
+Starloop
+Starmuse
+Datubud
+
+Charge
+Legendary · 1.5%
+First entry: damage dealt +100% for 1 turn.
+MONSTERS WITH THIS TRAIT · 2
+
+Arcapex
+Arcub
+
+CheatDeath
+Legendary · 1.5%
+Survives the first fatal hit with 1 HP.
+MONSTERS WITH THIS TRAIT · 2
+
+Clanx
+Clanxor
+
+Chillwind
+Legendary · 1.5%
+Inflicts 1 extra [Frostbite] stack.
+MONSTERS WITH THIS TRAIT · 2
+
+Frostlet
+Frostseer
+
+Claws
+Legendary · 1.5%
+Inflicts 1 extra [Bleed] stack.
+MONSTERS WITH THIS TRAIT · 3
+
+Chirphantom
+Chirplume
+Chirppy
+
+Deathrattle
+Legendary · 1.5%
+When defeated: deals 33% of the killer's max HP (max 300).
+MONSTERS WITH THIS TRAIT · 2
+
+Gulpfish
+Mirefish
+
+Drain
+Legendary · 1.5%
+Heals for 18% of attack damage dealt.
+MONSTERS WITH THIS TRAIT · 3
+
+Bluebird
+Celesthorn
+Volcrest
+
+Emberbirth
+Legendary · 1.5%
+When any foe takes [Burn] damage: heals for 100% of it.
+MONSTERS WITH THIS TRAIT · 2
+
+Lavarock
+Lavite
+
+EnergyLeech
+Legendary · 1.5%
+Each Energy removed from foes by this Evomon grants Atk +2 stages.
+MONSTERS WITH THIS TRAIT · 1
+
+Clipexor
+
+Evolve
+Legendary · 1.5%
+Skills inflicting [Poison] also inflict 2 [Psymark] stacks.
+MONSTERS WITH THIS TRAIT · 3
+
+Wisphex
+Wispshade
+Wispuff
+
+Flamefiend
+Legendary · 1.5%
+First entry: sets [Volcanic Eruption] for 5 turns.
+MONSTERS WITH THIS TRAIT · 3
+
+Blazmane
+Blazgrowl
+Blazpup
+
+Flamevein
+Legendary · 1.5%
+In [Volcanic Eruption]: Fire skill power +40.
+MONSTERS WITH THIS TRAIT · 2
+
+Ignifist
+Ignibud
+
+IceSig
+Legendary · 1.5%
+After defeating: restores 2 Energy.
+MONSTERS WITH THIS TRAIT · 2
+
+Snaero
+Snaerolf
+
+Infect
+Legendary · 1.5%
+Inflicts 1 extra [Poison] stack.
+MONSTERS WITH THIS TRAIT · 3
+
+Viparch
+Vipip
+Vipour
+
+Leech
+Legendary · 1.5%
+When any foe takes [Poison] damage: heals for 66% of it.
+MONSTERS WITH THIS TRAIT · 3
+
+Chitaladin
+Chitgladi
+Chitmite
+
+Momentum
+Legendary · 1.5%
+Each extra Energy restored grants SpA +1 stage.
+MONSTERS WITH THIS TRAIT · 3
+
+Wisflare
+Wispark
+Wispreign
+
+OpenSupport
+Legendary · 1.5%
+Status skills gain +1 priority.
+MONSTERS WITH THIS TRAIT · 2
+
+Frostelle
+Stardrift
+
+PartingGift
+Legendary · 1.5%
+When defeated: restores 2 Energy.
+MONSTERS WITH THIS TRAIT · 3
+
+Mudthorn
+Thordlord
+Mudbud
+
+Perpetual
+Legendary · 1.5%
+After defeating a foe: restores 2 PP to all skills.
+MONSTERS WITH THIS TRAIT · 2
+
+Tinkog
+Tinkore
+
+Primeform
+Legendary · 1.5%
+At full HP: damage taken -60%.
+MONSTERS WITH THIS TRAIT · 2
+
+Tarragon
+Tarro
+
+Purify
+Legendary · 1.5%
+Turn end: removes 1 status or stat decrease.
+MONSTERS WITH THIS TRAIT · 3
+
+Emfox
+Empixy
+Sparkit
+
+Pursuit
+Legendary · 1.5%
+Attack damage +18%.
+MONSTERS WITH THIS TRAIT · 4
+
+Magmaxor
+Magma
+Graycrene
+Sundercrene
+
+Raincall
+Legendary · 1.5%
+First entry: sets [Rain] for 5 turns.
+MONSTERS WITH THIS TRAIT · 3
+
+Clampip
+Clamspire
+Clamwhirl
+
+Rainveil
+Legendary · 1.5%
+In [Rain]: Water skill power +40.
+MONSTERS WITH THIS TRAIT · 3
+
+Bubblade
+Bubble
+Bubboxer
+
+Reaper
+Legendary · 1.5%
+After defeating a foe: Atk and SpA +5 stages.
+MONSTERS WITH THIS TRAIT · 3
+
+Leafblade
+Leafroge
+Leafbun
+
+Recover
+Legendary · 1.5%
+No damage taken this turn: restores 2 extra Energy.
+MONSTERS WITH THIS TRAIT · 3
+
+Glowres
+Glowy
+Goliath
+
+Regen
+Legendary · 1.5%
+Turn end below 50% HP: restores 15% max HP.
+MONSTERS WITH THIS TRAIT · 3
+
+Florawn
+Budling
+Silvanarch
+
+Relay
+Legendary · 1.5%
+Active switch-out: passes stat boosts to its replacement.
+MONSTERS WITH THIS TRAIT · 2
+
+Cyanie
+Cyanknight
+
+SandFiend
+Legendary · 1.5%
+First entry: sets [Sandstorm] for 5 turns.
+MONSTERS WITH THIS TRAIT · 2
+
+Spikub
+Spikumane
+
+Sandgale
+Legendary · 1.5%
+In [Sandstorm]: Ground/Rock skill power +40.
+MONSTERS WITH THIS TRAIT · 2
+
+Fluffastar
+Fluffet
+
+SnowFiend
+Legendary · 1.5%
+First entry: sets [Snow] for 5 turns.
+MONSTERS WITH THIS TRAIT · 5
+
+Frostclaw
+Frostin
+Glacitadel
+Glaclide
+Glacone
+
+SoulShock
+Legendary · 1.5%
+When defeated: inflicts [Confusion] on the killer.
+MONSTERS WITH THIS TRAIT · 2
+
+Mopillow
+Mopebun
+
+Thunderlord
+Legendary · 1.5%
+First entry: sets [Thunderstorm] for 5 turns.
+MONSTERS WITH THIS TRAIT · 3
+
+Coulomb
+Coulomtis
+Coultron
+
+TrueDmg
+Legendary · 1.5%
+Ignores the target's Def and SpD stage changes.
+MONSTERS WITH THIS TRAIT · 3
+
+Boltonia
+Pummash
+Pummpaw
+
+UltGuard
+Legendary · 1.5%
+First Ultimate hit taken: damage -50%.
+MONSTERS WITH THIS TRAIT · 3
+
+Pebble
+Pebgolem
+Pebroll
+
+Unseen
+Legendary · 1.5%
+On attack: steals 2 random stat-boost stages.
+MONSTERS WITH THIS TRAIT · 2
+
+Gempillar
+Gempress
