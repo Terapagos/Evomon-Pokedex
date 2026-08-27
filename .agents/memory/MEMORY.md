@@ -1,1 +1,2 @@
 - [OpenAPI Zod generator compatibility](openapi-zod-generator.md) — Avoid URI formats and integer types until the current Orval/Zod output compatibility changes.
+- [Evomon Wiki page slugs](evomon-wiki-slugs.md) — Use normalized names, not catalog IDs, for individual public Wiki pages.
