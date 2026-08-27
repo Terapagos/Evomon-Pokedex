@@ -5,16 +5,7 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface ApiError {
-  error: string;
-}
-
-export interface StatBlock {[key: string]: number}
-
-export interface LegendaryTrait {
-  name: string;
-  effect: string;
-}
+import type { StatBlock } from './statBlock';
 
 export interface EvomonEntry {
   id: string;
@@ -38,15 +29,3 @@ export interface EvomonEntry {
   evolutionLine: string[];
   sourceUrl: string;
 }
-
-export interface EvomonCatalog {
-  source: string;
-  traitsSource: string;
-  fetchedAt: string;
-  mons: EvomonEntry[];
-}
-
-export interface HealthStatus {
-  status: string;
-}
-

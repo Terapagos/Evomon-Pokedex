@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Evomon Pokédex"
+description = "A searchable Evomon encyclopedia with normal and shiny variants, base stats, legendary traits, catch locations, event status, and evolution lines."
+version = "1.0.0"
+id = "artifacts/evomon-pokedex"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19067
+
+[services.development]
+run = "pnpm --filter @workspace/evomon-pokedex run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/evomon-pokedex", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/evomon-pokedex/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19067"
+BASE_PATH = "/"

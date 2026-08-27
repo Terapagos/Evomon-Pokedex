@@ -10,7 +10,28 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: evomon
+    description: Evomon field-guide operations
 paths:
+  /evomon:
+    get:
+      operationId: getEvomonCatalog
+      tags: [evomon]
+      summary: Get the current Evomon field-guide catalog
+      description: Returns the catalog sourced from the public Evomon Wiki, including normal and shiny data where the wiki has published it.
+      responses:
+        "200":
+          description: Evomon catalog
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EvomonCatalog"
+        "502":
+          description: The Evomon Wiki could not be reached
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiError"
   /healthz:
     get:
       operationId: healthCheck
@@ -26,6 +47,90 @@ paths:
                 $ref: "#/components/schemas/HealthStatus"
 components:
   schemas:
+    ApiError:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+    StatBlock:
+      type: object
+      additionalProperties:
+        type: number
+    LegendaryTrait:
+      type: object
+      required: [name, effect]
+      properties:
+        name:
+          type: string
+        effect:
+          type: string
+    EvomonEntry:
+      type: object
+      required:
+        - id
+        - dexNumber
+        - name
+        - element
+        - stage
+        - baseStats
+        - shinyBaseStats
+        - shinyStatsRecorded
+        - catchLocation
+        - eventStatus
+        - evolutionLine
+        - sourceUrl
+      properties:
+        id:
+          type: string
+        dexNumber:
+          type: number
+        name:
+          type: string
+        element:
+          type: array
+          items:
+            type: string
+        stage:
+          type: string
+        image:
+          type: [string, "null"]
+        shinyImage:
+          type: [string, "null"]
+        baseStats:
+          $ref: "#/components/schemas/StatBlock"
+        shinyBaseStats:
+          $ref: "#/components/schemas/StatBlock"
+        shinyStatsRecorded:
+          type: boolean
+        legendaryTrait:
+          type: ["string", "null"]
+        legendaryTraitEffect:
+          type: ["string", "null"]
+        catchLocation:
+          type: string
+        eventStatus:
+          type: string
+        evolutionLine:
+          type: array
+          items:
+            type: string
+        sourceUrl:
+          type: string
+    EvomonCatalog:
+      type: object
+      required: [source, traitsSource, fetchedAt, mons]
+      properties:
+        source:
+          type: string
+        traitsSource:
+          type: string
+        fetchedAt:
+          type: string
+        mons:
+          type: array
+          items:
+            $ref: "#/components/schemas/EvomonEntry"
     HealthStatus:
       type: object
       properties:

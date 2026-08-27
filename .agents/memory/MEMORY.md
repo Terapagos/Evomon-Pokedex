@@ -1,0 +1,1 @@
+- [OpenAPI Zod generator compatibility](openapi-zod-generator.md) — Avoid URI formats and integer types until the current Orval/Zod output compatibility changes.
