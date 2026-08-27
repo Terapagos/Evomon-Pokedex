@@ -101,6 +101,15 @@ function stageLabel(value: unknown): string {
   return asString(value) ?? "Unclassified";
 }
 
+function wikiSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 async function getDetail(slug: string): Promise<{ line: string[]; shinyStats?: StatBlock }> {
   const rsc = await fetchRsc(`${WIKI_URL}/${encodeURIComponent(slug)}`);
   const lineIndex = rsc.indexOf("\"line\":[");
@@ -156,12 +165,13 @@ async function createCatalog(): Promise<unknown> {
   for (const batch of batches) {
     const results = await Promise.all(
       batch.map(async (pet) => {
-        const slug = asString(pet.id);
-        if (!slug) return undefined;
+        const id = asString(pet.id);
+        const name = asString(pet.name);
+        if (!id || !name) return undefined;
         try {
-          return [slug, await getDetail(slug)] as const;
+          return [id, await getDetail(wikiSlug(name))] as const;
         } catch {
-          return [slug, { line: [] as string[] }] as const;
+          return [id, { line: [] as string[] }] as const;
         }
       }),
     );
@@ -197,7 +207,7 @@ async function createCatalog(): Promise<unknown> {
         catchLocation: asString(pet.location)?.trim() || "Not recorded in current wiki notes",
         eventStatus: pet.isEvent === true ? "Event content" : "Standard content",
         evolutionLine: detail?.line.length ? detail.line : [name],
-        sourceUrl: `${WIKI_URL}/${encodeURIComponent(id)}`,
+        sourceUrl: `${WIKI_URL}/${encodeURIComponent(wikiSlug(name))}`,
       };
     })
     .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
