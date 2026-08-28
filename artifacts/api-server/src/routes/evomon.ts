@@ -4,10 +4,25 @@ import { GetEvomonCatalogResponse } from "@workspace/api-zod";
 const WIKI_ORIGIN = "https://www.evomon.wiki";
 const WIKI_URL = `${WIKI_ORIGIN}/wiki`;
 const TRAITS_URL = `${WIKI_ORIGIN}/traits`;
+const MOVES_URL = `${WIKI_ORIGIN}/moves`;
 const CACHE_MS = 1000 * 60 * 60 * 6;
 
 type JsonObject = Record<string, unknown>;
 type StatBlock = Record<string, number>;
+type MoveTag = "Physical" | "Sp. Atk" | "Support" | "Status condition" | "Weather" | "AoE" | "Single target";
+
+type CatalogMove = {
+  name: string;
+  element: string;
+  category: string;
+  description: string;
+  obtained: string | null;
+  unlockLevel: number | null;
+  slot: string;
+  power: string | null;
+  uses: number | null;
+  tags: MoveTag[];
+};
 
 let cachedCatalog: unknown;
 let cachedAt = 0;
@@ -110,6 +125,48 @@ function wikiSlug(name: string): string {
     .replace(/^-|-$/g, "");
 }
 
+function tagsForMove(category: string, description: string): MoveTag[] {
+  const tags: MoveTag[] = [];
+  if (category === "physical") tags.push("Physical");
+  if (category === "special") tags.push("Sp. Atk");
+
+  const isSupport = /\b(?:buff|debuff|stat(?:s| stage| stages| boost| boosts| decrease| decreases)?|raises?|lowers?|increases?|decreases?|boosts?|gains?|restores?|heals?|doubles?)\b/i.test(description);
+  if (isSupport) tags.push("Support");
+
+  const hasConditionToken = /\[(?:burn|bleed|blind|confusion|freeze|frostbite|paralysis|poison|psymark|sleep|stun|torment)\]/i.test(description);
+  const changesCondition = /\b(?:inflict|inflicts|inflicting|give|gives|giving|apply|applies|applying|cause|causes|causing|set|sets|setting|double|doubles|doubling|remove|removes|removing|cure|cures|curing)\b/i.test(description);
+  const hasStatusCondition = hasConditionToken && changesCondition;
+  if (hasStatusCondition) tags.push("Status condition");
+
+  const changesWeather = /\bweather\b|\[(?:rain|snow|sandstorm|thunderstorm|volcanic eruption)\]/i.test(description);
+  if (changesWeather) tags.push("Weather");
+
+  const isArea = /\b(?:all|every|both)\s+(?:targets?|foes?|enemies|evomons?|allies)\b|\barea\b/i.test(description);
+  const isSingle = /\b(?:one|the|a single)\s+(?:target|foe|enemy|ally)\b|\byour evomon\b/i.test(description);
+  if (isArea) tags.push("AoE");
+  else if (isSingle || (!changesWeather && (category === "physical" || category === "special" || category === "status"))) tags.push("Single target");
+
+  return tags;
+}
+
+function asMoveDefinition(value: JsonObject): Omit<CatalogMove, "unlockLevel" | "slot"> | undefined {
+  const name = asString(value.name);
+  const element = asString(value.type);
+  const category = asString(value.category);
+  const description = asString(value.description);
+  if (!name || !element || !category || !description) return undefined;
+  return {
+    name,
+    element,
+    category,
+    description,
+    obtained: asString(value.obtain) ?? null,
+    power: asString(value.power) ?? null,
+    uses: asNumber(value.uses) ?? null,
+    tags: tagsForMove(category.toLowerCase(), description),
+  };
+}
+
 async function getDetail(slug: string): Promise<{ line: string[]; shinyStats?: StatBlock }> {
   const rsc = await fetchRsc(`${WIKI_URL}/${encodeURIComponent(slug)}`);
   const lineIndex = rsc.indexOf("\"line\":[");
@@ -132,7 +189,11 @@ async function getDetail(slug: string): Promise<{ line: string[]; shinyStats?: S
 }
 
 async function createCatalog(): Promise<unknown> {
-  const [wikiRsc, traitsRsc] = await Promise.all([fetchRsc(WIKI_URL), fetchRsc(TRAITS_URL)]);
+  const [wikiRsc, traitsRsc, movesRsc] = await Promise.all([
+    fetchRsc(WIKI_URL),
+    fetchRsc(TRAITS_URL),
+    fetchRsc(MOVES_URL),
+  ]);
   const petsIndex = wikiRsc.indexOf("\"initialPets\":[");
   const rawPets = petsIndex < 0
     ? []
@@ -157,6 +218,38 @@ async function createCatalog(): Promise<unknown> {
       if (!slug) continue;
       legendaryByMonster.set(slug, [...(legendaryByMonster.get(slug) ?? []), effect]);
     }
+  }
+
+  const movesData = getRscObject(movesRsc, "\"moves\":[");
+  const moveDefinitions = new Map<string, Omit<CatalogMove, "unlockLevel" | "slot">>();
+  const rawMoves = Array.isArray(movesData?.moves) ? movesData.moves.filter(isObject) : [];
+  for (const rawMove of rawMoves) {
+    const move = asMoveDefinition(rawMove);
+    if (move) moveDefinitions.set(move.name, move);
+  }
+
+  const movesByMonster = new Map<string, CatalogMove[]>();
+  const moveLinks = Array.isArray(movesData?.links) ? movesData.links.filter(isObject) : [];
+  for (const link of moveLinks) {
+    const petId = asString(link.petId);
+    const moveName = asString(link.moveName);
+    const definition = moveName ? moveDefinitions.get(moveName) : undefined;
+    if (!petId || !moveName || !definition) continue;
+    const move: CatalogMove = {
+      ...definition,
+      unlockLevel: asNumber(link.learnLevel) ?? null,
+      slot: asString(link.slot) ?? "level",
+    };
+    movesByMonster.set(petId, [...(movesByMonster.get(petId) ?? []), move]);
+  }
+  for (const [petId, moves] of movesByMonster) {
+    movesByMonster.set(
+      petId,
+      moves.sort((a, b) =>
+        Number(a.slot === "ultimate") - Number(b.slot === "ultimate")
+        || (a.unlockLevel ?? Number.POSITIVE_INFINITY) - (b.unlockLevel ?? Number.POSITIVE_INFINITY)
+        || a.name.localeCompare(b.name)),
+    );
   }
 
   const pets = rawPets.filter(isObject);
@@ -229,6 +322,7 @@ async function createCatalog(): Promise<unknown> {
         catchLocation: asString(pet.location)?.trim() || "Not recorded in current wiki notes",
         eventStatus: pet.isEvent === true ? "Event content" : "Standard content",
         evolutionLine: detail?.line.length ? detail.line : [name],
+        moves: movesByMonster.get(id) ?? movesByMonster.get(wikiSlug(name)) ?? [],
         sourceUrl: `${WIKI_URL}/${encodeURIComponent(wikiSlug(name))}`,
       };
     })
@@ -238,6 +332,7 @@ async function createCatalog(): Promise<unknown> {
   return GetEvomonCatalogResponse.parse({
     source: WIKI_URL,
     traitsSource: TRAITS_URL,
+    movesSource: MOVES_URL,
     fetchedAt: new Date().toISOString(),
     mons,
   });

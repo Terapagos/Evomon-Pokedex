@@ -16,6 +16,36 @@ export interface LegendaryTrait {
   effect: string;
 }
 
+export type EvomonMoveTagsItem = typeof EvomonMoveTagsItem[keyof typeof EvomonMoveTagsItem];
+
+
+export const EvomonMoveTagsItem = {
+  Physical: 'Physical',
+  Sp_Atk: 'Sp. Atk',
+  Support: 'Support',
+  Status_condition: 'Status condition',
+  Weather: 'Weather',
+  AoE: 'AoE',
+  Single_target: 'Single target',
+} as const;
+
+export interface EvomonMove {
+  name: string;
+  element: string;
+  category: string;
+  description: string;
+  /** @nullable */
+  obtained: string | null;
+  /** @nullable */
+  unlockLevel: number | null;
+  slot: string;
+  /** @nullable */
+  power: string | null;
+  /** @nullable */
+  uses: number | null;
+  tags: EvomonMoveTagsItem[];
+}
+
 export interface EvomonEntry {
   id: string;
   dexNumber: number;
@@ -36,12 +66,14 @@ export interface EvomonEntry {
   catchLocation: string;
   eventStatus: string;
   evolutionLine: string[];
+  moves: EvomonMove[];
   sourceUrl: string;
 }
 
 export interface EvomonCatalog {
   source: string;
   traitsSource: string;
+  movesSource: string;
   fetchedAt: string;
   mons: EvomonEntry[];
 }

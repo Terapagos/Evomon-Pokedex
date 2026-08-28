@@ -3,6 +3,21 @@
  * without changing the field guide UI. Optional fields stay optional so
  * missing wiki notes are represented honestly.
  */
+export type MoveTag = 'Physical' | 'Sp. Atk' | 'Support' | 'Status condition' | 'Weather' | 'AoE' | 'Single target';
+
+export interface EvomonMove {
+  name: string;
+  element: string;
+  category: string;
+  description: string;
+  obtained: string | null;
+  unlockLevel: number | null;
+  slot: string;
+  power: string | null;
+  uses: number | null;
+  tags: MoveTag[];
+}
+
 export interface Evomon {
   id?: string;
   dexNumber?: number;
@@ -19,6 +34,7 @@ export interface Evomon {
   catchLocation?: string;
   eventStatus?: string;
   evolutionLine?: string[];
+  moves?: EvomonMove[];
   sourceUrl?: string;
 }
 

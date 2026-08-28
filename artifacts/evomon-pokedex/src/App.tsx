@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, ChevronDown, ExternalLink, Filter, Info, RotateCcw, Search, Sparkles, X } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams } from 'wouter';
-import { type Evomon, evomonData } from '@/data/evomonData';
+import { type Evomon, type EvomonMove, evomonData } from '@/data/evomonData';
 import { useGetEvomonCatalog } from '@workspace/api-client-react';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -11,6 +11,7 @@ import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
 const WIKI_URL = 'https://www.evomon.wiki/wiki';
+const MOVES_URL = 'https://www.evomon.wiki/moves';
 type Variant = 'normal' | 'shiny';
 const CatalogContext = createContext({ catalog: evomonData, isLoading: true, isError: false });
 
@@ -267,6 +268,45 @@ function DetailField({ label, value, testId }: { label: string; value?: string; 
   return <div className="detail-field"><span className="field-label">{label}</span><p data-testid={testId}>{value || missing}</p></div>;
 }
 
+function MoveCard({ move }: { move: EvomonMove }) {
+  const level = move.unlockLevel !== null ? `Lv ${move.unlockLevel}` : 'Level unrecorded';
+  return (
+    <article className="move-card" data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
+      <div className="move-card-head">
+        <div>
+          <span className="move-level">{move.slot === 'ultimate' ? 'ULT · ' : ''}{level}</span>
+          <h3 className="font-display">{move.name}</h3>
+        </div>
+        <span className="move-element">{move.element}</span>
+      </div>
+      <div className="move-tags" aria-label={`${move.name} classifications`}>
+        {move.tags.map((tag) => <span className={`move-tag move-tag-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`} key={tag}>{tag}</span>)}
+      </div>
+      <p className="move-description">{move.description}</p>
+      <div className="move-meta">
+        <span>Power <b>{move.power ?? '—'}</b></span>
+        <span>Uses <b>{move.uses ?? '—'}</b></span>
+        {move.obtained ? <span className="move-obtained">{move.obtained}</span> : null}
+      </div>
+    </article>
+  );
+}
+
+function Moveset({ moves }: { moves?: EvomonMove[] }) {
+  const recordedMoves = Array.isArray(moves) ? moves : [];
+  return (
+    <section className="moves-section" data-testid="section-moveset">
+      <div className="moves-heading">
+        <div className="section-kicker"><span>03</span><div><h2 className="font-display">Moveset</h2><p className="section-caption">{recordedMoves.length} documented moves · sorted by unlock level</p></div></div>
+        <a href={MOVES_URL} target="_blank" rel="noreferrer" data-testid="link-moves-source">Moves source <ExternalLink size={12} /></a>
+      </div>
+      {recordedMoves.length
+        ? <div className="moves-grid">{recordedMoves.map((move) => <MoveCard move={move} key={`${move.slot}-${move.unlockLevel}-${move.name}`} />)}</div>
+        : <div className="missing-panel">No moves or unlock levels are recorded for this Evomon on the current Wiki Moves page.</div>}
+    </section>
+  );
+}
+
 function Detail() {
   const params = useParams<{ id?: string }>();
   const [, setLocation] = useLocation();
@@ -295,6 +335,7 @@ function Detail() {
             <aside className="journal-sidebar"><div className="trait-card"><div className="trait-heading"><Sparkles size={17} /><span>Legendary trait</span></div><h2 className="font-display" data-testid="text-legendary-trait">{entry.legendaryTrait || missing}</h2><p data-testid="text-legendary-effect">{entry.legendaryTraitEffect || missing}</p></div><div className="details-list"><DetailField label="Catch location" value={entry.catchLocation} testId="text-catch-location" /><DetailField label="Event status" value={entry.eventStatus} testId="text-event-status" /></div></aside>
           </section>
           <section className="evolution-section"><div className="section-kicker"><span>02</span><h2 className="font-display">Evolution line</h2></div>{line.length ? <div className="evolution-line">{line.map((item, index) => <div className={`evolution-node ${item === entry.name ? 'current' : ''}`} key={`${item}-${index}`}><span>{String(index + 1).padStart(2, '0')}</span><b>{item}</b>{index < line.length - 1 && <ArrowRight size={15} />}</div>)}</div> : <div className="missing-panel">Evolution line not recorded in the current wiki notes.</div>}</section>
+          <Moveset moves={entry.moves} />
         </section>
         <div className="detail-nav"><div>{previous && <Link href={`/evomon/${encodeURIComponent(idFor(previous))}`} className="pager-link" data-testid="link-previous-entry"><ArrowLeft size={15} /><span>Previous specimen<b>{previous.name}</b></span></Link>}</div><div>{next && <Link href={`/evomon/${encodeURIComponent(idFor(next))}`} className="pager-link next" data-testid="link-next-entry"><span>Next specimen<b>{next.name}</b></span><ArrowRight size={15} /></Link>}</div></div>
         <p className="source-note">Field notes sourced from <a href={entry.sourceUrl || WIKI_URL} target="_blank" rel="noreferrer" data-testid="link-wiki-source">the Evomon Wiki <ExternalLink size={12} /></a>. Unrecorded details are left blank rather than guessed.</p>

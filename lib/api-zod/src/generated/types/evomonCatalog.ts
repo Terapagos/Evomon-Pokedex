@@ -10,6 +10,7 @@ import type { EvomonEntry } from './evomonEntry';
 export interface EvomonCatalog {
   source: string;
   traitsSource: string;
+  movesSource: string;
   fetchedAt: string;
   mons: EvomonEntry[];
 }

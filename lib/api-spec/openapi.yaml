@@ -65,6 +65,43 @@ components:
           type: string
         effect:
           type: string
+    EvomonMove:
+      type: object
+      required:
+        - name
+        - element
+        - category
+        - description
+        - obtained
+        - unlockLevel
+        - slot
+        - power
+        - uses
+        - tags
+      properties:
+        name:
+          type: string
+        element:
+          type: string
+        category:
+          type: string
+        description:
+          type: string
+        obtained:
+          type: [string, "null"]
+        unlockLevel:
+          type: [number, "null"]
+        slot:
+          type: string
+        power:
+          type: [string, "null"]
+        uses:
+          type: [number, "null"]
+        tags:
+          type: array
+          items:
+            type: string
+            enum: [Physical, Sp. Atk, Support, Status condition, Weather, AoE, Single target]
     EvomonEntry:
       type: object
       required:
@@ -79,6 +116,7 @@ components:
         - catchLocation
         - eventStatus
         - evolutionLine
+        - moves
         - sourceUrl
       properties:
         id:
@@ -115,15 +153,21 @@ components:
           type: array
           items:
             type: string
+        moves:
+          type: array
+          items:
+            $ref: "#/components/schemas/EvomonMove"
         sourceUrl:
           type: string
     EvomonCatalog:
       type: object
-      required: [source, traitsSource, fetchedAt, mons]
+      required: [source, traitsSource, movesSource, fetchedAt, mons]
       properties:
         source:
           type: string
         traitsSource:
+          type: string
+        movesSource:
           type: string
         fetchedAt:
           type: string

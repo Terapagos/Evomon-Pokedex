@@ -15,6 +15,7 @@ import * as zod from 'zod';
 export const GetEvomonCatalogResponse = zod.object({
   "source": zod.string(),
   "traitsSource": zod.string(),
+  "movesSource": zod.string(),
   "fetchedAt": zod.string(),
   "mons": zod.array(zod.object({
   "id": zod.string(),
@@ -32,6 +33,18 @@ export const GetEvomonCatalogResponse = zod.object({
   "catchLocation": zod.string(),
   "eventStatus": zod.string(),
   "evolutionLine": zod.array(zod.string()),
+  "moves": zod.array(zod.object({
+  "name": zod.string(),
+  "element": zod.string(),
+  "category": zod.string(),
+  "description": zod.string(),
+  "obtained": zod.string().nullable(),
+  "unlockLevel": zod.number().nullable(),
+  "slot": zod.string(),
+  "power": zod.string().nullable(),
+  "uses": zod.number().nullable(),
+  "tags": zod.array(zod.enum(['Physical', 'Sp. Atk', 'Support', 'Status condition', 'Weather', 'AoE', 'Single target']))
+})),
   "sourceUrl": zod.string()
 }))
 })

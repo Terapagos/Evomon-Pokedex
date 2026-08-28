@@ -5,6 +5,7 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
+import type { EvomonMove } from './evomonMove';
 import type { StatBlock } from './statBlock';
 
 export interface EvomonEntry {
@@ -27,5 +28,6 @@ export interface EvomonEntry {
   catchLocation: string;
   eventStatus: string;
   evolutionLine: string[];
+  moves: EvomonMove[];
   sourceUrl: string;
 }
