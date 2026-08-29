@@ -24,6 +24,64 @@ type CatalogMove = {
   tags: MoveTag[];
 };
 
+const MOVE_LEVELS = [1, 1, 10, 20, 40, 50, 60, 70, 90, 100, 120, 140];
+const ULTIMATE_LEVELS = [30, 80, 150];
+type SupplementalMoveList = { normal: string[]; ultimate: string[] };
+
+// These records come from the supplied base-form move lists. A few names use
+// the Wiki's spelling/numbering so they resolve to live definitions.
+const SUPPLEMENTAL_BASE_MOVES: Record<string, SupplementalMoveList> = {
+  Glaclide: {
+    normal: [
+    "Hone 1", "Heavy Strike", "Ice Spike", "Frostbite", "Snow Clear", "Frozen",
+    "Ice Ball", "Rest", "Shockwave", "Snowfall", "Hail", "Snow Lance",
+    ],
+    ultimate: ["Frigid Force 1", "Frigid Force 2", "Frigid Force 3"],
+  },
+  Chitmite: {
+    normal: [
+    "Intimidate", "Heavy Strike", "Insect Rush", "Smoke Cover", "Bug Drain", "Poison Spike",
+    "Heavy Slam", "Web Bind", "Poison", "Wing Blade", "Energy Absorb", "Venom Spray",
+    ],
+    ultimate: ["Toxic Bite 1", "Toxic Bite 2", "Toxic Bite 3"],
+  },
+  Lavite: {
+    normal: [
+    "Steady", "Ram", "Fire Strike", "Burn", "Cinder", "Hone 1", "Stone Edge", "Fatal Rebound",
+    "Cremate", "Wildfire", "Earth Power", "Flame Tear",
+    ],
+    ultimate: ["Sandstorm Eruption 1", "Sandstorm Eruption 2", "Sandstorm Eruption 3"],
+  },
+  Stardrift: {
+    normal: [
+    "Smoke Cover", "Heavy Strike", "Vine Drain", "Icy Wind", "Recover 1", "Heavy Slam",
+    "Wrap Assault", "Hail", "Leech Seed", "Fighting Will 1", "Aurora Blade", "Frostbite Sting",
+    ],
+    ultimate: ["Sleep Powder 1", "Sleep Powder 2", "Sleep Powder 3"],
+  },
+  Graycrene: {
+    normal: [
+    "Speed Rush", "Heavy Strike", "Gust", "Critical Focus", "Multi Twister", "Heavy Slam",
+    "Gale Thrust", "Recover 2", "Cyclone Spiral", "Rally", "Quick Strike", "Heaven Crash",
+    ],
+    ultimate: ["Storm Tornado 1", "Storm Tornado 2", "Storm Tornado 3"],
+  },
+  Spikub: {
+    normal: [
+    "Tenacity", "Mega Smash", "Ambush", "Disarray", "Mud Slap", "Block", "Shock",
+    "Savage Slam", "Earth Pulse", "Earthquake", "Immolate", "Fissure",
+    ],
+    ultimate: ["Sand Trap 1", "Sand Trap 2", "Sand Trap 3"],
+  },
+  Frostlet: {
+    normal: [
+    "Frostbite", "Flash Strike", "Ice Spike", "Glacial Spike", "Fighting Will 1", "Icy Wind",
+    "Ice Ball", "Torment", "Hail", "Glacial", "Frost Strike", "Frostbite Sting",
+    ],
+    ultimate: ["Glacial Field 1", "Glacial Field 2", "Glacial Field 3"],
+  },
+};
+
 let cachedCatalog: unknown;
 let cachedAt = 0;
 let refreshInFlight: Promise<unknown> | null = null;
@@ -230,6 +288,32 @@ async function createCatalog(): Promise<unknown> {
 
   const movesByMonster = new Map<string, CatalogMove[]>();
   const moveLinks = Array.isArray(movesData?.links) ? movesData.links.filter(isObject) : [];
+  const petsByName = new Map(
+    rawPets
+      .filter(isObject)
+      .map((pet) => [asString(pet.name), pet] as const)
+      .filter((entry): entry is readonly [string, JsonObject] => Boolean(entry[0])),
+  );
+  for (const [baseName, moveList] of Object.entries(SUPPLEMENTAL_BASE_MOVES)) {
+    const basePet = petsByName.get(baseName);
+    if (!basePet) continue;
+    moveList.normal.forEach((moveName, index) => {
+      moveLinks.push({
+        petId: asString(basePet.id) ?? wikiSlug(baseName),
+        moveName,
+        slot: "level",
+        learnLevel: MOVE_LEVELS[index],
+      });
+    });
+    moveList.ultimate.forEach((moveName, index) => {
+      moveLinks.push({
+        petId: asString(basePet.id) ?? wikiSlug(baseName),
+        moveName,
+        slot: "ultimate",
+        learnLevel: ULTIMATE_LEVELS[index],
+      });
+    });
+  }
   for (const link of moveLinks) {
     const petId = asString(link.petId);
     const moveName = asString(link.moveName);
@@ -328,6 +412,24 @@ async function createCatalog(): Promise<unknown> {
     })
     .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
     .sort((a, b) => a.dexNumber - b.dexNumber);
+
+  for (const baseName of Object.keys(SUPPLEMENTAL_BASE_MOVES)) {
+    const base = mons.find((mon) => mon.name === baseName);
+    if (!base) continue;
+    for (const lineName of base.evolutionLine) {
+      const lineMember = mons.find((mon) => mon.name === lineName);
+      if (!lineMember) continue;
+      const existingNames = new Set(lineMember.moves.map((move) => `${move.slot}:${move.name}:${move.unlockLevel}`));
+      for (const move of base.moves) {
+        const key = `${move.slot}:${move.name}:${move.unlockLevel}`;
+        if (!existingNames.has(key)) lineMember.moves.push(move);
+      }
+      lineMember.moves.sort((a, b) =>
+        Number(a.slot === "ultimate") - Number(b.slot === "ultimate")
+        || (a.unlockLevel ?? Number.POSITIVE_INFINITY) - (b.unlockLevel ?? Number.POSITIVE_INFINITY)
+        || a.name.localeCompare(b.name));
+    }
+  }
 
   return GetEvomonCatalogResponse.parse({
     source: WIKI_URL,
