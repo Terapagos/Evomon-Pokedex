@@ -413,10 +413,11 @@ async function createCatalog(): Promise<unknown> {
     .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry))
     .sort((a, b) => a.dexNumber - b.dexNumber);
 
-  for (const baseName of Object.keys(SUPPLEMENTAL_BASE_MOVES)) {
-    const base = mons.find((mon) => mon.name === baseName);
-    if (!base) continue;
-    for (const lineName of base.evolutionLine) {
+  const moveSources = mons.filter(
+    (mon) => mon.moves.length > 0 && mon.evolutionLine[0] === mon.name,
+  );
+  for (const base of moveSources) {
+    for (const lineName of base.evolutionLine.slice(1)) {
       const lineMember = mons.find((mon) => mon.name === lineName);
       if (!lineMember) continue;
       const existingNames = new Set(lineMember.moves.map((move) => `${move.slot}:${move.name}:${move.unlockLevel}`));
