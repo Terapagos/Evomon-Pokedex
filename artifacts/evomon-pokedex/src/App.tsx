@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, ChevronDown, ExternalLink, Filter, Info, RotateCcw, Search, Sparkles, X } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams } from 'wouter';
-import { type Evomon, type EvomonMove, evomonData } from '@/data/evomonData';
+import { type Evomon, type EvomonMove, type MoveTag, evomonData } from '@/data/evomonData';
 import { useGetEvomonCatalog } from '@workspace/api-client-react';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -55,13 +55,16 @@ function Brand() {
 }
 
 function Header() {
-  const [, setLocation] = useLocation();
+  const [location] = useLocation();
   const { catalog } = useCatalog();
+  const catalogActive = location === '/' || location.startsWith('/evomon/');
+  const skillsActive = location === '/skills';
   return (
     <header className="site-header">
       <Brand />
       <nav className="header-nav" aria-label="Primary navigation">
-        <button type="button" className="header-link active" onClick={() => setLocation('/')} data-testid="button-catalog-nav">Catalog <span>{catalog.length || '—'}</span></button>
+        <Link href="/" className={`header-link ${catalogActive ? 'active' : ''}`} data-testid="button-catalog-nav">Catalog <span>{catalog.length || '—'}</span></Link>
+        <Link href="/skills" className={`header-link ${skillsActive ? 'active' : ''}`} data-testid="link-skills-nav">Skills</Link>
         <a className="header-link" href={WIKI_URL} target="_blank" rel="noreferrer" data-testid="link-wiki-nav">Wiki source <ExternalLink size={13} /></a>
       </nav>
       <div className="header-status"><span className="status-light" /> LINK ESTABLISHED</div>
@@ -307,6 +310,109 @@ function Moveset({ moves }: { moves?: EvomonMove[] }) {
   );
 }
 
+const SKILL_ATTRIBUTES: MoveTag[] = ['Physical', 'Sp. Atk', 'Support', 'Status condition', 'Weather', 'AoE', 'Single target'];
+
+type SkillIndexEntry = {
+  move: EvomonMove;
+  learners: Array<{ entry: Evomon; unlockLevel: number | null; slot: string }>;
+};
+
+function skillIndexFor(catalog: Evomon[]): SkillIndexEntry[] {
+  const byName = new Map<string, SkillIndexEntry>();
+  for (const entry of catalog) {
+    for (const move of entry.moves ?? []) {
+      const current = byName.get(move.name) ?? { move, learners: [] };
+      current.learners.push({ entry, unlockLevel: move.unlockLevel, slot: move.slot });
+      byName.set(move.name, current);
+    }
+  }
+  return [...byName.values()].sort((a, b) => a.move.name.localeCompare(b.move.name));
+}
+
+function SkillLearner({ learner }: { learner: SkillIndexEntry['learners'][number] }) {
+  return (
+    <Link href={`/evomon/${encodeURIComponent(idFor(learner.entry))}`} className="skill-learner" data-testid={`skill-learner-${idFor(learner.entry)}`}>
+      <span className="skill-learner-name">{learner.entry.name}</span>
+      <span className="skill-learner-level">{learner.slot === 'ultimate' ? 'ULT · ' : ''}Lv {learner.unlockLevel ?? '—'}</span>
+      <ArrowRight size={13} aria-hidden="true" />
+    </Link>
+  );
+}
+
+function Skills() {
+  const { catalog, isLoading } = useCatalog();
+  const [query, setQuery] = useState('');
+  const [attribute, setAttribute] = useState<MoveTag | 'all'>('all');
+  const [selectedName, setSelectedName] = useState<string | null>(null);
+  const skills = useMemo(() => skillIndexFor(catalog), [catalog]);
+  const attributeCounts = useMemo(() => Object.fromEntries(SKILL_ATTRIBUTES.map((tag) => [tag, skills.filter(({ move }) => move.tags.includes(tag)).length])), [skills]);
+  const filtered = useMemo(() => {
+    const normalized = query.trim().toLowerCase();
+    return skills.filter(({ move }) => (!normalized || move.name.toLowerCase().includes(normalized) || move.element.toLowerCase().includes(normalized)) && (attribute === 'all' || move.tags.includes(attribute)));
+  }, [attribute, query, skills]);
+  const selected = filtered.find(({ move }) => move.name === selectedName) ?? filtered[0];
+
+  useEffect(() => {
+    if (selected && selected.move.name !== selectedName) setSelectedName(selected.move.name);
+    if (!selected) setSelectedName(null);
+  }, [selected, selectedName]);
+
+  return (
+    <Shell>
+      <main className="skills-main">
+        <section className="skills-intro fade-up">
+          <div>
+            <p className="eyebrow">Skill archive / field index</p>
+            <h1 className="font-display">Find the <em>right move.</em></h1>
+          </div>
+          <p className="intro-copy">Filter by what a skill does, then open its record to see every Mon currently documented as learning it.</p>
+          <div className="intro-index"><span>SKILLS</span><b>{skills.length || '—'}</b><span>{catalog.length || '—'} MON</span></div>
+        </section>
+        <ErrorNotice />
+        <section className="skill-device" aria-label="Evomon skill archive">
+          <div className="skill-device-top"><span>EVOMON // SKILL INDEX</span><span className="device-led" /><span>{skills.length} DOCUMENTED SKILLS</span></div>
+          <div className="skill-screen">
+            <div className="skill-toolbar">
+              <div className="control-search">
+                <Search size={16} aria-hidden="true" />
+                <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search skill or element" aria-label="Search skills" data-testid="input-search-skills" />
+                {query && <button type="button" className="clear-search" onClick={() => setQuery('')} aria-label="Clear skill search" data-testid="button-clear-skill-search"><X size={15} /></button>}
+              </div>
+              <div className="skill-attributes" role="group" aria-label="Filter by skill attribute">
+                <button type="button" className={attribute === 'all' ? 'selected' : ''} onClick={() => setAttribute('all')} aria-pressed={attribute === 'all'} data-testid="button-skill-attribute-all">All <span>{skills.length}</span></button>
+                {SKILL_ATTRIBUTES.map((tag) => <button type="button" className={attribute === tag ? 'selected' : ''} onClick={() => setAttribute(tag)} aria-pressed={attribute === tag} key={tag} data-testid={`button-skill-attribute-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>{tag} <span>{attributeCounts[tag] ?? 0}</span></button>)}
+              </div>
+            </div>
+            {isLoading
+              ? <div className="skill-loading" data-testid="status-skills-loading">Loading skill records…</div>
+              : filtered.length
+                ? <div className="skill-browser">
+                  <div className="skill-results" role="listbox" aria-label="Skill results" data-testid="skill-results">
+                    <div className="skill-results-heading"><span>{filtered.length} MATCHES</span><span>SELECT A RECORD</span></div>
+                    {filtered.map(({ move, learners }) => <button type="button" role="option" aria-selected={selected?.move.name === move.name} className={`skill-result ${selected?.move.name === move.name ? 'selected' : ''}`} onClick={() => setSelectedName(move.name)} key={move.name} data-testid={`skill-result-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
+                      <span className="skill-result-name">{move.name}</span>
+                      <span className="skill-result-meta">{move.element} · {learners.length} Mon</span>
+                      <ArrowRight size={14} aria-hidden="true" />
+                    </button>)}
+                  </div>
+                  {selected && <article className="skill-detail" data-testid="skill-detail">
+                    <div className="skill-detail-top"><div><span className="move-level">{selected.move.slot === 'ultimate' ? 'ULTIMATE RECORD' : 'LEARNABLE RECORD'}</span><h2 className="font-display">{selected.move.name}</h2></div><span className="move-element">{selected.move.element}</span></div>
+                    <div className="move-tags">{selected.move.tags.map((tag) => <span className={`move-tag move-tag-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`} key={tag}>{tag}</span>)}</div>
+                    <p className="skill-detail-description">{selected.move.description}</p>
+                    <div className="skill-detail-stats"><span>Power <b>{selected.move.power ?? '—'}</b></span><span>Uses <b>{selected.move.uses ?? '—'}</b></span><span>{selected.move.obtained ?? 'Source unrecorded'}</span></div>
+                    <div className="skill-learners-heading"><span>Learned by</span><b>{selected.learners.length} Mon</b></div>
+                    <div className="skill-learners">{selected.learners.map((learner) => <SkillLearner learner={learner} key={idFor(learner.entry)} />)}</div>
+                  </article>}
+                </div>
+                : <div className="skill-empty" data-testid="status-skills-empty"><span className="eyebrow">SCAN COMPLETE / NO MATCH</span><h2 className="font-display">Adjust the filter.</h2><p>No documented skill matches that search and attribute combination.</p></div>}
+          </div>
+          <div className="skill-device-footer"><span>ATTRIBUTE FILTERS SHOW DOCUMENTED SKILLS ONLY</span><a href={MOVES_URL} target="_blank" rel="noreferrer" data-testid="link-skills-source">Open Wiki moves <ExternalLink size={12} /></a></div>
+        </section>
+      </main>
+    </Shell>
+  );
+}
+
 function Detail() {
   const params = useParams<{ id?: string }>();
   const [, setLocation] = useLocation();
@@ -350,7 +456,7 @@ function RoutedErrorBoundary({ children }: { children: ReactNode }) {
 }
 
 function Router() {
-  return <RoutedErrorBoundary><Switch><Route path="/" component={Home} /><Route path="/evomon/:id" component={Detail} /><Route component={NotFound} /></Switch></RoutedErrorBoundary>;
+  return <RoutedErrorBoundary><Switch><Route path="/" component={Home} /><Route path="/skills" component={Skills} /><Route path="/evomon/:id" component={Detail} /><Route component={NotFound} /></Switch></RoutedErrorBoundary>;
 }
 
 function CatalogLoader({ children }: { children: ReactNode }) {
