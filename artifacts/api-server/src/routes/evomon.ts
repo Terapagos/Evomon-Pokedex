@@ -80,6 +80,69 @@ const SUPPLEMENTAL_BASE_MOVES: Record<string, SupplementalMoveList> = {
     ],
     ultimate: ["Glacial Field 1", "Glacial Field 2", "Glacial Field 3"],
   },
+  Gempillar: {
+    normal: [
+      "Heavy Strike", "Intimidate", "Insect Rush", "Tenacity", "Insect Sonic", "Poison Spike",
+      "Heavy Slam", "Web Bind", "Inversion", "Wing Blade", "Rally", "Silkburst",
+    ],
+    ultimate: ["Swarm Assault 1", "Swarm Assault 2", "Swarm Assault 3"],
+  },
+  Tarro: {
+    normal: [
+      "Hone 1", "Heavy Strike", "Vine Drain", "Dragon Claw", "Fighting Will 1", "Seed Bomb",
+      "Wrap Assault", "Horn Strike", "Energy Absorb", "Leech Seed", "Verdant Beam", "Dragon Pursuit",
+    ],
+    ultimate: ["Leaf Storm 1", "Leaf Storm 2", "Leaf Storm 3"],
+  },
+  Magma: {
+    normal: [
+      "Critical Focus", "Ram", "Flame Dance", "Fighting Will 1", "Dash Punch", "Protect",
+      "Fireball Blast", "Burn", "Mirage", "Wildfire", "Unblemished Spirit", "Bloodflame",
+    ],
+    ultimate: ["Flame Devour 1", "Flame Devour 2", "Flame Devour 3"],
+  },
+  Arcub: {
+    normal: [
+      "Ram", "Lightning Shock", "Hone 1", "Static Field", "Electrify", "Chain Lightning",
+      "Thor Power", "Lightning Blitz", "Volt Tempest", "Reckoning Strike", "Thunderstorm", "Thunder Retribution",
+    ],
+    ultimate: ["Lightning Surge 1", "Lightning Surge 2", "Lightning Surge 3"],
+  },
+  Starloop: {
+    normal: [
+      "Steady", "Tackle", "Psychic Blast", "Torment", "Mirage Beam", "Hallucination",
+      "Power Strike", "Star Meteor", "Mind Insight", "Psychic Cast", "Rally", "Mind Disrupt",
+    ],
+    ultimate: ["Mind Burst 1", "Mind Burst 2", "Mind Burst 3"],
+  },
+  Tinkog: {
+    normal: [
+      "Tackle", "Iron Fortress", "Magnetic Field", "Encore", "Steel Resonance", "Wild Ram",
+      "Protect", "Gear Grind", "Energy Absorb", "Kinetic Impact", "Charged Strike", "Thermal Ray",
+    ],
+    ultimate: ["Magnetic Storm 1", "Magnetic Storm 2", "Magnetic Storm 3"],
+  },
+  Snaero: {
+    normal: [
+      "Energy Absorb", "Ram", "Ice Spike", "Glacial", "Icy Wind", "Power Strike",
+      "Snowfall", "Ice Ball", "Frost Strike", "Feral Unleash", "Myriad Frost", "Snow Lance",
+    ],
+    ultimate: ["Swift Freeze 1", "Swift Freeze 2", "Swift Freeze 3"],
+  },
+  Pummpaw: {
+    normal: [
+      "Restore", "Scratch", "Sonic Punch", "Intimidate", "Dash Punch", "Block",
+      "Power Strike", "Sharp Claw", "Hone 1", "Elbow Smash", "Combo Punch", "Rider Kick",
+    ],
+    ultimate: ["Exploding Fist 1", "Exploding Fist 2", "Exploding Fist 3"],
+  },
+  Datubud: {
+    normal: [
+      "Fighting Will 1", "Tackle", "Psychic Blast", "Hallucination", "Mirage Beam", "Mega Drain",
+      "Torment", "Star Meteor", "Psychic Cast", "Recover 1", "Mind Disrupt", "Blossom Strike",
+    ],
+    ultimate: ["Sleep Powder 1", "Sleep Powder 2", "Sleep Powder 3"],
+  },
 };
 
 let cachedCatalog: unknown;
