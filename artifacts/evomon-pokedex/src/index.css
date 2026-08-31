@@ -392,6 +392,36 @@
 .move-card-normal .move-tags { margin: 9px 4px 0; }
 .move-card-normal .move-description { margin-inline: 4px; }
 .move-card-normal .move-meta { margin-inline: 4px; }
+.move-card-fire { padding: 8px; border: 4px solid hsl(var(--device-deep)); border-radius: 27px; background: hsl(20 100% 55%); box-shadow: 0 4px 0 hsl(var(--device-deep) / .45); overflow: hidden; }
+.fire-move-face { display: grid; grid-template-columns: 62px minmax(0, 1fr) 82px; align-items: center; gap: 11px; min-height: 88px; padding: 8px 10px; border-radius: 20px; background: linear-gradient(77deg, hsl(20 100% 55%) 0 69%, hsl(192 12% 16%) 69% 72%, hsl(192 12% 16%) 72% 100%); }
+.fire-move-icon { width: 57px; height: 57px; display: grid; place-items: center; border-radius: 50%; background: hsl(0 0% 0%); color: hsl(20 100% 61%); }
+.fire-move-main { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.fire-move-main h3 { width: 100%; overflow: hidden; color: hsl(0 0% 100%); font-size: clamp(17px, 2.2vw, 27px); line-height: .95; letter-spacing: -.025em; text-align: center; text-overflow: ellipsis; text-shadow: 2px 2px 0 hsl(0 0% 0%), -1px -1px 0 hsl(0 0% 0%), 1px -1px 0 hsl(0 0% 0%), -1px 1px 0 hsl(0 0% 0%); white-space: nowrap; }
+.fire-move-power { width: min(100%, 178px); padding: 5px 10px 4px; border-radius: 15px; background: hsl(24 69% 36%); color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 25px; font-weight: 700; line-height: .9; text-align: center; text-shadow: 2px 2px 0 hsl(0 0% 0%); }
+.fire-move-uses { display: flex; align-items: center; justify-content: center; min-height: 38px; padding: 6px 8px; border-radius: 22px; color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 21px; line-height: 1; text-shadow: 2px 2px 0 hsl(0 0% 0%); }
+.move-card-fire .move-tags { margin: 9px 4px 0; }
+.move-card-fire .move-description { margin-inline: 4px; }
+.move-card-fire .move-meta { margin-inline: 4px; }
+.move-card-ice { padding: 8px; border: 4px solid hsl(var(--device-deep)); border-radius: 27px; background: hsl(184 76% 76%); box-shadow: 0 4px 0 hsl(var(--device-deep) / .45); overflow: hidden; }
+.ice-move-face { display: grid; grid-template-columns: 62px minmax(0, 1fr) 82px; align-items: center; gap: 11px; min-height: 88px; padding: 8px 10px; border-radius: 20px; background: linear-gradient(77deg, hsl(184 76% 76%) 0 69%, hsl(192 12% 16%) 69% 72%, hsl(192 12% 16%) 72% 100%); }
+.ice-move-icon { width: 57px; height: 57px; display: grid; place-items: center; border-radius: 50%; background: hsl(0 0% 0%); color: hsl(184 76% 76%); }
+.ice-move-main { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.ice-move-main h3 { width: 100%; overflow: hidden; color: hsl(0 0% 100%); font-size: clamp(17px, 2.2vw, 27px); line-height: .95; letter-spacing: -.025em; text-align: center; text-overflow: ellipsis; text-shadow: 2px 2px 0 hsl(0 0% 0%), -1px -1px 0 hsl(0 0% 0%), 1px -1px 0 hsl(0 0% 0%), -1px 1px 0 hsl(0 0% 0%); white-space: nowrap; }
+.ice-move-power { width: min(100%, 178px); padding: 5px 10px 4px; border-radius: 15px; background: hsl(183 31% 49%); color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 25px; font-weight: 700; line-height: .9; text-align: center; text-shadow: 2px 2px 0 hsl(0 0% 0%); }
+.ice-move-uses { display: flex; align-items: center; justify-content: center; min-height: 38px; padding: 6px 8px; border-radius: 22px; color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 21px; line-height: 1; text-shadow: 2px 2px 0 hsl(0 0% 0%); }
+.move-card-ice .move-tags { margin: 9px 4px 0; }
+.move-card-ice .move-description { margin-inline: 4px; }
+.move-card-ice .move-meta { margin-inline: 4px; }
+.move-card-flying { padding: 8px; border: 4px solid hsl(var(--device-deep)); border-radius: 27px; background: hsl(164 48% 86%); box-shadow: 0 4px 0 hsl(var(--device-deep) / .45); overflow: hidden; }
+.flying-move-face { display: grid; grid-template-columns: 62px minmax(0, 1fr) 82px; align-items: center; gap: 11px; min-height: 88px; padding: 8px 10px; border-radius: 20px; background: linear-gradient(77deg, hsl(164 48% 86%) 0 69%, hsl(192 12% 16%) 69% 72%, hsl(192 12% 16%) 72% 100%); }
+.flying-move-icon { width: 57px; height: 57px; display: grid; place-items: center; border-radius: 50%; background: hsl(0 0% 0%); color: hsl(164 48% 86%); }
+.flying-move-main { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.flying-move-main h3 { width: 100%; overflow: hidden; color: hsl(0 0% 100%); font-size: clamp(17px, 2.2vw, 27px); line-height: .95; letter-spacing: -.025em; text-align: center; text-overflow: ellipsis; text-shadow: 2px 2px 0 hsl(0 0% 0%), -1px -1px 0 hsl(0 0% 0%), 1px -1px 0 hsl(0 0% 0%), -1px 1px 0 hsl(0 0% 0%); white-space: nowrap; }
+.flying-move-power { width: min(100%, 178px); padding: 5px 10px 4px; border-radius: 15px; background: hsl(164 14% 57%); color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 25px; font-weight: 700; line-height: .9; text-align: center; text-shadow: 2px 2px 0 hsl(0 0% 0%); }
+.flying-move-uses { display: flex; align-items: center; justify-content: center; min-height: 38px; padding: 6px 8px; border-radius: 22px; color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 21px; line-height: 1; text-shadow: 2px 2px 0 hsl(0 0% 0%); }
+.move-card-flying .move-tags { margin: 9px 4px 0; }
+.move-card-flying .move-description { margin-inline: 4px; }
+.move-card-flying .move-meta { margin-inline: 4px; }
 .move-element { flex: none; padding: 5px 7px 4px; border-radius: 3px; background: hsl(var(--accent) / .13); color: hsl(var(--accent)); font-family: var(--app-font-mono); font-size: 7px; letter-spacing: .06em; text-transform: uppercase; }
 .move-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 13px; }
 .move-tag { padding: 4px 6px 3px; border: 1px solid hsl(var(--device-deep) / .15); color: hsl(var(--device-deep) / .72); background: hsl(var(--screen)); font-family: var(--app-font-mono); font-size: 7px; line-height: 1; letter-spacing: .03em; text-transform: uppercase; }

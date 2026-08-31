@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, ChevronDown, Filter, Info, Layers, Mountain, RotateCcw, Search, Sparkles, Star, X, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronDown, Feather, Filter, Flame, Info, Layers, Mountain, RotateCcw, Search, Snowflake, Sparkles, Star, X, Zap, type LucideIcon } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams } from 'wouter';
 import { type Evomon, type EvomonMove, type MoveTag, evomonData } from '@/data/evomonData';
 import { useGetEvomonCatalog } from '@workspace/api-client-react';
@@ -273,42 +273,52 @@ function DetailField({ label, value, testId }: { label: string; value?: string; 
   return <div className="detail-field"><span className="field-label">{label}</span><p data-testid={testId}>{value || missing}</p></div>;
 }
 
+type BattleMoveStyle = 'rock' | 'ground' | 'normal' | 'fire' | 'ice' | 'flying';
+
+const BATTLE_MOVE_ICONS: Record<BattleMoveStyle, LucideIcon> = {
+  rock: Mountain,
+  ground: Layers,
+  normal: Star,
+  fire: Flame,
+  ice: Snowflake,
+  flying: Feather,
+};
+
+function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveStyle }) {
+  const Icon = BATTLE_MOVE_ICONS[style];
+  const prefix = `${style}-move`;
+  const uses = style === 'rock' ? (move.uses ?? '—') : move.uses !== null ? `${move.uses}/${move.uses}` : '—/—';
+  return (
+    <div className={`${prefix}-face`}>
+      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' ? 'currentColor' : undefined} /></div>
+      <div className={`${prefix}-main`}>
+        <h3 className="font-display">{move.name}</h3>
+        <span className={`${prefix}-power`}>{move.power ?? (style === 'normal' ? '--' : '—')}</span>
+      </div>
+      <div className={`${prefix}-uses`} aria-label={`${move.uses ?? 'Unrecorded'} uses`}>{style === 'rock' ? <Zap size={19} fill="currentColor" aria-hidden="true" /> : null}<b>{uses}</b></div>
+    </div>
+  );
+}
+
 function MoveCard({ move }: { move: EvomonMove }) {
   const level = move.unlockLevel !== null ? `Lv ${move.unlockLevel}` : 'Level unrecorded';
-  const isRockMove = `${move.name} ${move.element}`.toLowerCase().includes('rock');
-  const isGroundMove = `${move.name} ${move.element}`.toLowerCase().includes('ground');
-  const isNormalMove = `${move.name} ${move.element}`.toLowerCase().includes('normal');
-  const isBattleMove = isRockMove || isGroundMove || isNormalMove;
+  const moveText = `${move.name} ${move.element}`.toLowerCase();
+  const battleMoveStyle: BattleMoveStyle | null = moveText.includes('rock')
+    ? 'rock'
+    : moveText.includes('ground')
+      ? 'ground'
+      : moveText.includes('normal')
+        ? 'normal'
+        : moveText.includes('fire')
+          ? 'fire'
+          : moveText.includes('ice')
+            ? 'ice'
+            : moveText.includes('flying')
+              ? 'flying'
+              : null;
   return (
-    <article className={`move-card ${isRockMove ? 'move-card-rock' : isGroundMove ? 'move-card-ground' : isNormalMove ? 'move-card-normal' : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
-      {isRockMove ? (
-        <div className="rock-move-face">
-          <div className="rock-move-icon" aria-hidden="true"><Mountain size={34} strokeWidth={2.5} /></div>
-          <div className="rock-move-main">
-            <h3 className="font-display">{move.name}</h3>
-            <span className="rock-move-power">{move.power ?? '—'}</span>
-          </div>
-          <div className="rock-move-uses"><Zap size={19} fill="currentColor" aria-hidden="true" /><b>{move.uses ?? '—'}</b></div>
-        </div>
-      ) : isGroundMove ? (
-        <div className="ground-move-face">
-          <div className="ground-move-icon" aria-hidden="true"><Layers size={34} strokeWidth={2.5} /></div>
-          <div className="ground-move-main">
-            <h3 className="font-display">{move.name}</h3>
-            <span className="ground-move-power">{move.power ?? '—'}</span>
-          </div>
-          <div className="ground-move-uses" aria-label={`${move.uses ?? 'Unrecorded'} uses`}><b>{move.uses !== null ? `${move.uses}/${move.uses}` : '—/—'}</b></div>
-        </div>
-      ) : isNormalMove ? (
-        <div className="normal-move-face">
-          <div className="normal-move-icon" aria-hidden="true"><Star size={28} strokeWidth={2.5} fill="currentColor" /></div>
-          <div className="normal-move-main">
-            <h3 className="font-display">{move.name}</h3>
-            <span className="normal-move-power">{move.power ?? '--'}</span>
-          </div>
-          <div className="normal-move-uses" aria-label={`${move.uses ?? 'Unrecorded'} uses`}><b>{move.uses !== null ? `${move.uses}/${move.uses}` : '—/—'}</b></div>
-        </div>
-      ) : (
+    <article className={`move-card ${battleMoveStyle ? `move-card-${battleMoveStyle}` : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
+      {battleMoveStyle ? <BattleMoveFace move={move} style={battleMoveStyle} /> : (
         <div className="move-card-head">
           <div>
             <span className="move-level">{move.slot === 'ultimate' ? 'ULT · ' : ''}{level}</span>
@@ -322,7 +332,7 @@ function MoveCard({ move }: { move: EvomonMove }) {
       </div>
       <p className="move-description">{move.description}</p>
       <div className="move-meta">
-        {isBattleMove ? <span>{move.slot === 'ultimate' ? 'Ultimate' : 'Unlock'} <b>{level}</b></span> : null}
+        {battleMoveStyle ? <span>{move.slot === 'ultimate' ? 'Ultimate' : 'Unlock'} <b>{level}</b></span> : null}
         <span>Power <b>{move.power ?? '—'}</b></span>
         <span>Uses <b>{move.uses ?? '—'}</b></span>
         {move.obtained ? <span className="move-obtained">{move.obtained}</span> : null}
