@@ -1,0 +1,200 @@
+
+
+
+
+
+
+
+
+
+Wispuff:
+Hone 1
+Ram
+Psychic Blast
+Poison
+Toxic Sting
+Hallucination
+Poison Coat
+Full Purify
+Venom Spray
+Psychic Cast
+Venom Burst
+Deadly Toxin
+
+Ultimate: Corrosive Smoke 1 -> 3
+
+Mudbud:
+Smoke Cover
+Mega Smash
+Leaf Blade
+Expose
+Seed Bomb
+Energy Absorb
+Earthquake
+Wrap Assault
+Rally
+Earth Pulse
+Quicksand
+Ruthless Rush
+
+Ultimate: Earth Fissure 1 -> 3
+
+Astraknight:
+Intimidate
+Scratch
+Sonic Punch
+Speed Rush
+Dash Punch
+Protect
+Sharp Claw
+True Hit
+Hone 1
+Elbow Smash
+Heavy blow
+Multi Strike
+
+Ultimate: Ultimate Burst Fist 1 -> 3
+
+Boltonia:
+Flash Strike
+Lightning shock
+Fighting Will 1
+Static Field
+Electrify
+Heavy Slam
+Protect
+VoltDash
+Thunder Blast
+Full Purify
+Ion Purge
+Volt Overload
+
+Ultimate: Thunderous Roar 1 -> 3
+
+Celesthorn:
+Hallucination
+Tackle
+Psychic Blast
+Encore
+Mirage Beam
+Power Strike
+Star Meteor
+Shatter
+Psychic Cast
+Rally
+Psychic Crush
+Psychic Etch
+
+Ultimate: Implosion 1 -> 3
+
+Wispark: 
+Hone 1
+Flash Strike
+Light Focus
+Radiance
+Light Pulse
+Power Strike
+Radiant Blade
+Full Purify
+Energy Flow
+Purge Beam
+Energy Absorb
+Radiance Cannon
+
+Ultimate: Sacred Baptism 1 -> 3
+
+Clipdow:
+Speed Rush
+Tackle
+Shadow Blast
+Torment
+Energy Siphon
+Shadow Ambush
+Power Strike
+Corrosion Fang
+Hone 1
+Nightfall Slash
+Energy Absorb
+Core Overdrive
+
+Ultimate: Shadow Reap 1 -> 3
+
+Clanx:
+Hone 1
+Iron Impact
+Magnetic Field
+Torment
+Energy Siphon
+Steel Resonance
+Gear Grind
+Shadow Ambush
+Protect 
+Nightfall Slash
+Charged Strike
+Overload Smash
+
+Ultimate: Steel Smash 1 -> 3
+
+Frostin:
+Frostbite
+Ram
+Ice Spike
+Insect Rush
+Bug Drain
+Ice Ball
+Inversion
+Web Bind
+Snowfall
+Glacial
+Silk Burst
+Snow Lance
+
+Ultimate: Frigid Force 1 -> 3
+
+Glowy:
+Hone 1
+Tackle
+Ambush
+Radiance
+Light Pulse
+Shock
+Power Strike
+Full Purify
+Energy Flow
+Quicksand
+Energy Absorb
+Radiance Cannon 
+
+Ultimate: Core Shock 1 -> 3
+
+Cyanie:
+Iron Fortress
+Ram
+Lighting Shock
+Electrify
+Thunder Punch
+Savage Slam
+Sand Attack
+Sandstorm
+Lighting Blitz
+Fighting will 1
+Earth Power
+Heaven's Thunder
+
+Ultimate: Prism Beam 1 -> 3
+
+Ignibud:
+Hone 1
+Ram
+Fire Strike
+Burn
+Cinder
+Mirage
+Power Strike
+Fireball Blast
+Cremate
+Spark Strike
+Skyfire
+Brands of Cinder
+
+Ultimate: Fire Rain 1 -> 3

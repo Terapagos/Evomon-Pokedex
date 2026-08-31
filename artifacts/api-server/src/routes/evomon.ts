@@ -143,6 +143,83 @@ const SUPPLEMENTAL_BASE_MOVES: Record<string, SupplementalMoveList> = {
     ],
     ultimate: ["Sleep Powder 1", "Sleep Powder 2", "Sleep Powder 3"],
   },
+  Wispuff: {
+    normal: [
+      "Hone 1", "Ram", "Psychic Blast", "Poison", "Toxic Sting", "Hallucination",
+      "Poison Coat", "Full Purify", "Venom Spray", "Psychic Cast", "Venom Burst", "Deadly Toxin",
+    ],
+    ultimate: ["Corrosive Smoke 1", "Corrosive Smoke 2", "Corrosive Smoke 3"],
+  },
+  Mudbud: {
+    normal: [
+      "Smoke Cover", "Mega Smash", "Leaf Blade", "Expose", "Seed Bomb", "Energy Absorb",
+      "Earthquake", "Wrap Assault", "Rally", "Earth Pulse", "Quicksand", "Ruthless Rush",
+    ],
+    ultimate: ["Earth Fissure 1", "Earth Fissure 2", "Earth Fissure 3"],
+  },
+  Astraknight: {
+    normal: [
+      "Intimidate", "Scratch", "Sonic Punch", "Speed Rush", "Dash Punch", "Protect",
+      "Sharp Claw", "True Hit", "Hone 1", "Elbow Smash", "Heavy Blow", "Multi Strike",
+    ],
+    ultimate: ["Ultimate Burst Fist 1", "Ultimate Burst Fist 2", "Ultimate Burst Fist 3"],
+  },
+  Celesthorn: {
+    normal: [
+      "Hallucination", "Tackle", "Psychic Blast", "Encore", "Mirage Beam", "Power Strike",
+      "Star Meteor", "Shatter", "Psychic Cast", "Rally", "Psychic Crush", "Psychic Etch",
+    ],
+    ultimate: ["Implosion 1", "Implosion 2", "Implosion 3"],
+  },
+  Wispark: {
+    normal: [
+      "Hone 1", "Flash Strike", "Light Focus", "Radiance", "Light Pulse", "Power Strike",
+      "Radiant Blade", "Full Purify", "Energy Flow", "Purge Beam", "Energy Absorb", "Radiance Cannon",
+    ],
+    ultimate: ["Sacred Baptism 1", "Sacred Baptism 2", "Sacred Baptism 3"],
+  },
+  Clipdow: {
+    normal: [
+      "Speed Rush", "Tackle", "Shadow Blast", "Torment", "Energy Siphon", "Shadow Ambush",
+      "Power Strike", "Corrosion Fang", "Hone 1", "Nightfall Slash", "Energy Absorb", "Core Overdrive",
+    ],
+    ultimate: ["Shadow Reap 1", "Shadow Reap 2", "Shadow Reap 3"],
+  },
+  Clanx: {
+    normal: [
+      "Hone 1", "Iron Impact", "Magnetic Field", "Torment", "Energy Siphon", "Steel Resonance",
+      "Gear Grind", "Shadow Ambush", "Protect", "Nightfall Slash", "Charged Strike", "Overload Smash",
+    ],
+    ultimate: ["Steel Smash 1", "Steel Smash 2", "Steel Smash 3"],
+  },
+  Frostin: {
+    normal: [
+      "Frostbite", "Ram", "Ice Spike", "Insect Rush", "Bug Drain", "Ice Ball",
+      "Inversion", "Web Bind", "Snowfall", "Glacial", "Silkburst", "Snow Lance",
+    ],
+    ultimate: ["Frigid Force 1", "Frigid Force 2", "Frigid Force 3"],
+  },
+  Glowy: {
+    normal: [
+      "Hone 1", "Tackle", "Ambush", "Radiance", "Light Pulse", "Shock",
+      "Power Strike", "Full Purify", "Energy Flow", "Quicksand", "Energy Absorb", "Radiance Cannon",
+    ],
+    ultimate: ["Core Shock 1", "Core Shock 2", "Core Shock 3"],
+  },
+  Cyanie: {
+    normal: [
+      "Iron Fortress", "Ram", "Lightning Shock", "Electrify", "Thunder Punch", "Savage Slam",
+      "Sand Attack", "Sandstorm", "Lightning Blitz", "Fighting Will 1", "Earth Power", "Heaven's Thunder",
+    ],
+    ultimate: ["Prism Beam 1", "Prism Beam 2", "Prism Beam 3"],
+  },
+  Ignibud: {
+    normal: [
+      "Hone 1", "Ram", "Fire Strike", "Burn", "Cinder", "Mirage",
+      "Power Strike", "Fireball Blast", "Cremate", "Spark Strike", "Skyfire", "Brands of Cinder",
+    ],
+    ultimate: ["Fire Rain 1", "Fire Rain 2", "Fire Rain 3"],
+  },
 };
 
 let cachedCatalog: unknown;
