@@ -301,7 +301,7 @@ function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveSt
   const uses = style === 'rock' || style === 'electric' ? (move.uses ?? '—') : move.uses !== null ? `${move.uses}/${move.uses}` : '—/—';
   return (
     <div className={`${prefix}-face`}>
-      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' || style === 'electric' || style === 'water' || style === 'fighting' || style === 'bug' || style === 'poison' ? 'currentColor' : undefined} /></div>
+      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' || style === 'electric' || style === 'water' || style === 'fighting' || style === 'bug' || style === 'poison' || style === 'grass' ? 'currentColor' : undefined} /></div>
       <div className={`${prefix}-main`}>
         <h3 className="font-display">{move.name}</h3>
         <span className={`${prefix}-power`}>{move.power ?? (style === 'normal' ? '--' : '—')}</span>
@@ -336,7 +336,19 @@ function MoveCard({ move }: { move: EvomonMove }) {
                       ? 'poison'
                       : moveText.includes('bug')
                         ? 'bug'
-              : null;
+                        : moveText.includes('grass')
+                          ? 'grass'
+                          : moveText.includes('dark')
+                            ? 'dark'
+                            : moveText.includes('steel')
+                              ? 'steel'
+                              : moveText.includes('psychic')
+                                ? 'psychic'
+                                : moveText.includes('light')
+                                  ? 'light'
+                                  : moveText.includes('dragon')
+                                    ? 'dragon'
+                                    : null;
   return (
     <article className={`move-card ${battleMoveStyle ? `move-card-${battleMoveStyle}` : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
       {battleMoveStyle ? <BattleMoveFace move={move} style={battleMoveStyle} /> : (
@@ -386,10 +398,15 @@ type SkillIndexEntry = {
   learners: Array<{ entry: Evomon; unlockLevel: number | null; slot: string; ultimateRange?: string }>;
 };
 
-type SkillElementStyle = Exclude<BattleMoveStyle, 'rock' | 'ground' | 'normal' | 'fire' | 'flying'>;
+type SkillElementStyle = BattleMoveStyle;
 
 function skillElementStyleFor(element: string): SkillElementStyle | null {
   const normalized = element.toLowerCase();
+  if (normalized.includes('rock')) return 'rock';
+  if (normalized.includes('ground')) return 'ground';
+  if (normalized.includes('normal')) return 'normal';
+  if (normalized.includes('fire')) return 'fire';
+  if (normalized.includes('flying')) return 'flying';
   if (normalized.includes('dark')) return 'dark';
   if (normalized.includes('steel')) return 'steel';
   if (normalized.includes('psychic')) return 'psychic';
@@ -498,7 +515,7 @@ function Skills() {
                       const resultLevel = move.unlockLevel !== null ? `Lv.${move.unlockLevel}` : move.slot === 'ultimate' ? 'ULT' : 'Skill cache';
                       const ElementIcon = elementStyle ? BATTLE_MOVE_ICONS[elementStyle] : BATTLE_MOVE_ICONS.normal;
                       return <button type="button" role="option" aria-selected={selected?.key === key} aria-label={`${displayName}, ${move.element}, ${resultLevel}, ${learners.length} Mon`} className={`skill-result ${elementStyle ? `skill-result-${elementStyle}` : 'skill-result-default'} ${selected?.key === key ? 'selected' : ''}`} onClick={() => setSelectedKey(key)} key={key} data-testid={`skill-result-${displayName.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
-                        <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={!elementStyle || elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' || elementStyle === 'grass' || elementStyle === 'electric' || elementStyle === 'water' || elementStyle === 'fighting' || elementStyle === 'ice' ? 'currentColor' : undefined} /></span>
+                        <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={!elementStyle || elementStyle === 'normal' || elementStyle === 'fire' || elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' || elementStyle === 'grass' || elementStyle === 'electric' || elementStyle === 'water' || elementStyle === 'fighting' || elementStyle === 'ice' ? 'currentColor' : undefined} /></span>
                         <span className="skill-result-name">{displayName}{ultimateRange ? ` · Ultimate ${ultimateRange}` : ''}</span>
                         <span className="skill-result-meta">{resultLevel}</span>
                         <span className="skill-result-record" title={`${learners.length} Mon learn this skill`} aria-hidden="true"><BookOpen size={19} strokeWidth={2.6} /></span>
