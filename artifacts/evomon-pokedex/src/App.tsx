@@ -37,8 +37,8 @@ function Artwork({ entry, variant, large = false }: { entry: Evomon; variant: Va
   if (!src || failed) {
     return (
       <div className={`art-fallback ${large ? 'art-fallback-large' : ''}`} aria-label={`${entry.name} artwork unavailable`} data-testid={`artwork-fallback-${entry.name}`}>
-        <span className="art-orbit" />
         <span className="art-initial">{entry.name.slice(0, 1).toUpperCase()}</span>
+        {large && variant === 'shiny' ? <span className="art-fallback-label">Shiny art not recorded</span> : null}
       </div>
     );
   }

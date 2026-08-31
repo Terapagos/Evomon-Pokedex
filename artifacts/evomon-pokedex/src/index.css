@@ -299,7 +299,7 @@
 .art-image-large { position: relative; z-index: 1; width: min(78%, 300px); height: 300px; object-fit: contain; }
 .art-fallback-large { position: relative; z-index: 1; width: 280px; height: 280px; display: grid; place-items: center; color: hsl(var(--device-deep) / .7); }
 .art-fallback-large .art-initial { font-family: var(--app-font-display); font-size: 130px; }
-.art-orbit { position: absolute; inset: 0; border: 1px solid hsl(var(--device-deep) / .26); border-radius: 50%; transform: rotate(-26deg) scaleY(.44); }
+.art-fallback-label { position: absolute; bottom: 32px; color: hsl(var(--muted-foreground)); font-family: var(--app-font-mono); font-size: 7px; letter-spacing: .08em; text-transform: uppercase; }
 .detail-title .eyebrow { margin-bottom: 19px; }
 .detail-title h1 { color: hsl(var(--screen)); font-size: clamp(58px, 8vw, 106px); line-height: .78; letter-spacing: -.07em; margin: 0 0 22px; font-weight: 600; }
 .detail-subline { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; color: hsl(var(--screen) / .58); font-family: var(--app-font-mono); text-transform: uppercase; letter-spacing: .06em; font-size: 8px; }
