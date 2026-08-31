@@ -519,7 +519,7 @@ function Skills() {
                       const ElementIcon = elementStyle ? BATTLE_MOVE_ICONS[elementStyle] : BATTLE_MOVE_ICONS.normal;
                       return <button type="button" role="option" aria-selected={selected?.key === key} aria-label={`${displayName}, ${move.element}, ${resultLevel}, ${learners.length} Mon`} className={`skill-result ${elementStyle ? `skill-result-${elementStyle}` : 'skill-result-default'} ${selected?.key === key ? 'selected' : ''}`} onClick={() => setSelectedKey(key)} key={key} data-testid={`skill-result-${displayName.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
                         <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={!elementStyle || elementStyle === 'normal' || elementStyle === 'fire' || elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' || elementStyle === 'grass' || elementStyle === 'electric' || elementStyle === 'water' || elementStyle === 'fighting' || elementStyle === 'ice' ? 'currentColor' : undefined} /></span>
-                        <span className="skill-result-name">{displayName}{ultimateRange ? ` · Ultimate ${ultimateRange}` : ''}</span>
+                        <span className="skill-result-name">{displayName}{ultimateRange ? ' - Ult' : ''}</span>
                         <span className="skill-result-meta">{resultLevel}</span>
                       </button>;
                     })}
