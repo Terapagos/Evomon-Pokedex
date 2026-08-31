@@ -273,7 +273,7 @@ function DetailField({ label, value, testId }: { label: string; value?: string; 
   return <div className="detail-field"><span className="field-label">{label}</span><p data-testid={testId}>{value || missing}</p></div>;
 }
 
-type BattleMoveStyle = 'rock' | 'ground' | 'normal' | 'fire' | 'ice' | 'flying' | 'electric';
+type BattleMoveStyle = 'rock' | 'ground' | 'normal' | 'fire' | 'ice' | 'flying' | 'electric' | 'water' | 'fighting';
 
 const BATTLE_MOVE_ICONS: Record<BattleMoveStyle, LucideIcon> = {
   rock: Mountain,
@@ -283,6 +283,8 @@ const BATTLE_MOVE_ICONS: Record<BattleMoveStyle, LucideIcon> = {
   ice: Snowflake,
   flying: Feather,
   electric: Zap,
+  water: Droplet,
+  fighting: HandFist,
 };
 
 function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveStyle }) {
@@ -291,7 +293,7 @@ function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveSt
   const uses = style === 'rock' || style === 'electric' ? (move.uses ?? '—') : move.uses !== null ? `${move.uses}/${move.uses}` : '—/—';
   return (
     <div className={`${prefix}-face`}>
-      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' || style === 'electric' ? 'currentColor' : undefined} /></div>
+      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' || style === 'electric' || style === 'water' || style === 'fighting' ? 'currentColor' : undefined} /></div>
       <div className={`${prefix}-main`}>
         <h3 className="font-display">{move.name}</h3>
         <span className={`${prefix}-power`}>{move.power ?? (style === 'normal' ? '--' : '—')}</span>
@@ -318,6 +320,10 @@ function MoveCard({ move }: { move: EvomonMove }) {
               ? 'flying'
               : moveText.includes('electric')
                 ? 'electric'
+                : moveText.includes('water')
+                  ? 'water'
+                  : moveText.includes('fighting')
+                    ? 'fighting'
               : null;
   return (
     <article className={`move-card ${battleMoveStyle ? `move-card-${battleMoveStyle}` : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
