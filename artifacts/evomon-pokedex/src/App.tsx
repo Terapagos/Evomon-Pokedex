@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, ChevronDown, ExternalLink, Filter, Info, RotateCcw, Search, Sparkles, X } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronDown, Filter, Info, RotateCcw, Search, Sparkles, X } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams } from 'wouter';
 import { type Evomon, type EvomonMove, type MoveTag, evomonData } from '@/data/evomonData';
 import { useGetEvomonCatalog } from '@workspace/api-client-react';
@@ -10,8 +10,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
-const WIKI_URL = 'https://www.evomon.wiki/wiki';
-const MOVES_URL = 'https://www.evomon.wiki/moves';
 type Variant = 'normal' | 'shiny';
 const CatalogContext = createContext({ catalog: evomonData, isLoading: true, isError: false });
 
@@ -65,7 +63,6 @@ function Header() {
       <nav className="header-nav" aria-label="Primary navigation">
         <Link href="/" className={`header-link ${catalogActive ? 'active' : ''}`} data-testid="button-catalog-nav">Catalog <span>{catalog.length || '—'}</span></Link>
         <Link href="/skills" className={`header-link ${skillsActive ? 'active' : ''}`} data-testid="link-skills-nav">Skills</Link>
-        <a className="header-link" href={WIKI_URL} target="_blank" rel="noreferrer" data-testid="link-wiki-nav">Wiki source <ExternalLink size={13} /></a>
       </nav>
       <div className="header-status"><span className="status-light" /> LINK ESTABLISHED</div>
     </header>
@@ -79,7 +76,7 @@ function Shell({ children }: { children: ReactNode }) {
       {children}
       <footer className="site-footer">
         <span>EVOMON / FIELD GUIDE</span>
-        <a href={WIKI_URL} target="_blank" rel="noreferrer" data-testid="link-wiki-footer">Source notes: Evomon Wiki <ExternalLink size={12} /></a>
+        <span>FIELD ARCHIVE / 01</span>
         <span>ARCHIVE BUILD 01.01</span>
       </footer>
     </div>
@@ -178,7 +175,7 @@ function Home() {
   const [element, setElement] = useState('all');
   const [stage, setStage] = useState('all');
   const [variant, setVariant] = useState<Variant>('normal');
-  useEffect(() => { document.title = 'Evomon — Handheld Field Guide'; }, []);
+  useEffect(() => { document.title = 'Evomon Wiki'; }, []);
   const elements = useMemo(() => Array.from(new Set(catalog.flatMap(elementsFor))).sort(), [catalog]);
   const stages = useMemo(() => Array.from(new Set(catalog.map(stageFor))).sort(), [catalog]);
   const filtered = useMemo(() => {
@@ -202,7 +199,7 @@ function Home() {
           {isLoading ? <SkeletonRoster /> : filtered.length ? <div className="roster-scroll" role="list" aria-label="Evomon roster" data-testid="roster-scroll">{filtered.map((entry, index) => <EvomonRow key={idFor(entry)} entry={entry} index={index} variant={variant} />)}</div> : <EmptyCatalog filtered={filtering} onReset={clearFilters} />}
           <div className="roster-footnote"><span>↑ ↓ Navigate roster</span><span>ENTER Open specimen</span><span>{variant === 'shiny' ? 'SHINY PLATES ACTIVE' : 'STANDARD PLATES ACTIVE'}</span></div>
         </Device>
-        <div className="home-note"><span>CATALOG NOTE</span><p>Numbers follow the current Evomon Wiki archive. Blank fields are marked rather than guessed.</p><a href={WIKI_URL} target="_blank" rel="noreferrer" data-testid="link-catalog-source">Read source notes <ExternalLink size={12} /></a></div>
+        <div className="home-note"><span>CATALOG NOTE</span><p>Numbers follow the current archive. Blank fields are marked rather than guessed.</p><span>FIELD NOTES / 01</span></div>
       </main>
     </Shell>
   );
@@ -301,7 +298,6 @@ function Moveset({ moves }: { moves?: EvomonMove[] }) {
     <section className="moves-section" data-testid="section-moveset">
       <div className="moves-heading">
         <div className="section-kicker"><span>03</span><div><h2 className="font-display">Moveset</h2><p className="section-caption">{recordedMoves.length} documented moves · sorted by unlock level</p></div></div>
-        <a href={MOVES_URL} target="_blank" rel="noreferrer" data-testid="link-moves-source">Moves source <ExternalLink size={12} /></a>
       </div>
       {recordedMoves.length
         ? <div className="moves-grid">{recordedMoves.map((move) => <MoveCard move={move} key={`${move.slot}-${move.unlockLevel}-${move.name}`} />)}</div>
@@ -425,7 +421,7 @@ function Skills() {
                 </div>
                 : <div className="skill-empty" data-testid="status-skills-empty"><span className="eyebrow">SCAN COMPLETE / NO MATCH</span><h2 className="font-display">Adjust the filter.</h2><p>No documented skill matches that search and attribute combination.</p></div>}
           </div>
-          <div className="skill-device-footer"><span>ATTRIBUTE FILTERS SHOW DOCUMENTED SKILLS ONLY</span><a href={MOVES_URL} target="_blank" rel="noreferrer" data-testid="link-skills-source">Open Wiki moves <ExternalLink size={12} /></a></div>
+          <div className="skill-device-footer"><span>ATTRIBUTE FILTERS SHOW DOCUMENTED SKILLS ONLY</span><span>FIELD INDEX / 01</span></div>
         </section>
       </main>
     </Shell>
@@ -439,7 +435,7 @@ function Detail() {
   const [variant, setVariant] = useState<Variant>('normal');
   const entryIndex = catalog.findIndex((entry) => idFor(entry) === decodeURIComponent(params.id ?? ''));
   const entry = entryIndex >= 0 ? catalog[entryIndex] : undefined;
-  useEffect(() => { document.title = entry ? `${entry.name} — Evomon Field Guide` : 'Entry not found — Evomon'; }, [entry]);
+  useEffect(() => { document.title = entry ? `${entry.name} — Evomon Wiki` : 'Entry not found — Evomon Wiki'; }, [entry]);
   if (!entry) return <Shell><main className="detail-main"><EmptyCatalog /></main></Shell>;
   const elements = elementsFor(entry);
   const line = Array.isArray(entry.evolutionLine) ? entry.evolutionLine : [];
@@ -463,7 +459,7 @@ function Detail() {
           <Moveset moves={entry.moves} />
         </section>
         <div className="detail-nav"><div>{previous && <Link href={`/evomon/${encodeURIComponent(idFor(previous))}`} className="pager-link" data-testid="link-previous-entry"><ArrowLeft size={15} /><span>Previous specimen<b>{previous.name}</b></span></Link>}</div><div>{next && <Link href={`/evomon/${encodeURIComponent(idFor(next))}`} className="pager-link next" data-testid="link-next-entry"><span>Next specimen<b>{next.name}</b></span><ArrowRight size={15} /></Link>}</div></div>
-        <p className="source-note">Field notes sourced from <a href={entry.sourceUrl || WIKI_URL} target="_blank" rel="noreferrer" data-testid="link-wiki-source">the Evomon Wiki <ExternalLink size={12} /></a>. Unrecorded details are left blank rather than guessed.</p>
+        <p className="source-note">Unrecorded details are left blank rather than guessed.</p>
       </main>
     </Shell>
   );
