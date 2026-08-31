@@ -43,7 +43,7 @@ export const GetEvomonCatalogResponse = zod.object({
   "slot": zod.string(),
   "power": zod.string().nullable(),
   "uses": zod.number().nullable(),
-  "tags": zod.array(zod.enum(['Physical', 'Sp. Atk', 'Support', 'Status condition', 'Weather', 'AoE', 'Single target']))
+  "tags": zod.array(zod.enum(['Physical', 'Sp. Atk', 'Support', 'Priority', 'Status condition', 'Weather', 'AoE', 'Single target']))
 })),
   "sourceUrl": zod.string()
 }))

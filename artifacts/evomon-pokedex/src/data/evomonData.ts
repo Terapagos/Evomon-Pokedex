@@ -3,7 +3,7 @@
  * without changing the field guide UI. Optional fields stay optional so
  * missing wiki notes are represented honestly.
  */
-export type MoveTag = 'Physical' | 'Sp. Atk' | 'Support' | 'Status condition' | 'Weather' | 'AoE' | 'Single target';
+export type MoveTag = 'Physical' | 'Sp. Atk' | 'Support' | 'Priority' | 'Status condition' | 'Weather' | 'AoE' | 'Single target';
 
 export interface EvomonMove {
   name: string;

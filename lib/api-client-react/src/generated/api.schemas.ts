@@ -23,6 +23,7 @@ export const EvomonMoveTagsItem = {
   Physical: 'Physical',
   Sp_Atk: 'Sp. Atk',
   Support: 'Support',
+  Priority: 'Priority',
   Status_condition: 'Status condition',
   Weather: 'Weather',
   AoE: 'AoE',

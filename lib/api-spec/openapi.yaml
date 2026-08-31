@@ -101,7 +101,7 @@ components:
           type: array
           items:
             type: string
-            enum: [Physical, Sp. Atk, Support, Status condition, Weather, AoE, Single target]
+            enum: [Physical, Sp. Atk, Support, Priority, Status condition, Weather, AoE, Single target]
     EvomonEntry:
       type: object
       required:

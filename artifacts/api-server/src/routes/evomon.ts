@@ -9,7 +9,7 @@ const CACHE_MS = 1000 * 60 * 60 * 6;
 
 type JsonObject = Record<string, unknown>;
 type StatBlock = Record<string, number>;
-type MoveTag = "Physical" | "Sp. Atk" | "Support" | "Status condition" | "Weather" | "AoE" | "Single target";
+type MoveTag = "Physical" | "Sp. Atk" | "Support" | "Priority" | "Status condition" | "Weather" | "AoE" | "Single target";
 
 type CatalogMove = {
   name: string;
@@ -337,6 +337,8 @@ function tagsForMove(category: string, description: string): MoveTag[] {
 
   const isSupport = /\b(?:buff|debuff|stat(?:s| stage| stages| boost| boosts| decrease| decreases)?|raises?|lowers?|increases?|decreases?|boosts?|gains?|restores?|heals?|doubles?)\b/i.test(description);
   if (isSupport) tags.push("Support");
+
+  if (/\bpriority\b/i.test(description)) tags.push("Priority");
 
   const hasConditionToken = /\[(?:burn|bleed|blind|confusion|freeze|frostbite|paralysis|poison|psymark|sleep|stun|torment)\]/i.test(description);
   const changesCondition = /\b(?:inflict|inflicts|inflicting|give|gives|giving|apply|applies|applying|cause|causes|causing|set|sets|setting|double|doubles|doubling|remove|removes|removing|cure|cures|curing)\b/i.test(description);

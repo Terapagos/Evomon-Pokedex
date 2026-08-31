@@ -310,7 +310,7 @@ function Moveset({ moves }: { moves?: EvomonMove[] }) {
   );
 }
 
-const SKILL_ATTRIBUTES: MoveTag[] = ['Physical', 'Sp. Atk', 'Support', 'Status condition', 'Weather', 'AoE', 'Single target'];
+const SKILL_ATTRIBUTES: MoveTag[] = ['Physical', 'Sp. Atk', 'Support', 'Priority', 'Status condition', 'Weather', 'AoE', 'Single target'];
 
 type SkillIndexEntry = {
   key: string;
