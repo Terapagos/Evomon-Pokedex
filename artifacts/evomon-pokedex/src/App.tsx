@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, ChevronDown, Feather, Filter, Flame, Info, Layers, Mountain, RotateCcw, Search, Snowflake, Sparkles, Star, X, Zap, type LucideIcon } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, ChevronDown, Cog, Crown, Feather, Filter, Flame, Infinity as InfinityIcon, Info, Layers, Moon, Mountain, RotateCcw, Search, Snowflake, Sparkles, Star, X, Zap, type LucideIcon } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams } from 'wouter';
 import { type Evomon, type EvomonMove, type MoveTag, evomonData } from '@/data/evomonData';
 import { useGetEvomonCatalog } from '@workspace/api-client-react';
@@ -368,6 +368,26 @@ type SkillIndexEntry = {
   learners: Array<{ entry: Evomon; unlockLevel: number | null; slot: string; ultimateRange?: string }>;
 };
 
+type SkillElementStyle = 'dark' | 'steel' | 'psychic' | 'light' | 'dragon';
+
+const SKILL_ELEMENT_ICONS: Record<SkillElementStyle, LucideIcon> = {
+  dark: Moon,
+  steel: Cog,
+  psychic: InfinityIcon,
+  light: Sparkles,
+  dragon: Crown,
+};
+
+function skillElementStyleFor(element: string): SkillElementStyle | null {
+  const normalized = element.toLowerCase();
+  if (normalized.includes('dark')) return 'dark';
+  if (normalized.includes('steel')) return 'steel';
+  if (normalized.includes('psychic')) return 'psychic';
+  if (normalized.includes('light')) return 'light';
+  if (normalized.includes('dragon')) return 'dragon';
+  return null;
+}
+
 function skillIndexFor(catalog: Evomon[]): SkillIndexEntry[] {
   const byName = new Map<string, SkillIndexEntry>();
   const entriesByName = new Map(catalog.map((entry) => [entry.name, entry] as const));
@@ -456,11 +476,17 @@ function Skills() {
                 ? <div className="skill-browser">
                   <div className="skill-results" role="listbox" aria-label="Skill results" data-testid="skill-results">
                     <div className="skill-results-heading"><span>{filtered.length} MATCHES</span><span>SELECT A RECORD</span></div>
-                    {filtered.map(({ key, move, displayName, ultimateRange, learners }) => <button type="button" role="option" aria-selected={selected?.key === key} className={`skill-result ${selected?.key === key ? 'selected' : ''}`} onClick={() => setSelectedKey(key)} key={key} data-testid={`skill-result-${displayName.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
-                      <span className="skill-result-name">{displayName}{ultimateRange ? ` · Ultimate ${ultimateRange}` : ''}</span>
-                      <span className="skill-result-meta">{move.element} · {learners.length} Mon</span>
-                      <ArrowRight size={14} aria-hidden="true" />
-                    </button>)}
+                    {filtered.map(({ key, move, displayName, ultimateRange, learners }) => {
+                      const elementStyle = skillElementStyleFor(move.element);
+                      const resultLevel = move.unlockLevel !== null ? `Lv.${move.unlockLevel}` : move.slot === 'ultimate' ? 'ULT' : 'Lv.—';
+                      const ElementIcon = elementStyle ? SKILL_ELEMENT_ICONS[elementStyle] : Info;
+                      return <button type="button" role="option" aria-selected={selected?.key === key} aria-label={`${displayName}, ${move.element}, ${resultLevel}, ${learners.length} Mon`} className={`skill-result ${elementStyle ? `skill-result-${elementStyle}` : 'skill-result-default'} ${selected?.key === key ? 'selected' : ''}`} onClick={() => setSelectedKey(key)} key={key} data-testid={`skill-result-${displayName.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
+                        <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={elementStyle === 'light' || elementStyle === 'dragon' ? 'currentColor' : undefined} /></span>
+                        <span className="skill-result-name">{displayName}{ultimateRange ? ` · Ultimate ${ultimateRange}` : ''}</span>
+                        <span className="skill-result-meta">{resultLevel}</span>
+                        <span className="skill-result-record" title={`${learners.length} Mon learn this skill`} aria-hidden="true"><BookOpen size={19} strokeWidth={2.6} /></span>
+                      </button>;
+                    })}
                   </div>
                   {selected && <article className="skill-detail" data-testid="skill-detail">
                     <div className="skill-detail-top"><div><span className="move-level">{selected.ultimateRange ? `ULTIMATE ${selected.ultimateRange}` : selected.move.slot === 'ultimate' ? 'ULTIMATE RECORD' : 'LEARNABLE RECORD'}</span><h2 className="font-display">{selected.displayName}</h2></div><span className="move-element">{selected.move.element}</span></div>
