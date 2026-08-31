@@ -101,6 +101,13 @@ const SUPPLEMENTAL_BASE_MOVES: Record<string, SupplementalMoveList> = {
     ],
     ultimate: ["Flame Devour 1", "Flame Devour 2", "Flame Devour 3"],
   },
+  Boltonia: {
+    normal: [
+      "Flash Strike", "Lightning Shock", "Fighting Will 1", "Static Field", "Electrify", "Heavy Slam",
+      "Protect", "Volt Dash", "Thunder Blast", "Full Purify", "Ion Purge", "Volt Overload",
+    ],
+    ultimate: ["Thunderous Roar 1", "Thunderous Roar 2", "Thunderous Roar 3"],
+  },
   Arcub: {
     normal: [
       "Ram", "Lightning Shock", "Hone 1", "Static Field", "Electrify", "Chain Lightning",
@@ -425,6 +432,16 @@ async function createCatalog(): Promise<unknown> {
     const move = asMoveDefinition(rawMove);
     if (move) moveDefinitions.set(move.name, move);
   }
+  moveDefinitions.set("Volt Dash", {
+    name: "Volt Dash",
+    element: "electric",
+    category: "special",
+    description: "Deals Special Damage to the target.",
+    obtained: null,
+    power: "85",
+    uses: 15,
+    tags: tagsForMove("special", "Deals Special Damage to the target."),
+  });
 
   const movesByMonster = new Map<string, CatalogMove[]>();
   const moveLinks = Array.isArray(movesData?.links) ? movesData.links.filter(isObject) : [];
