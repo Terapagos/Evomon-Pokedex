@@ -15,6 +15,7 @@ const CatalogContext = createContext({ catalog: evomonData, isLoading: true, isE
 
 const ARTWORK_OVERRIDES: Record<string, string> = {
   Bubboxer: '/bubboxer.png',
+  Blazpup: '/blazpup.png',
 };
 
 function useCatalog() {
