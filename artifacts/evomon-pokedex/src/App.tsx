@@ -322,7 +322,10 @@ type SkillIndexEntry = {
 
 function skillIndexFor(catalog: Evomon[]): SkillIndexEntry[] {
   const byName = new Map<string, SkillIndexEntry>();
+  const entriesByName = new Map(catalog.map((entry) => [entry.name, entry] as const));
   for (const entry of catalog) {
+    const baseName = entry.evolutionLine?.[0];
+    const baseEntry = (baseName ? entriesByName.get(baseName) : undefined) ?? entry;
     for (const move of entry.moves ?? []) {
       const ultimateMatch = move.slot === 'ultimate' ? move.name.match(/^(.*) ([1-3])$/) : null;
       const displayName = ultimateMatch?.[1] || move.name;
@@ -334,8 +337,8 @@ function skillIndexFor(catalog: Evomon[]): SkillIndexEntry[] {
         ultimateRange: ultimateMatch ? '1 → 3' : undefined,
         learners: [],
       };
-      const learner = { entry, unlockLevel: move.unlockLevel, slot: move.slot, ultimateRange: ultimateMatch ? '1 → 3' : undefined };
-      if (!current.learners.some(({ entry: learnerEntry }) => idFor(learnerEntry) === idFor(entry))) current.learners.push(learner);
+      const learner = { entry: baseEntry, unlockLevel: move.unlockLevel, slot: move.slot, ultimateRange: ultimateMatch ? '1 → 3' : undefined };
+      if (!current.learners.some(({ entry: learnerEntry }) => idFor(learnerEntry) === idFor(baseEntry))) current.learners.push(learner);
       byName.set(key, current);
     }
   }
@@ -378,7 +381,7 @@ function Skills() {
             <p className="eyebrow">Skill archive / field index</p>
             <h1 className="font-display">Find the <em>right move.</em></h1>
           </div>
-          <p className="intro-copy">Filter by what a skill does, then open its record to see every Mon currently documented as learning it.</p>
+          <p className="intro-copy">Filter by what a skill does, then open its record to see the base Mon for each evolution line that learns it.</p>
           <div className="intro-index"><span>SKILLS</span><b>{skills.length || '—'}</b><span>{catalog.length || '—'} MON</span></div>
         </section>
         <ErrorNotice />
@@ -413,7 +416,7 @@ function Skills() {
                     <div className="move-tags">{selected.move.tags.map((tag) => <span className={`move-tag move-tag-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`} key={tag}>{tag}</span>)}</div>
                     <p className="skill-detail-description">{selected.move.description}</p>
                     <div className="skill-detail-stats"><span>Power <b>{selected.move.power ?? '—'}</b></span><span>Uses <b>{selected.move.uses ?? '—'}</b></span><span>{selected.move.obtained ?? 'Source unrecorded'}</span></div>
-                    <div className="skill-learners-heading"><span>Learned by</span><b>{selected.learners.length} Mon</b></div>
+                    <div className="skill-learners-heading"><span>Base Mon by evolution line</span><b>{selected.learners.length} Mon</b></div>
                     <div className="skill-learners">{selected.learners.map((learner) => <SkillLearner learner={learner} key={idFor(learner.entry)} />)}</div>
                   </article>}
                 </div>
