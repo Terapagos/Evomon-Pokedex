@@ -229,6 +229,56 @@ const SUPPLEMENTAL_BASE_MOVES: Record<string, SupplementalMoveList> = {
   },
 };
 
+// Unique learnable skills supplied for evolved forms are keyed to each line's
+// base form so the normal inheritance pass exposes them to every evolution.
+// These entries do not include invented unlock levels; the Wiki definitions
+// still provide their type, description, power, uses, and classifications.
+const SUPPLEMENTAL_UNIQUE_MOVES: Record<string, string[]> = {
+  Blazpup: ["All-Out Attack", "Spark Strike", "Line Breaker"],
+  Glaclide: ["Ice Beam", "All-Out Attack", "Combat Spirit"],
+  Bluebird: ["Cyclone Spiral", "Lightning Storm", "Combat Spirit"],
+  Graycrene: ["Dust Cyclone", "All-Out Attack", "Combat Spirit", "Air Slash"],
+  Bubble: ["All-Out Attack", "Bubble Slam", "Combat Spirit"],
+  Chitmite: ["Poison Gas", "Battle Stance", "Venom Chase"],
+  Lavite: ["Dust Cyclone", "Spark Strike", "Line Breaker"],
+  Frostlet: ["Ice Beam", "All-Out Attack", "Store Power"],
+  Tarro: ["Giga Drain", "Dragon Breath", "Store Power"],
+  Wispuff: ["Poison Gas", "Time Warp", "Combat Spirit"],
+  Arcub: ["Lightning Storm", "All-Out Attack", "Bolt Strike", "Battle Stance"],
+  Pummpaw: ["Mega Claw", "All-Out Attack", "Battle Stance"],
+  Gempillar: ["All-Out Attack", "Venom Chase", "Store Power"],
+  Datubud: ["Giga Drain", "Time Warp", "Store Power"],
+  Mudbud: ["Caltrop", "Giga Drain", "Combat Spirit"],
+  Pebble: ["All-Out Attack", "Dust Cyclone", "Line Breaker"],
+  Spikub: ["Caltrop", "All-Out Attack", "Line Breaker"],
+  Fluffet: ["All-Out Attack", "Dust Cyclone", "Line Breaker"],
+  Chirppy: ["Cyclone Spiral", "All-Out Attack", "Battle Stance"],
+  Gulpfish: ["Caltrop", "Bubble Slam", "Store Power"],
+  Wispark: ["Dawnstrike", "All-Out Attack", "Store Power"],
+  Clanx: ["Shadow Stab", "Neutron Pulse", "Line Breaker"],
+  Clipdow: ["All-Out Attack", "Line Breaker", "Shadow Stab"],
+  Glowy: ["Dawnstrike", "Caltrop", "Store Power"],
+  Mopebun: ["Dust Cyclone", "Caltrop", "Combat Spirit"],
+  Clampip: ["All-Out Attack", "Bubble Slam", "Battle Stance"],
+  Sparkit: ["All-Out Attack", "Spark Strike", "Store Power"],
+  Stardrift: ["Ice Beam", "Combat Spirit", "Giga Drain"],
+  Tinkog: ["Neutron Pulse", "All-Out Attack", "Line Breaker"],
+  Humding: ["Cyclone Spiral", "Venom Chase", "Battle Stance"],
+  Budling: ["Giga Drain", "All-Out Attack", "Store Power"],
+  Vipip: ["Poison Gas", "All-Out Attack", "Battle Stance"],
+  Starloop: ["All-Out Attack", "Store Power", "Time Warp"],
+  Leafbun: ["All-Out Attack", "Giga Drain", "Combat Spirit"],
+  Coulomb: ["Lightning Storm", "All-Out Attack", "Store Power"],
+  Cyanie: ["Dust Cyclone", "Lightning Storm", "Store Power"],
+  Astraknight: ["All-Out Attack", "Mega Claw", "Battle Stance"],
+  Celesthorn: ["Time Warp", "All-Out Attack", "Combat Spirit"],
+  Magma: ["Spark Strike", "Mega Claw", "Line Breaker"],
+  Snaero: ["Ice Beam", "All-Out Attack", "Battle Stance"],
+  Frostin: ["Venom Chase", "Ice Beam", "Combat Spirit"],
+  Boltonia: ["All-Out Attack", "Lightning Storm", "Combat Spirit"],
+  Silvanarch: ["Giga Drain", "All-Out Attack", "Store Power"],
+};
+
 let cachedCatalog: unknown;
 let cachedAt = 0;
 let refreshInFlight: Promise<unknown> | null = null;
@@ -472,6 +522,18 @@ async function createCatalog(): Promise<unknown> {
         learnLevel: ULTIMATE_LEVELS[index],
       });
     });
+  }
+  for (const [baseName, moveNames] of Object.entries(SUPPLEMENTAL_UNIQUE_MOVES)) {
+    const basePet = petsByName.get(baseName);
+    if (!basePet) continue;
+    for (const moveName of moveNames) {
+      moveLinks.push({
+        petId: asString(basePet.id) ?? wikiSlug(baseName),
+        moveName,
+        slot: "level",
+        learnLevel: null,
+      });
+    }
   }
   for (const link of moveLinks) {
     const petId = asString(link.petId);

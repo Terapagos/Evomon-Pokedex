@@ -1,0 +1,216 @@
+
+
+
+Unique Learnable Skill:
+
+Blazmane:
+All-Out Attack
+Spark Strike
+Line Breaker
+
+Glacitadel:
+Ice Beam
+All-Out Attack
+Combat Spirit
+
+Volcrest:
+Cyclone Spiral
+Lightning Storm
+Combact Spirit
+
+Sundercrene:
+Dust Cyclone
+All-Out Attack
+Combat Spirit
+Air Slash
+
+Bubblade:
+All-Out Attack
+Bubble Slam
+Combat Spirit
+
+Chitaladin:
+Poison gas
+Battle Stance
+Venom Chase
+
+Lavarock:
+Dust Cyclone
+Spark Strike
+Line Breaker
+
+Frostseer:
+Ice Beam
+All-out Attack
+Store Power
+
+Tarragon:
+Giga Drain
+Dragon Breath
+Store Power
+
+Wisphex:
+Poison Gas
+Time Warp
+Combat Spirit
+
+Arcapex:
+Lightning Storm
+All-out Attack
+Bolt Strike
+Battle Stance
+
+Pummash:
+Mega Claw
+All-Out Attack
+Battle Stance
+
+Gempress:
+All-out Attack
+Venom Chase
+Store Power
+
+Datunymph:
+Giga Drain
+Time Warp
+Store Power
+
+Thordlord:
+Caltrop
+Giga Drain
+Combat Spirit
+
+Pebgolem:
+All-Out Attack
+Dust Cyclone
+Line Breaker
+
+Spikumane:
+Caltrop
+All-out Attack
+Line Breaker
+
+Fluffastar:
+All-Out Attack
+Dust Cyclone
+Line Breaker
+
+Chirphantom:
+Cyclone Spiral
+All-out Attack
+Battle Stance
+
+Mirefish: 
+Caltrop
+Bubble Slam
+Store Power
+
+Wispreign: 
+Dawnstrike
+All-out Attack
+Store Power
+
+Clanxor:
+Shadow Stab
+Neutron Pulse
+Line Breaker
+
+Clipexor:
+All-out Attack
+Line breaker
+Shadow Slab
+
+Goliath:
+Dawnstrike
+Caltrop
+Store Power
+
+Mopillow:
+Dust Cyclone
+Caltrop
+Combat Spirit
+
+Clamspire:
+All-out Attack
+Bubble Slam
+Battle Stance
+
+Empixy:
+All-out Attack
+Spark Strike
+Store Power
+
+Frostelle:
+Ice beam
+Combat Spirit
+Giga Drain
+
+Tinkore:
+Neutron Pulse
+All-out Attack
+Line Breaker
+
+Twirlby:
+Cyclone Spiral
+Venom Chase
+Battle Stance
+
+Sivanarch:
+Giga Drain
+All-out Attack
+Store power
+
+Viparch:
+Poison Gas
+All-out attack
+Battle Stance
+
+Starmuse:
+All-out attack
+Store Power
+Time Warp
+
+Leafblade:
+All-out Attack
+Giga Drain
+COmbat spirit
+
+Coulomtis:
+Ligtning Storm
+All-out attack
+Store power
+
+Cyanknight:
+Dust Cyclone
+Lightning Storm
+Store Power
+
+boltonia:
+All-out attack
+lightning storm
+combact spirit
+
+Astraknight:
+all-out attack
+mega claw
+battle stance
+
+celesthorn: 
+time warp
+all-out attack
+combat spirit
+
+magmaxor:
+spark strike
+mega claw
+line breaker
+
+Snarerolf:
+ice beam
+all-out attack
+battle stance
+
+frostclaw:
+venom chase
+ice beam 
+combat spirit
