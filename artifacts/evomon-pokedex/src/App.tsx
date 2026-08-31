@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, ChevronDown, Filter, Info, Mountain, RotateCcw, Search, Sparkles, X, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronDown, Filter, Info, Layers, Mountain, RotateCcw, Search, Sparkles, X, Zap } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams } from 'wouter';
 import { type Evomon, type EvomonMove, type MoveTag, evomonData } from '@/data/evomonData';
 import { useGetEvomonCatalog } from '@workspace/api-client-react';
@@ -276,8 +276,10 @@ function DetailField({ label, value, testId }: { label: string; value?: string; 
 function MoveCard({ move }: { move: EvomonMove }) {
   const level = move.unlockLevel !== null ? `Lv ${move.unlockLevel}` : 'Level unrecorded';
   const isRockMove = `${move.name} ${move.element}`.toLowerCase().includes('rock');
+  const isGroundMove = `${move.name} ${move.element}`.toLowerCase().includes('ground');
+  const isBattleMove = isRockMove || isGroundMove;
   return (
-    <article className={`move-card ${isRockMove ? 'move-card-rock' : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
+    <article className={`move-card ${isRockMove ? 'move-card-rock' : isGroundMove ? 'move-card-ground' : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
       {isRockMove ? (
         <div className="rock-move-face">
           <div className="rock-move-icon" aria-hidden="true"><Mountain size={34} strokeWidth={2.5} /></div>
@@ -286,6 +288,15 @@ function MoveCard({ move }: { move: EvomonMove }) {
             <span className="rock-move-power">{move.power ?? '—'}</span>
           </div>
           <div className="rock-move-uses"><Zap size={19} fill="currentColor" aria-hidden="true" /><b>{move.uses ?? '—'}</b></div>
+        </div>
+      ) : isGroundMove ? (
+        <div className="ground-move-face">
+          <div className="ground-move-icon" aria-hidden="true"><Layers size={34} strokeWidth={2.5} /></div>
+          <div className="ground-move-main">
+            <h3 className="font-display">{move.name}</h3>
+            <span className="ground-move-power">{move.power ?? '—'}</span>
+          </div>
+          <div className="ground-move-uses" aria-label={`${move.uses ?? 'Unrecorded'} uses`}><b>{move.uses !== null ? `${move.uses}/${move.uses}` : '—/—'}</b></div>
         </div>
       ) : (
         <div className="move-card-head">
@@ -301,7 +312,7 @@ function MoveCard({ move }: { move: EvomonMove }) {
       </div>
       <p className="move-description">{move.description}</p>
       <div className="move-meta">
-        {isRockMove ? <span>{move.slot === 'ultimate' ? 'Ultimate' : 'Unlock'} <b>{level}</b></span> : null}
+        {isBattleMove ? <span>{move.slot === 'ultimate' ? 'Ultimate' : 'Unlock'} <b>{level}</b></span> : null}
         <span>Power <b>{move.power ?? '—'}</b></span>
         <span>Uses <b>{move.uses ?? '—'}</b></span>
         {move.obtained ? <span className="move-obtained">{move.obtained}</span> : null}
