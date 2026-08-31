@@ -313,27 +313,40 @@ function Moveset({ moves }: { moves?: EvomonMove[] }) {
 const SKILL_ATTRIBUTES: MoveTag[] = ['Physical', 'Sp. Atk', 'Support', 'Status condition', 'Weather', 'AoE', 'Single target'];
 
 type SkillIndexEntry = {
+  key: string;
   move: EvomonMove;
-  learners: Array<{ entry: Evomon; unlockLevel: number | null; slot: string }>;
+  displayName: string;
+  ultimateRange?: string;
+  learners: Array<{ entry: Evomon; unlockLevel: number | null; slot: string; ultimateRange?: string }>;
 };
 
 function skillIndexFor(catalog: Evomon[]): SkillIndexEntry[] {
   const byName = new Map<string, SkillIndexEntry>();
   for (const entry of catalog) {
     for (const move of entry.moves ?? []) {
-      const current = byName.get(move.name) ?? { move, learners: [] };
-      current.learners.push({ entry, unlockLevel: move.unlockLevel, slot: move.slot });
-      byName.set(move.name, current);
+      const ultimateMatch = move.slot === 'ultimate' ? move.name.match(/^(.*) ([1-3])$/) : null;
+      const displayName = ultimateMatch?.[1] || move.name;
+      const key = ultimateMatch ? `ultimate:${displayName}` : `move:${move.name}`;
+      const current = byName.get(key) ?? {
+        key,
+        move,
+        displayName,
+        ultimateRange: ultimateMatch ? '1 → 3' : undefined,
+        learners: [],
+      };
+      const learner = { entry, unlockLevel: move.unlockLevel, slot: move.slot, ultimateRange: ultimateMatch ? '1 → 3' : undefined };
+      if (!current.learners.some(({ entry: learnerEntry }) => idFor(learnerEntry) === idFor(entry))) current.learners.push(learner);
+      byName.set(key, current);
     }
   }
-  return [...byName.values()].sort((a, b) => a.move.name.localeCompare(b.move.name));
+  return [...byName.values()].sort((a, b) => a.displayName.localeCompare(b.displayName));
 }
 
 function SkillLearner({ learner }: { learner: SkillIndexEntry['learners'][number] }) {
   return (
     <Link href={`/evomon/${encodeURIComponent(idFor(learner.entry))}`} className="skill-learner" data-testid={`skill-learner-${idFor(learner.entry)}`}>
       <span className="skill-learner-name">{learner.entry.name}</span>
-      <span className="skill-learner-level">{learner.slot === 'ultimate' ? 'ULT · ' : ''}Lv {learner.unlockLevel ?? '—'}</span>
+      <span className="skill-learner-level">{learner.ultimateRange ? `ULT · ${learner.ultimateRange}` : `${learner.slot === 'ultimate' ? 'ULT · ' : ''}Lv ${learner.unlockLevel ?? '—'}`}</span>
       <ArrowRight size={13} aria-hidden="true" />
     </Link>
   );
@@ -343,19 +356,19 @@ function Skills() {
   const { catalog, isLoading } = useCatalog();
   const [query, setQuery] = useState('');
   const [attribute, setAttribute] = useState<MoveTag | 'all'>('all');
-  const [selectedName, setSelectedName] = useState<string | null>(null);
+  const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const skills = useMemo(() => skillIndexFor(catalog), [catalog]);
   const attributeCounts = useMemo(() => Object.fromEntries(SKILL_ATTRIBUTES.map((tag) => [tag, skills.filter(({ move }) => move.tags.includes(tag)).length])), [skills]);
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    return skills.filter(({ move }) => (!normalized || move.name.toLowerCase().includes(normalized) || move.element.toLowerCase().includes(normalized)) && (attribute === 'all' || move.tags.includes(attribute)));
+    return skills.filter(({ displayName, move }) => (!normalized || displayName.toLowerCase().includes(normalized) || move.name.toLowerCase().includes(normalized) || move.element.toLowerCase().includes(normalized)) && (attribute === 'all' || move.tags.includes(attribute)));
   }, [attribute, query, skills]);
-  const selected = filtered.find(({ move }) => move.name === selectedName) ?? filtered[0];
+  const selected = filtered.find(({ key }) => key === selectedKey) ?? filtered[0];
 
   useEffect(() => {
-    if (selected && selected.move.name !== selectedName) setSelectedName(selected.move.name);
-    if (!selected) setSelectedName(null);
-  }, [selected, selectedName]);
+    if (selected && selected.key !== selectedKey) setSelectedKey(selected.key);
+    if (!selected) setSelectedKey(null);
+  }, [selected, selectedKey]);
 
   return (
     <Shell>
@@ -389,14 +402,14 @@ function Skills() {
                 ? <div className="skill-browser">
                   <div className="skill-results" role="listbox" aria-label="Skill results" data-testid="skill-results">
                     <div className="skill-results-heading"><span>{filtered.length} MATCHES</span><span>SELECT A RECORD</span></div>
-                    {filtered.map(({ move, learners }) => <button type="button" role="option" aria-selected={selected?.move.name === move.name} className={`skill-result ${selected?.move.name === move.name ? 'selected' : ''}`} onClick={() => setSelectedName(move.name)} key={move.name} data-testid={`skill-result-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
-                      <span className="skill-result-name">{move.name}</span>
+                    {filtered.map(({ key, move, displayName, ultimateRange, learners }) => <button type="button" role="option" aria-selected={selected?.key === key} className={`skill-result ${selected?.key === key ? 'selected' : ''}`} onClick={() => setSelectedKey(key)} key={key} data-testid={`skill-result-${displayName.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
+                      <span className="skill-result-name">{displayName}{ultimateRange ? ` · Ultimate ${ultimateRange}` : ''}</span>
                       <span className="skill-result-meta">{move.element} · {learners.length} Mon</span>
                       <ArrowRight size={14} aria-hidden="true" />
                     </button>)}
                   </div>
                   {selected && <article className="skill-detail" data-testid="skill-detail">
-                    <div className="skill-detail-top"><div><span className="move-level">{selected.move.slot === 'ultimate' ? 'ULTIMATE RECORD' : 'LEARNABLE RECORD'}</span><h2 className="font-display">{selected.move.name}</h2></div><span className="move-element">{selected.move.element}</span></div>
+                    <div className="skill-detail-top"><div><span className="move-level">{selected.ultimateRange ? `ULTIMATE ${selected.ultimateRange}` : selected.move.slot === 'ultimate' ? 'ULTIMATE RECORD' : 'LEARNABLE RECORD'}</span><h2 className="font-display">{selected.displayName}</h2></div><span className="move-element">{selected.move.element}</span></div>
                     <div className="move-tags">{selected.move.tags.map((tag) => <span className={`move-tag move-tag-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`} key={tag}>{tag}</span>)}</div>
                     <p className="skill-detail-description">{selected.move.description}</p>
                     <div className="skill-detail-stats"><span>Power <b>{selected.move.power ?? '—'}</b></span><span>Uses <b>{selected.move.uses ?? '—'}</b></span><span>{selected.move.obtained ?? 'Source unrecorded'}</span></div>
