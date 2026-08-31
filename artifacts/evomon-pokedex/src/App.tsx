@@ -273,7 +273,7 @@ function DetailField({ label, value, testId }: { label: string; value?: string; 
   return <div className="detail-field"><span className="field-label">{label}</span><p data-testid={testId}>{value || missing}</p></div>;
 }
 
-type BattleMoveStyle = 'rock' | 'ground' | 'normal' | 'fire' | 'ice' | 'flying' | 'electric' | 'water' | 'fighting';
+type BattleMoveStyle = 'rock' | 'ground' | 'normal' | 'fire' | 'ice' | 'flying' | 'electric' | 'water' | 'fighting' | 'dark' | 'steel' | 'psychic' | 'light' | 'dragon' | 'bug' | 'poison' | 'grass';
 
 const BATTLE_MOVE_ICONS: Record<BattleMoveStyle, LucideIcon> = {
   rock: Mountain,
@@ -285,6 +285,14 @@ const BATTLE_MOVE_ICONS: Record<BattleMoveStyle, LucideIcon> = {
   electric: Zap,
   water: Droplet,
   fighting: HandFist,
+  dark: Moon,
+  steel: Cog,
+  psychic: InfinityIcon,
+  light: Sparkles,
+  dragon: Crown,
+  bug: Bug,
+  poison: Droplets,
+  grass: Leaf,
 };
 
 function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveStyle }) {
@@ -324,6 +332,8 @@ function MoveCard({ move }: { move: EvomonMove }) {
                   ? 'water'
                   : moveText.includes('fighting')
                     ? 'fighting'
+                    : moveText.includes('poison')
+                      ? 'poison'
               : null;
   return (
     <article className={`move-card ${battleMoveStyle ? `move-card-${battleMoveStyle}` : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
@@ -374,22 +384,7 @@ type SkillIndexEntry = {
   learners: Array<{ entry: Evomon; unlockLevel: number | null; slot: string; ultimateRange?: string }>;
 };
 
-type SkillElementStyle = 'dark' | 'steel' | 'psychic' | 'light' | 'dragon' | 'bug' | 'poison' | 'grass' | 'electric' | 'water' | 'fighting' | 'ice';
-
-const SKILL_ELEMENT_ICONS: Record<SkillElementStyle, LucideIcon> = {
-  dark: Moon,
-  steel: Cog,
-  psychic: InfinityIcon,
-  light: Sparkles,
-  dragon: Crown,
-  bug: Bug,
-  poison: Droplets,
-  grass: Leaf,
-  electric: Zap,
-  water: Droplet,
-  fighting: HandFist,
-  ice: Snowflake,
-};
+type SkillElementStyle = Exclude<BattleMoveStyle, 'rock' | 'ground' | 'normal' | 'fire' | 'flying'>;
 
 function skillElementStyleFor(element: string): SkillElementStyle | null {
   const normalized = element.toLowerCase();
@@ -499,9 +494,9 @@ function Skills() {
                     {filtered.map(({ key, move, displayName, ultimateRange, learners }) => {
                       const elementStyle = skillElementStyleFor(move.element);
                       const resultLevel = move.unlockLevel !== null ? `Lv.${move.unlockLevel}` : move.slot === 'ultimate' ? 'ULT' : 'Lv.—';
-                      const ElementIcon = elementStyle ? SKILL_ELEMENT_ICONS[elementStyle] : Info;
+                      const ElementIcon = elementStyle ? BATTLE_MOVE_ICONS[elementStyle] : BATTLE_MOVE_ICONS.normal;
                       return <button type="button" role="option" aria-selected={selected?.key === key} aria-label={`${displayName}, ${move.element}, ${resultLevel}, ${learners.length} Mon`} className={`skill-result ${elementStyle ? `skill-result-${elementStyle}` : 'skill-result-default'} ${selected?.key === key ? 'selected' : ''}`} onClick={() => setSelectedKey(key)} key={key} data-testid={`skill-result-${displayName.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
-                        <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' || elementStyle === 'grass' || elementStyle === 'electric' || elementStyle === 'water' || elementStyle === 'fighting' || elementStyle === 'ice' ? 'currentColor' : undefined} /></span>
+                        <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={!elementStyle || elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' || elementStyle === 'grass' || elementStyle === 'electric' || elementStyle === 'water' || elementStyle === 'fighting' || elementStyle === 'ice' ? 'currentColor' : undefined} /></span>
                         <span className="skill-result-name">{displayName}{ultimateRange ? ` · Ultimate ${ultimateRange}` : ''}</span>
                         <span className="skill-result-meta">{resultLevel}</span>
                         <span className="skill-result-record" title={`${learners.length} Mon learn this skill`} aria-hidden="true"><BookOpen size={19} strokeWidth={2.6} /></span>
