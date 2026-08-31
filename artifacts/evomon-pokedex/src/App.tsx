@@ -460,15 +460,17 @@ function SkillLearner({ learner }: { learner: SkillIndexEntry['learners'][number
 function Skills() {
   const { catalog, isLoading } = useCatalog();
   const [query, setQuery] = useState('');
-  const [attribute, setAttribute] = useState<MoveTag | 'all'>('all');
+  const [attribute, setAttribute] = useState<MoveTag | 'all' | 'ultimate'>('all');
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const skills = useMemo(() => skillIndexFor(catalog), [catalog]);
   const attributeCounts = useMemo(() => Object.fromEntries(SKILL_ATTRIBUTES.map((tag) => [tag, skills.filter(({ move }) => move.tags.includes(tag)).length])), [skills]);
+  const ultimateCount = useMemo(() => skills.filter(({ move }) => move.slot === 'ultimate').length, [skills]);
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return skills.filter(({ displayName, move }) => {
       const searchableText = [displayName, move.name, move.element, move.description, move.obtained ?? '', move.unlockLevel === null ? 'Skill cache' : '', ...move.tags].join(' ').toLowerCase();
-      return (!normalized || searchableText.includes(normalized)) && (attribute === 'all' || move.tags.includes(attribute));
+      const matchesFilter = attribute === 'all' ? true : attribute === 'ultimate' ? move.slot === 'ultimate' : move.tags.includes(attribute);
+      return (!normalized || searchableText.includes(normalized)) && matchesFilter;
     });
   }, [attribute, query, skills]);
   const selected = filtered.find(({ key }) => key === selectedKey) ?? filtered[0];
@@ -499,8 +501,9 @@ function Skills() {
                 <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search skill, effect, or element" aria-label="Search skills, effects, or elements" data-testid="input-search-skills" />
                 {query && <button type="button" className="clear-search" onClick={() => setQuery('')} aria-label="Clear skill search" data-testid="button-clear-skill-search"><X size={15} /></button>}
               </div>
-              <div className="skill-attributes" role="group" aria-label="Filter by skill attribute">
+              <div className="skill-attributes" role="group" aria-label="Filter by skill attribute or type">
                 <button type="button" className={attribute === 'all' ? 'selected' : ''} onClick={() => setAttribute('all')} aria-pressed={attribute === 'all'} data-testid="button-skill-attribute-all">All <span>{skills.length}</span></button>
+                <button type="button" className={attribute === 'ultimate' ? 'selected' : ''} onClick={() => setAttribute('ultimate')} aria-pressed={attribute === 'ultimate'} data-testid="button-skill-attribute-ultimate">Ultimate <span>{ultimateCount}</span></button>
                 {SKILL_ATTRIBUTES.map((tag) => <button type="button" className={attribute === tag ? 'selected' : ''} onClick={() => setAttribute(tag)} aria-pressed={attribute === tag} key={tag} data-testid={`button-skill-attribute-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>{tag} <span>{attributeCounts[tag] ?? 0}</span></button>)}
               </div>
             </div>
