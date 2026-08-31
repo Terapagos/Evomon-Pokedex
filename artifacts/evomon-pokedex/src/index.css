@@ -346,6 +346,8 @@
 .evolution-node { flex: 1; min-width: 135px; display: flex; align-items: center; gap: 11px; color: hsl(var(--muted-foreground)); }
 .evolution-node > span { font-family: var(--app-font-mono); font-size: 8px; color: hsl(var(--primary)); }
 .evolution-node b { font-family: var(--app-font-display); font-size: 22px; font-weight: 600; color: hsl(var(--device-deep)); white-space: nowrap; }
+.evolution-node b a { color: inherit; text-decoration: none; }
+.evolution-node b a:hover, .evolution-node b a:focus-visible { color: hsl(var(--primary)); }
 .evolution-node svg { margin-left: auto; color: hsl(var(--primary)); margin-right: 11px; }
 .evolution-node.current b { color: hsl(var(--primary)); }
 .moves-section { padding: 48px 13px 58px; background: hsl(var(--screen)); border-top: 1px solid hsl(var(--device-deep) / .14); }
