@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Bug, ChevronDown, Cog, Crown, Droplets, Feather, Filter, Flame, Infinity as InfinityIcon, Info, Layers, Moon, Mountain, RotateCcw, Search, Snowflake, Sparkles, Star, X, Zap, type LucideIcon } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Bug, ChevronDown, Cog, Crown, Droplet, Droplets, Feather, Filter, Flame, HandFist, Infinity as InfinityIcon, Info, Layers, Leaf, Moon, Mountain, RotateCcw, Search, Snowflake, Sparkles, Star, X, Zap, type LucideIcon } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams } from 'wouter';
 import { type Evomon, type EvomonMove, type MoveTag, evomonData } from '@/data/evomonData';
 import { useGetEvomonCatalog } from '@workspace/api-client-react';
@@ -368,7 +368,7 @@ type SkillIndexEntry = {
   learners: Array<{ entry: Evomon; unlockLevel: number | null; slot: string; ultimateRange?: string }>;
 };
 
-type SkillElementStyle = 'dark' | 'steel' | 'psychic' | 'light' | 'dragon' | 'bug' | 'poison';
+type SkillElementStyle = 'dark' | 'steel' | 'psychic' | 'light' | 'dragon' | 'bug' | 'poison' | 'grass' | 'electric' | 'water' | 'fighting';
 
 const SKILL_ELEMENT_ICONS: Record<SkillElementStyle, LucideIcon> = {
   dark: Moon,
@@ -378,6 +378,10 @@ const SKILL_ELEMENT_ICONS: Record<SkillElementStyle, LucideIcon> = {
   dragon: Crown,
   bug: Bug,
   poison: Droplets,
+  grass: Leaf,
+  electric: Zap,
+  water: Droplet,
+  fighting: HandFist,
 };
 
 function skillElementStyleFor(element: string): SkillElementStyle | null {
@@ -389,6 +393,10 @@ function skillElementStyleFor(element: string): SkillElementStyle | null {
   if (normalized.includes('dragon')) return 'dragon';
   if (normalized.includes('bug')) return 'bug';
   if (normalized.includes('poison')) return 'poison';
+  if (normalized.includes('grass')) return 'grass';
+  if (normalized.includes('electric')) return 'electric';
+  if (normalized.includes('water')) return 'water';
+  if (normalized.includes('fighting')) return 'fighting';
   return null;
 }
 
@@ -485,7 +493,7 @@ function Skills() {
                       const resultLevel = move.unlockLevel !== null ? `Lv.${move.unlockLevel}` : move.slot === 'ultimate' ? 'ULT' : 'Lv.—';
                       const ElementIcon = elementStyle ? SKILL_ELEMENT_ICONS[elementStyle] : Info;
                       return <button type="button" role="option" aria-selected={selected?.key === key} aria-label={`${displayName}, ${move.element}, ${resultLevel}, ${learners.length} Mon`} className={`skill-result ${elementStyle ? `skill-result-${elementStyle}` : 'skill-result-default'} ${selected?.key === key ? 'selected' : ''}`} onClick={() => setSelectedKey(key)} key={key} data-testid={`skill-result-${displayName.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
-                        <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' ? 'currentColor' : undefined} /></span>
+                        <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' || elementStyle === 'grass' || elementStyle === 'electric' || elementStyle === 'water' || elementStyle === 'fighting' ? 'currentColor' : undefined} /></span>
                         <span className="skill-result-name">{displayName}{ultimateRange ? ` · Ultimate ${ultimateRange}` : ''}</span>
                         <span className="skill-result-meta">{resultLevel}</span>
                         <span className="skill-result-record" title={`${learners.length} Mon learn this skill`} aria-hidden="true"><BookOpen size={19} strokeWidth={2.6} /></span>

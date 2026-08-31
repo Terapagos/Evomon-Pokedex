@@ -271,7 +271,11 @@
 .skill-result-dragon { --skill-color: hsl(230 82% 69%); }
 .skill-result-bug { --skill-color: hsl(61 51% 49%); }
 .skill-result-poison { --skill-color: hsl(282 65% 64%); }
-.skill-result-default, .skill-result-dark, .skill-result-steel, .skill-result-psychic, .skill-result-light, .skill-result-dragon, .skill-result-bug, .skill-result-poison { background: linear-gradient(73deg, var(--skill-color) 0 68%, hsl(0 0% 7%) 68% 71%, hsl(0 0% 14%) 71% 100%); }
+.skill-result-grass { --skill-color: hsl(116 71% 69%); }
+.skill-result-electric { --skill-color: hsl(48 95% 65%); }
+.skill-result-water { --skill-color: hsl(193 73% 67%); }
+.skill-result-fighting { --skill-color: hsl(0 64% 58%); }
+.skill-result-default, .skill-result-dark, .skill-result-steel, .skill-result-psychic, .skill-result-light, .skill-result-dragon, .skill-result-bug, .skill-result-poison, .skill-result-grass, .skill-result-electric, .skill-result-water, .skill-result-fighting { background: linear-gradient(73deg, var(--skill-color) 0 68%, hsl(0 0% 7%) 68% 71%, hsl(0 0% 14%) 71% 100%); }
 .skill-result-dark .skill-result-icon { color: hsl(258 66% 78%); }
 .skill-result-steel .skill-result-icon { color: hsl(220 76% 78%); }
 .skill-result-psychic .skill-result-icon { color: hsl(294 75% 72%); }
@@ -279,6 +283,10 @@
 .skill-result-dragon .skill-result-icon { color: hsl(230 82% 69%); }
 .skill-result-bug .skill-result-icon { color: hsl(61 51% 49%); }
 .skill-result-poison .skill-result-icon { color: hsl(282 65% 64%); }
+.skill-result-grass .skill-result-icon { color: hsl(116 71% 69%); }
+.skill-result-electric .skill-result-icon { color: hsl(48 95% 65%); }
+.skill-result-water .skill-result-icon { color: hsl(193 73% 67%); }
+.skill-result-fighting .skill-result-icon { color: hsl(0 64% 58%); }
 .skill-detail { padding: 22px; }
 .skill-detail-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; }
 .skill-detail h2 { margin: 0; color: hsl(var(--device-deep)); font-size: clamp(33px, 4vw, 50px); line-height: .9; letter-spacing: -.05em; }
