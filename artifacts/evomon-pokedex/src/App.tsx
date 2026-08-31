@@ -82,6 +82,7 @@ function Shell({ children }: { children: ReactNode }) {
       <footer className="site-footer">
         <span>EVOMON / FIELD GUIDE</span>
         <span>FIELD ARCHIVE / 01</span>
+        <a href="https://www.evomon.wiki/" target="_blank" rel="noreferrer">SOURCE / EVOMON.WIKI</a>
         <span>ARCHIVE BUILD 01.01</span>
       </footer>
     </div>
