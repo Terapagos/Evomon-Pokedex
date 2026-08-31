@@ -264,6 +264,7 @@ const SUPPLEMENTAL_UNIQUE_MOVES: Record<string, string[]> = {
   Stardrift: ["Ice Beam", "Combat Spirit", "Giga Drain"],
   Tinkog: ["Neutron Pulse", "All-Out Attack", "Line Breaker"],
   Humding: ["Cyclone Spiral", "Venom Chase", "Battle Stance"],
+  Ignibud: ["Venom Chase", "Ice Beam", "Combat Spirit"],
   Budling: ["Giga Drain", "All-Out Attack", "Store Power"],
   Vipip: ["Poison Gas", "All-Out Attack", "Battle Stance"],
   Starloop: ["All-Out Attack", "Store Power", "Time Warp"],
