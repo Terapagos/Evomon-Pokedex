@@ -364,7 +364,10 @@ function Skills() {
   const attributeCounts = useMemo(() => Object.fromEntries(SKILL_ATTRIBUTES.map((tag) => [tag, skills.filter(({ move }) => move.tags.includes(tag)).length])), [skills]);
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-    return skills.filter(({ displayName, move }) => (!normalized || displayName.toLowerCase().includes(normalized) || move.name.toLowerCase().includes(normalized) || move.element.toLowerCase().includes(normalized)) && (attribute === 'all' || move.tags.includes(attribute)));
+    return skills.filter(({ displayName, move }) => {
+      const searchableText = [displayName, move.name, move.element, move.description, move.obtained ?? '', ...move.tags].join(' ').toLowerCase();
+      return (!normalized || searchableText.includes(normalized)) && (attribute === 'all' || move.tags.includes(attribute));
+    });
   }, [attribute, query, skills]);
   const selected = filtered.find(({ key }) => key === selectedKey) ?? filtered[0];
 
@@ -391,7 +394,7 @@ function Skills() {
             <div className="skill-toolbar">
               <div className="control-search">
                 <Search size={16} aria-hidden="true" />
-                <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search skill or element" aria-label="Search skills" data-testid="input-search-skills" />
+                <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search skill, effect, or element" aria-label="Search skills, effects, or elements" data-testid="input-search-skills" />
                 {query && <button type="button" className="clear-search" onClick={() => setQuery('')} aria-label="Clear skill search" data-testid="button-clear-skill-search"><X size={15} /></button>}
               </div>
               <div className="skill-attributes" role="group" aria-label="Filter by skill attribute">
