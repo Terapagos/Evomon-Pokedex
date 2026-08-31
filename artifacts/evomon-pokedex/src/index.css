@@ -254,15 +254,13 @@
 .skill-results, .skill-detail { min-width: 0; background: hsl(var(--screen)); border: 1px solid hsl(var(--device-deep) / .24); }
 .skill-results { max-height: 680px; overflow-y: auto; scrollbar-color: hsl(var(--primary)) hsl(var(--screen-deep)); scrollbar-width: thin; }
 .skill-results-heading { display: flex; justify-content: space-between; gap: 10px; padding: 12px; color: hsl(var(--accent)); font-family: var(--app-font-mono); font-size: 7px; letter-spacing: .08em; }
-.skill-result { position: relative; width: calc(100% - 14px); display: grid; grid-template-columns: 57px minmax(0, 1fr) auto 38px; align-items: center; gap: 10px; min-height: 66px; margin: 7px; padding: 6px 9px; border: 3px solid hsl(192 12% 7%); border-radius: 28px; background: linear-gradient(73deg, hsl(0 0% 45%) 0 68%, hsl(0 0% 7%) 68% 71%, hsl(0 0% 14%) 71% 100%); color: hsl(0 0% 100%); text-align: left; cursor: pointer; overflow: visible; }
+.skill-result { position: relative; width: calc(100% - 14px); display: grid; grid-template-columns: 57px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 66px; margin: 7px; padding: 6px 9px; border: 3px solid hsl(192 12% 7%); border-radius: 28px; background: linear-gradient(73deg, hsl(0 0% 45%) 0 68%, hsl(0 0% 7%) 68% 71%, hsl(0 0% 14%) 71% 100%); color: hsl(0 0% 100%); text-align: left; cursor: pointer; overflow: visible; }
 .skill-result:hover { filter: brightness(1.08); }
 .skill-result.selected { box-shadow: inset 0 0 0 2px hsl(var(--secondary)), 0 0 0 2px hsl(var(--primary)); }
 .skill-result-name { position: relative; z-index: 1; overflow: hidden; color: hsl(0 0% 100%); text-overflow: ellipsis; white-space: nowrap; font-family: var(--app-font-display); font-size: 17px; font-weight: 700; text-shadow: 2px 2px 0 hsl(0 0% 0%), -1px -1px 0 hsl(0 0% 0%), 1px -1px 0 hsl(0 0% 0%), -1px 1px 0 hsl(0 0% 0%); }
 .skill-result-meta { position: relative; z-index: 1; color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 17px; font-weight: 700; letter-spacing: 0; text-shadow: 2px 2px 0 hsl(0 0% 0%), -1px -1px 0 hsl(0 0% 0%), 1px -1px 0 hsl(0 0% 0%), -1px 1px 0 hsl(0 0% 0%); white-space: nowrap; }
 .skill-result-icon { position: relative; z-index: 1; width: 51px; height: 51px; display: grid; place-items: center; border-radius: 50%; background: hsl(0 0% 0%); color: hsl(0 0% 100%); }
 .skill-result-icon svg { color: currentColor; }
-.skill-result-record { position: relative; z-index: 2; width: 36px; height: 31px; display: grid; place-items: center; align-self: start; margin: -13px -10px 0 0; border: 2px solid hsl(0 0% 4%); border-radius: 11px 11px 11px 4px; background: hsl(137 88% 60%); color: hsl(140 46% 10%); box-shadow: 2px 2px 0 hsl(0 0% 4%); transform: rotate(-1deg); }
-.skill-result-record::after { content: ''; position: absolute; left: 3px; bottom: -6px; border-top: 7px solid hsl(137 88% 60%); border-right: 7px solid transparent; }
 .skill-result-default { --skill-color: hsl(0 0% 45%); }
 .skill-result-rock { --skill-color: hsl(184 17% 68%); }
 .skill-result-ground { --skill-color: hsl(24 58% 53%); }
@@ -301,8 +299,6 @@
 .skill-result-water .skill-result-icon { color: hsl(193 73% 67%); }
 .skill-result-fighting .skill-result-icon { color: hsl(0 64% 58%); }
 .skill-result-ice .skill-result-icon { color: hsl(184 76% 76%); }
-.skill-result-ice .skill-result-record { background: hsl(49 96% 61%); }
-.skill-result-ice .skill-result-record::after { border-top-color: hsl(49 96% 61%); }
 .skill-detail { padding: 22px; }
 .skill-detail-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; }
 .skill-detail h2 { margin: 0; color: hsl(var(--device-deep)); font-size: clamp(33px, 4vw, 50px); line-height: .9; letter-spacing: -.05em; }

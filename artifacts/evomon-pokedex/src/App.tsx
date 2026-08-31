@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Bug, ChevronDown, Cog, Crown, Droplet, Droplets, Feather, Filter, Flame, HandFist, Infinity as InfinityIcon, Info, Layers, Leaf, Moon, Mountain, RotateCcw, Search, Snowflake, Sparkles, Star, X, Zap, type LucideIcon } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bug, ChevronDown, Cog, Crown, Droplet, Droplets, Feather, Filter, Flame, HandFist, Infinity as InfinityIcon, Info, Layers, Leaf, Moon, Mountain, RotateCcw, Search, Snowflake, Sparkles, Star, X, Zap, type LucideIcon } from 'lucide-react';
 import { Link, Route, Switch, useLocation, useParams } from 'wouter';
 import { type Evomon, type EvomonMove, type MoveTag, evomonData } from '@/data/evomonData';
 import { useGetEvomonCatalog } from '@workspace/api-client-react';
@@ -518,7 +518,6 @@ function Skills() {
                         <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={!elementStyle || elementStyle === 'normal' || elementStyle === 'fire' || elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' || elementStyle === 'grass' || elementStyle === 'electric' || elementStyle === 'water' || elementStyle === 'fighting' || elementStyle === 'ice' ? 'currentColor' : undefined} /></span>
                         <span className="skill-result-name">{displayName}{ultimateRange ? ` · Ultimate ${ultimateRange}` : ''}</span>
                         <span className="skill-result-meta">{resultLevel}</span>
-                        <span className="skill-result-record" title={`${learners.length} Mon learn this skill`} aria-hidden="true"><BookOpen size={19} strokeWidth={2.6} /></span>
                       </button>;
                     })}
                   </div>
