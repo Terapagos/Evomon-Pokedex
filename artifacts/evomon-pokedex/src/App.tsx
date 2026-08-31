@@ -273,7 +273,7 @@ function DetailField({ label, value, testId }: { label: string; value?: string; 
   return <div className="detail-field"><span className="field-label">{label}</span><p data-testid={testId}>{value || missing}</p></div>;
 }
 
-type BattleMoveStyle = 'rock' | 'ground' | 'normal' | 'fire' | 'ice' | 'flying';
+type BattleMoveStyle = 'rock' | 'ground' | 'normal' | 'fire' | 'ice' | 'flying' | 'electric';
 
 const BATTLE_MOVE_ICONS: Record<BattleMoveStyle, LucideIcon> = {
   rock: Mountain,
@@ -282,20 +282,21 @@ const BATTLE_MOVE_ICONS: Record<BattleMoveStyle, LucideIcon> = {
   fire: Flame,
   ice: Snowflake,
   flying: Feather,
+  electric: Zap,
 };
 
 function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveStyle }) {
   const Icon = BATTLE_MOVE_ICONS[style];
   const prefix = `${style}-move`;
-  const uses = style === 'rock' ? (move.uses ?? '—') : move.uses !== null ? `${move.uses}/${move.uses}` : '—/—';
+  const uses = style === 'rock' || style === 'electric' ? (move.uses ?? '—') : move.uses !== null ? `${move.uses}/${move.uses}` : '—/—';
   return (
     <div className={`${prefix}-face`}>
-      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' ? 'currentColor' : undefined} /></div>
+      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' || style === 'electric' ? 'currentColor' : undefined} /></div>
       <div className={`${prefix}-main`}>
         <h3 className="font-display">{move.name}</h3>
         <span className={`${prefix}-power`}>{move.power ?? (style === 'normal' ? '--' : '—')}</span>
       </div>
-      <div className={`${prefix}-uses`} aria-label={`${move.uses ?? 'Unrecorded'} uses`}>{style === 'rock' ? <Zap size={19} fill="currentColor" aria-hidden="true" /> : null}<b>{uses}</b></div>
+      <div className={`${prefix}-uses`} aria-label={`${move.uses ?? 'Unrecorded'} uses`}>{style === 'rock' || style === 'electric' ? <Zap size={19} fill="currentColor" aria-hidden="true" /> : null}<b>{uses}</b></div>
     </div>
   );
 }
@@ -315,6 +316,8 @@ function MoveCard({ move }: { move: EvomonMove }) {
             ? 'ice'
             : moveText.includes('flying')
               ? 'flying'
+              : moveText.includes('electric')
+                ? 'electric'
               : null;
   return (
     <article className={`move-card ${battleMoveStyle ? `move-card-${battleMoveStyle}` : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
