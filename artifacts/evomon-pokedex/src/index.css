@@ -380,6 +380,18 @@
 .move-card-ground .move-tags { margin: 9px 4px 0; }
 .move-card-ground .move-description { margin-inline: 4px; }
 .move-card-ground .move-meta { margin-inline: 4px; }
+.move-card-normal { padding: 8px; border: 4px solid hsl(var(--device-deep)); border-radius: 27px; background: hsl(0 0% 83%); box-shadow: 0 4px 0 hsl(var(--device-deep) / .45); overflow: hidden; }
+.normal-move-face { display: grid; grid-template-columns: 62px minmax(0, 1fr) 82px; align-items: center; gap: 11px; min-height: 88px; padding: 8px 10px; border-radius: 20px; background: linear-gradient(76deg, hsl(0 0% 83%) 0 69%, hsl(0 0% 7%) 69% 72%, hsl(0 0% 13%) 72% 100%); }
+.normal-move-icon { position: relative; width: 57px; height: 57px; display: grid; place-items: center; border-radius: 50%; background: hsl(0 0% 0%); color: hsl(0 0% 0%); }
+.normal-move-icon::before { content: ''; position: absolute; inset: 7px; border-radius: 50%; background: hsl(0 0% 96%); }
+.normal-move-icon svg { position: relative; z-index: 1; }
+.normal-move-main { min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.normal-move-main h3 { width: 100%; overflow: hidden; color: hsl(0 0% 100%); font-size: clamp(17px, 2.2vw, 27px); line-height: .95; letter-spacing: -.025em; text-align: center; text-overflow: ellipsis; text-shadow: 2px 2px 0 hsl(0 0% 0%), -1px -1px 0 hsl(0 0% 0%), 1px -1px 0 hsl(0 0% 0%), -1px 1px 0 hsl(0 0% 0%); white-space: nowrap; }
+.normal-move-power { width: min(100%, 178px); padding: 5px 10px 4px; border-radius: 15px; background: hsl(0 0% 56%); color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 25px; font-weight: 700; line-height: .9; text-align: center; text-shadow: 2px 2px 0 hsl(0 0% 0%); }
+.normal-move-uses { display: flex; align-items: center; justify-content: center; min-height: 38px; padding: 6px 8px; border-radius: 22px; color: hsl(0 0% 100%); font-family: var(--app-font-display); font-size: 21px; line-height: 1; text-shadow: 2px 2px 0 hsl(0 0% 0%); }
+.move-card-normal .move-tags { margin: 9px 4px 0; }
+.move-card-normal .move-description { margin-inline: 4px; }
+.move-card-normal .move-meta { margin-inline: 4px; }
 .move-element { flex: none; padding: 5px 7px 4px; border-radius: 3px; background: hsl(var(--accent) / .13); color: hsl(var(--accent)); font-family: var(--app-font-mono); font-size: 7px; letter-spacing: .06em; text-transform: uppercase; }
 .move-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 13px; }
 .move-tag { padding: 4px 6px 3px; border: 1px solid hsl(var(--device-deep) / .15); color: hsl(var(--device-deep) / .72); background: hsl(var(--screen)); font-family: var(--app-font-mono); font-size: 7px; line-height: 1; letter-spacing: .03em; text-transform: uppercase; }
