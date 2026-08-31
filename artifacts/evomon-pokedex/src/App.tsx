@@ -301,7 +301,7 @@ function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveSt
   const uses = style === 'rock' || style === 'electric' ? (move.uses ?? '—') : move.uses !== null ? `${move.uses}/${move.uses}` : '—/—';
   return (
     <div className={`${prefix}-face`}>
-      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' || style === 'electric' || style === 'water' || style === 'fighting' ? 'currentColor' : undefined} /></div>
+      <div className={`${prefix}-icon`} aria-hidden="true"><Icon size={style === 'normal' ? 28 : 34} strokeWidth={2.5} fill={style === 'normal' || style === 'fire' || style === 'flying' || style === 'electric' || style === 'water' || style === 'fighting' || style === 'bug' || style === 'poison' ? 'currentColor' : undefined} /></div>
       <div className={`${prefix}-main`}>
         <h3 className="font-display">{move.name}</h3>
         <span className={`${prefix}-power`}>{move.power ?? (style === 'normal' ? '--' : '—')}</span>
@@ -312,7 +312,7 @@ function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveSt
 }
 
 function MoveCard({ move }: { move: EvomonMove }) {
-  const level = move.unlockLevel !== null ? `Lv ${move.unlockLevel}` : 'Level unrecorded';
+  const level = move.unlockLevel !== null ? `Lv ${move.unlockLevel}` : 'Skill cache';
   const moveText = `${move.name} ${move.element}`.toLowerCase();
   const battleMoveStyle: BattleMoveStyle | null = moveText.includes('rock')
     ? 'rock'
@@ -334,6 +334,8 @@ function MoveCard({ move }: { move: EvomonMove }) {
                     ? 'fighting'
                     : moveText.includes('poison')
                       ? 'poison'
+                      : moveText.includes('bug')
+                        ? 'bug'
               : null;
   return (
     <article className={`move-card ${battleMoveStyle ? `move-card-${battleMoveStyle}` : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
@@ -351,10 +353,10 @@ function MoveCard({ move }: { move: EvomonMove }) {
       </div>
       <p className="move-description">{move.description}</p>
       <div className="move-meta">
-        {battleMoveStyle ? <span>{move.slot === 'ultimate' ? 'Ultimate' : 'Unlock'} <b>{level}</b></span> : null}
+        {battleMoveStyle ? <span>{move.unlockLevel === null ? <b>Skill cache</b> : <>{move.slot === 'ultimate' ? 'Ultimate' : 'Unlock'} <b>{level}</b></>}</span> : null}
         <span>Power <b>{move.power ?? '—'}</b></span>
         <span>Uses <b>{move.uses ?? '—'}</b></span>
-        {move.obtained ? <span className="move-obtained">{move.obtained}</span> : null}
+        {move.obtained || move.unlockLevel === null ? <span className="move-obtained">{move.obtained ?? 'Skill cache'}</span> : null}
       </div>
     </article>
   );
@@ -432,7 +434,7 @@ function SkillLearner({ learner }: { learner: SkillIndexEntry['learners'][number
   return (
     <Link href={`/evomon/${encodeURIComponent(idFor(learner.entry))}`} className="skill-learner" data-testid={`skill-learner-${idFor(learner.entry)}`}>
       <span className="skill-learner-name">{learner.entry.name}</span>
-      <span className="skill-learner-level">{learner.ultimateRange ? `ULT · ${learner.ultimateRange}` : `${learner.slot === 'ultimate' ? 'ULT · ' : ''}Lv ${learner.unlockLevel ?? '—'}`}</span>
+      <span className="skill-learner-level">{learner.ultimateRange ? `ULT · ${learner.ultimateRange}` : learner.unlockLevel !== null ? `${learner.slot === 'ultimate' ? 'ULT · ' : ''}Lv ${learner.unlockLevel}` : 'Skill cache'}</span>
       <ArrowRight size={13} aria-hidden="true" />
     </Link>
   );
@@ -448,7 +450,7 @@ function Skills() {
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     return skills.filter(({ displayName, move }) => {
-      const searchableText = [displayName, move.name, move.element, move.description, move.obtained ?? '', ...move.tags].join(' ').toLowerCase();
+      const searchableText = [displayName, move.name, move.element, move.description, move.obtained ?? '', move.unlockLevel === null ? 'Skill cache' : '', ...move.tags].join(' ').toLowerCase();
       return (!normalized || searchableText.includes(normalized)) && (attribute === 'all' || move.tags.includes(attribute));
     });
   }, [attribute, query, skills]);
@@ -493,7 +495,7 @@ function Skills() {
                     <div className="skill-results-heading"><span>{filtered.length} MATCHES</span><span>SELECT A RECORD</span></div>
                     {filtered.map(({ key, move, displayName, ultimateRange, learners }) => {
                       const elementStyle = skillElementStyleFor(move.element);
-                      const resultLevel = move.unlockLevel !== null ? `Lv.${move.unlockLevel}` : move.slot === 'ultimate' ? 'ULT' : 'Lv.—';
+                      const resultLevel = move.unlockLevel !== null ? `Lv.${move.unlockLevel}` : move.slot === 'ultimate' ? 'ULT' : 'Skill cache';
                       const ElementIcon = elementStyle ? BATTLE_MOVE_ICONS[elementStyle] : BATTLE_MOVE_ICONS.normal;
                       return <button type="button" role="option" aria-selected={selected?.key === key} aria-label={`${displayName}, ${move.element}, ${resultLevel}, ${learners.length} Mon`} className={`skill-result ${elementStyle ? `skill-result-${elementStyle}` : 'skill-result-default'} ${selected?.key === key ? 'selected' : ''}`} onClick={() => setSelectedKey(key)} key={key} data-testid={`skill-result-${displayName.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
                         <span className="skill-result-icon" aria-hidden="true"><ElementIcon size={29} strokeWidth={2.5} fill={!elementStyle || elementStyle === 'light' || elementStyle === 'dragon' || elementStyle === 'bug' || elementStyle === 'poison' || elementStyle === 'grass' || elementStyle === 'electric' || elementStyle === 'water' || elementStyle === 'fighting' || elementStyle === 'ice' ? 'currentColor' : undefined} /></span>
@@ -507,7 +509,7 @@ function Skills() {
                     <div className="skill-detail-top"><div><span className="move-level">{selected.ultimateRange ? `ULTIMATE ${selected.ultimateRange}` : selected.move.slot === 'ultimate' ? 'ULTIMATE RECORD' : 'LEARNABLE RECORD'}</span><h2 className="font-display">{selected.displayName}</h2></div><span className="move-element">{selected.move.element}</span></div>
                     <div className="move-tags">{selected.move.tags.map((tag) => <span className={`move-tag move-tag-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`} key={tag}>{tag}</span>)}</div>
                     <p className="skill-detail-description">{selected.move.description}</p>
-                    <div className="skill-detail-stats"><span>Power <b>{selected.move.power ?? '—'}</b></span><span>Uses <b>{selected.move.uses ?? '—'}</b></span><span>{selected.move.obtained ?? 'Source unrecorded'}</span></div>
+                    <div className="skill-detail-stats"><span>Power <b>{selected.move.power ?? '—'}</b></span><span>Uses <b>{selected.move.uses ?? '—'}</b></span><span>{selected.move.unlockLevel === null ? 'Skill cache' : selected.move.obtained ?? 'Source unrecorded'}</span></div>
                     <div className="skill-learners-heading"><span>Base Mon by evolution line</span><b>{selected.learners.length} Mon</b></div>
                     <div className="skill-learners">{selected.learners.map((learner) => <SkillLearner learner={learner} key={idFor(learner.entry)} />)}</div>
                   </article>}
