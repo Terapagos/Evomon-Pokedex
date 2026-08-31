@@ -13,6 +13,10 @@ const queryClient = new QueryClient();
 type Variant = 'normal' | 'shiny';
 const CatalogContext = createContext({ catalog: evomonData, isLoading: true, isError: false });
 
+const ARTWORK_OVERRIDES: Record<string, string> = {
+  Bubboxer: '/bubboxer.png',
+};
+
 function useCatalog() {
   return useContext(CatalogContext);
 }
@@ -24,7 +28,7 @@ const asList = (value: unknown): string[] => {
 const idFor = (entry: Evomon) => entry.id ?? entry.name.toLowerCase().replaceAll(/\s+/g, '-');
 const elementsFor = (entry: Evomon) => asList(entry.element);
 const stageFor = (entry: Evomon) => entry.stage || 'Unclassified';
-const imageFor = (entry: Evomon, variant: Variant) => variant === 'shiny' ? entry.shinyImage : entry.image;
+const imageFor = (entry: Evomon, variant: Variant) => variant === 'shiny' ? entry.shinyImage : ARTWORK_OVERRIDES[entry.name] ?? entry.image;
 const statsFor = (entry: Evomon, variant: Variant): Record<string, number> => variant === 'shiny' ? (entry.shinyBaseStats ?? entry.baseStats ?? {}) : (entry.baseStats ?? {});
 const missing = 'Not recorded in current wiki notes';
 
