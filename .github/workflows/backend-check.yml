@@ -19,9 +19,11 @@ jobs:
       - name: Build production image
         run: docker build -t evomon-api:test .
       - name: Start production image
-        run: docker run --detach --name evomon-api --publish 127.0.0.1:8080:8080 evomon-api:test
+        run: docker run --detach --name evomon-api --memory 256m --memory-swap 256m --publish 127.0.0.1:8080:8080 evomon-api:test
       - name: Verify health, catalog, and CORS
         run: node scripts/verify-api.mjs http://127.0.0.1:8080
+      - name: Report memory use
+        run: docker stats --no-stream evomon-api
       - name: Show backend logs on failure
         if: failure()
         run: docker logs evomon-api

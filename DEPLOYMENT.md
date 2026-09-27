@@ -18,7 +18,7 @@ node scripts/verify-api.mjs https://terapagos-evomon-api.fly.dev
 
 The app name must be available and owned by your account. If you choose another
 name, update `fly.toml` and the public `VITE_API_URL` accordingly. The Fly config
-uses one shared CPU and 512 MB RAM in `iad`, HTTPS, a health check, and automatic
+uses one shared CPU and 256 MB RAM in `iad`, HTTPS, a health check, and automatic
 stop/start when idle. `--ha=false` avoids creating a second standby Machine.
 Fly.io hosting is usage-billed; this configuration is not a guarantee of free
 hosting. Stopping clears the six-hour in-memory wiki cache, so the first catalog
