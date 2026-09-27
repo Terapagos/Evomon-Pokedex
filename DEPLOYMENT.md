@@ -1,5 +1,34 @@
 # GitHub Pages
 
+## Fly.io backend
+
+The root `Dockerfile` builds the existing Express server and runs only its
+compiled output as a non-root user. No database, volume, or application secret
+is needed by the current API routes. `.dockerignore` limits the build context
+and excludes local environment and credential files.
+
+After signing in with `fly auth login`, create the app in your Fly organization
+and deploy from the repository root:
+
+```sh
+fly apps create terapagos-evomon-api
+fly deploy --remote-only --ha=false
+node scripts/verify-api.mjs https://terapagos-evomon-api.fly.dev
+```
+
+The app name must be available and owned by your account. If you choose another
+name, update `fly.toml` and the public `VITE_API_URL` accordingly. The Fly config
+uses one shared CPU and 512 MB RAM in `iad`, HTTPS, a health check, and automatic
+stop/start when idle. `--ha=false` avoids creating a second standby Machine.
+Fly.io hosting is usage-billed; this configuration is not a guarantee of free
+hosting. Stopping clears the six-hour in-memory wiki cache, so the first catalog
+request after a cold start can take longer.
+
+The `Verify Fly backend image` workflow builds the production container and
+checks health, a nonempty catalog, skills, and CORS. This check uses live public
+wiki data, so a wiki outage can fail it without a code change. Backend deployment
+uses authenticated Fly tooling; no Fly token is stored in the repository.
+
 The `Build and deploy Evomon to GitHub Pages` workflow builds the Vite frontend
 on Ubuntu with Node 22 and pnpm 10. It installs the workspace using the frozen
 lockfile, sets `PORT=3000` and `BASE_PATH=/Evomon-Pokedex/`, and publishes only
