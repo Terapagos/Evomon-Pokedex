@@ -14,8 +14,8 @@ type Variant = 'normal' | 'shiny';
 const CatalogContext = createContext({ catalog: evomonData, isLoading: true, isError: false });
 
 const ARTWORK_OVERRIDES: Record<string, string> = {
-  Bubboxer: '/bubboxer.png',
-  Blazpup: '/blazpup.png',
+  Bubboxer: `${import.meta.env.BASE_URL}bubboxer.png`,
+  Blazpup: `${import.meta.env.BASE_URL}blazpup.png`,
 };
 
 function useCatalog() {
