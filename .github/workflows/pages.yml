@@ -1,0 +1,74 @@
+name: Build and deploy Evomon to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PORT: '3000'
+      BASE_PATH: /Evomon-Pokedex/
+      # Public API origin, never a token or other secret.
+      VITE_API_URL: ${{ vars.VITE_API_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '10'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build frontend
+        run: pnpm --filter @workspace/evomon-pokedex build
+      - name: Support direct links and verify output
+        run: |
+          cp artifacts/evomon-pokedex/dist/public/index.html artifacts/evomon-pokedex/dist/public/404.html
+          node scripts/verify-pages.mjs
+      - name: Upload built site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: artifacts/evomon-pokedex/dist/public
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check public API configuration
+        env:
+          VITE_API_URL: ${{ vars.VITE_API_URL }}
+        run: |
+          node --input-type=module <<'NODE'
+          const value = process.env.VITE_API_URL;
+          if (!value) throw new Error('Set the repository Actions variable VITE_API_URL to your public backend origin before deploying.');
+          const url = new URL(value);
+          if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash || !['', '/'].includes(url.pathname)) {
+            throw new Error('VITE_API_URL must be a public HTTPS origin with no credentials, path, query, or fragment.');
+          }
+          NODE
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,25 @@
+# Allow only the files needed to build the backend.
+**
+!Dockerfile
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!artifacts/
+!artifacts/api-server/
+!artifacts/api-server/package.json
+!artifacts/api-server/build.mjs
+!artifacts/api-server/src/
+!artifacts/api-server/src/**
+!lib/
+!lib/api-zod/
+!lib/api-zod/package.json
+!lib/api-zod/src/
+!lib/api-zod/src/**
+!lib/db/
+!lib/db/package.json
+# Never send local credentials or environment files to a builder.
+**/.env*
+**/*.pem
+**/*.key
+**/node_modules
+**/.git
