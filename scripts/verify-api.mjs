@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { setTimeout as delay } from 'node:timers/promises';
+import { readFile } from 'node:fs/promises';
 
 const origin = process.argv[2];
 assert(origin, 'Pass the API origin as the first argument');
@@ -23,4 +24,20 @@ const catalog = await response.json();
 assert(Array.isArray(catalog.mons) && catalog.mons.length > 0, 'Catalog must contain Evomon');
 assert(catalog.mons.every((mon) => mon.id && mon.name), 'Catalog entries need IDs and names');
 assert(catalog.mons.some((mon) => Array.isArray(mon.moves) && mon.moves.length > 0), 'Skills must contain moves');
+const supplement = JSON.parse(await readFile(new URL('../artifacts/api-server/src/data/replit-move-supplement.json', import.meta.url), 'utf8'));
+let verifiedMoves = 0;
+for (const [name, moves] of Object.entries(supplement.learnsets)) {
+  const mon = catalog.mons.find((entry) => entry.name === name);
+  assert(mon, `Missing maintained Evomon: ${name}`);
+  for (const [moveName, level, slot] of moves) {
+    const matches = mon.moves.filter((move) => move.name === moveName && move.unlockLevel === level
+      && (move.slot === 'ultimate') === (slot === 'ultimate'));
+    assert.equal(matches.length, 1, `${name}: expected exactly one ${moveName} at level ${level}`);
+    const move = matches[0];
+    assert(move.description && move.element && move.category, `${name}: incomplete ${moveName} details`);
+    verifiedMoves++;
+  }
+}
+assert(catalog.mons.find((mon) => mon.name === 'Bubble').moves.some((move) => move.name === 'Water Pulse' && move.unlockLevel === 140), 'Bubble must retain its late-level Water Pulse');
+console.log(`Verified ${verifiedMoves} restored move assignments across ${Object.keys(supplement.learnsets).length} Evomon.`);
 console.log(`API verified: health, ${catalog.mons.length} catalog entries, skills, and Pages CORS.`);

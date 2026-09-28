@@ -1,0 +1,2856 @@
+{
+  "source": "Replit reference catalog supplied by the repository owner",
+  "capturedAt": "2026-09-28T00:43:25.780Z",
+  "definitions": {
+    "Mud Slide": {
+      "name": "Mud Slide",
+      "element": "water",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and lowers the target's Spe by 1 stage.",
+      "obtained": "via Level up.",
+      "power": "70",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Power Strike": {
+      "name": "Power Strike",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals Physical damage to one target.",
+      "obtained": "via Level up.",
+      "power": "75",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Rain Dance": {
+      "name": "Rain Dance",
+      "element": "water",
+      "category": "status",
+      "description": "Changes the weather to [Rain].",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Weather"
+      ]
+    },
+    "Vortex": {
+      "name": "Vortex",
+      "element": "water",
+      "category": "special",
+      "description": "If [Soak], Skill Power +40.",
+      "obtained": "via Level up.",
+      "power": "85",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Bubble Beam": {
+      "name": "Bubble Beam",
+      "element": "water",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and removes all stat debuffs from your Evomon.",
+      "obtained": "via Level up.",
+      "power": "95",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Water Pulse": {
+      "name": "Water Pulse",
+      "element": "water",
+      "category": "special",
+      "description": "Deals Special damage to the target, and gains +15 Power per Water-type skill used.",
+      "obtained": "via Level up.",
+      "power": "105",
+      "uses": 5,
+      "tags": [
+        "Sp. Atk",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Fireball Blast": {
+      "name": "Fireball Blast",
+      "element": "fire",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up or Skill shop.",
+      "power": "80",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Cremate": {
+      "name": "Cremate",
+      "element": "fire",
+      "category": "status",
+      "description": "Doubles the target's existing [Burn] stacks.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Support",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Flamethrower": {
+      "name": "Flamethrower",
+      "element": "fire",
+      "category": "special",
+      "description": "Deals Special damage to the target, and gains +5 Skill Power per stack of [Burn] on the target.",
+      "obtained": "via Level up.",
+      "power": "90",
+      "uses": 15,
+      "tags": [
+        "Sp. Atk",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Meltdown": {
+      "name": "Meltdown",
+      "element": "fire",
+      "category": "physical",
+      "description": "Deals Physical damage to the target; Your Evomon immune to status conditions for 2 turns.",
+      "obtained": "via Level up.",
+      "power": "100",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Flame Tear": {
+      "name": "Flame Tear",
+      "element": "fire",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up.",
+      "power": "120",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Intimidation": {
+      "name": "Intimidation",
+      "element": "normal",
+      "category": "status",
+      "description": "Lowers the target's Def and SpD by 8.",
+      "obtained": "Via Skill Shop",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Full Purify": {
+      "name": "Full Purify",
+      "element": "normal",
+      "category": "status",
+      "description": "Removes all stat debuffs and status conditions from your Evomon.",
+      "obtained": "via Level Up",
+      "power": "—",
+      "uses": 10,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Wrap Assault": {
+      "name": "Wrap Assault",
+      "element": "grass",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up or Skill shop.",
+      "power": "80",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Thorn Pierce": {
+      "name": "Thorn Pierce",
+      "element": "grass",
+      "category": "physical",
+      "description": "Deals Physical damage to the target with +1 Priority.",
+      "obtained": "via Level up.",
+      "power": "60",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Priority",
+        "Single target"
+      ]
+    },
+    "Leech Seed": {
+      "name": "Leech Seed",
+      "element": "grass",
+      "category": "status",
+      "description": "Inflicts [Leech] to one target.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 7,
+      "tags": [
+        "Single target"
+      ]
+    },
+    "Verdant Beam": {
+      "name": "Verdant Beam",
+      "element": "grass",
+      "category": "special",
+      "description": "Deals Special damage to the target.",
+      "obtained": "via Level up.",
+      "power": "100",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Leaf Razor": {
+      "name": "Leaf Razor",
+      "element": "grass",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and removes the target's stat boosts.",
+      "obtained": "via Level up.",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Gale Thrust": {
+      "name": "Gale Thrust",
+      "element": "flying",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up or Skill shop.",
+      "power": "80",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Heavy Slam": {
+      "name": "Heavy Slam",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals Physical damage to one target.",
+      "obtained": "via Level Up",
+      "power": "80",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Wound": {
+      "name": "Wound",
+      "element": "normal",
+      "category": "status",
+      "description": "Inflicts 4 stacks of [Bleed] to one target.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 10,
+      "tags": [
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Wing Smash": {
+      "name": "Wing Smash",
+      "element": "flying",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and doubles the target's existing [Bleed] stacks.",
+      "obtained": "via Level up.",
+      "power": "90",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Support",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Hone 1": {
+      "name": "Hone 1",
+      "element": "normal",
+      "category": "status",
+      "description": "Increases ATK by 5.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 15,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Razor Wing": {
+      "name": "Razor Wing",
+      "element": "flying",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and inflicts 1 stack of [Bleed].",
+      "obtained": "via Level up.",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Web Bind": {
+      "name": "Web Bind",
+      "element": "bug",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up and Skill shop.",
+      "power": "80",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Inversion": {
+      "name": "Inversion",
+      "element": "normal",
+      "category": "status",
+      "description": "Inverts all of the target's stat changes.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Wing Combo": {
+      "name": "Wing Combo",
+      "element": "flying",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and inflicts 3 stacks of [Bleed].",
+      "obtained": "via Level up.",
+      "power": "85",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Fighting Will 1": {
+      "name": "Fighting Will 1",
+      "element": "normal",
+      "category": "status",
+      "description": "Increases SpA by 5.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 15,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Silkburst": {
+      "name": "Silkburst",
+      "element": "bug",
+      "category": "special",
+      "description": "Deals Special damage to the target, and lowers the target's Atk and SpA by 1 stage.",
+      "obtained": "via Level up.",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Sp. Atk",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Savage Slam": {
+      "name": "Savage Slam",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals Physical damage to one target.",
+      "obtained": "via Level up.",
+      "power": "75",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Fatal Rebound": {
+      "name": "Fatal Rebound",
+      "element": "normal",
+      "category": "physical",
+      "description": "Priority -6; When hit, counterattacks for 1.75 times the damage received.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Priority",
+        "Single target"
+      ]
+    },
+    "True Hit": {
+      "name": "True Hit",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and inflicts 80 fixed damage.",
+      "obtained": "via Level up.",
+      "power": "20",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "All-Out Attack": {
+      "name": "All-Out Attack",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Skill shop and Level up.",
+      "power": "100",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Critical Focus": {
+      "name": "Critical Focus",
+      "element": "normal",
+      "category": "status",
+      "description": "Increases Crit Rate by 20% for the rest of the battle.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 15,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Gravity Crush": {
+      "name": "Gravity Crush",
+      "element": "normal",
+      "category": "special",
+      "description": "Deals Special damage to the target, and inflicts 25 fixed damage.",
+      "obtained": "via Level up.",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Wild Ram": {
+      "name": "Wild Ram",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals Physical damage to one target.",
+      "obtained": "via Level up.",
+      "power": "75",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Stone Edge": {
+      "name": "Stone Edge",
+      "element": "rock",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Skill shop.",
+      "power": "80",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Sandstorm": {
+      "name": "Sandstorm",
+      "element": "rock",
+      "category": "status",
+      "description": "Changes the weather to [Sandstorm].",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Weather"
+      ]
+    },
+    "Ancient Power": {
+      "name": "Ancient Power",
+      "element": "rock",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and Skill Power scales with the user's Def advantage.",
+      "obtained": "via Level up.",
+      "power": "75",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Earthquake": {
+      "name": "Earthquake",
+      "element": "ground",
+      "category": "special",
+      "description": "Deals Special damage to all targets.",
+      "obtained": "via Level up.",
+      "power": "60",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "AoE"
+      ]
+    },
+    "Thrash": {
+      "name": "Thrash",
+      "element": "rock",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and inflicts [Fatigue] on your Evomon.",
+      "obtained": "via Level up.",
+      "power": "150",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Burn": {
+      "name": "Burn",
+      "element": "fire",
+      "category": "status",
+      "description": "Inflicts 5 stacks of [Burn] to one target.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 10,
+      "tags": [
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Soulburn Strike": {
+      "name": "Soulburn Strike",
+      "element": "fire",
+      "category": "special",
+      "description": "Deals Special damage to the target, and inflict [Fatigue] on your Evomon.",
+      "obtained": "via Level up.",
+      "power": "160",
+      "uses": 4,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Quicksand": {
+      "name": "Quicksand",
+      "element": "ground",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and lowers the target's Def by 2 stages each turn for 3 turns.",
+      "obtained": "via Level up.",
+      "power": "70",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Wave Strike": {
+      "name": "Wave Strike",
+      "element": "water",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and 50% chance to inflicts 50 fixed damage.",
+      "obtained": "via Level up.",
+      "power": "85",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Aqua Rush": {
+      "name": "Aqua Rush",
+      "element": "water",
+      "category": "special",
+      "description": "Deals Special damage to the target; Also deals 25% of the damage dealt to Evomon.",
+      "obtained": "via Level up.",
+      "power": "135",
+      "uses": 5,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Rally": {
+      "name": "Rally",
+      "element": "normal",
+      "category": "status",
+      "description": "Increases Atk and SpA by 5.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 15,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Volt Tempest": {
+      "name": "Volt Tempest",
+      "element": "electric",
+      "category": "special",
+      "description": "Deals Special damage to the target, and +40 Skill Power against Evomons with [Paralysis].",
+      "obtained": "via Level up.",
+      "power": "90",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Thunderous Wind": {
+      "name": "Thunderous Wind",
+      "element": "flying",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and removes the target's stat boosts.",
+      "obtained": "via Level up.",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Heaven's Thunder": {
+      "name": "Heaven's Thunder",
+      "element": "electric",
+      "category": "special",
+      "description": "Deals Special damage to the target, and inflicts 1 stack of [Paralysis].",
+      "obtained": "via Level up.",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Sp. Atk",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Electrify": {
+      "name": "Electrify",
+      "element": "electric",
+      "category": "status",
+      "description": "Inflicts 3 stacks of [Paralysis] to one target.",
+      "obtained": "via Level up.",
+      "power": "--",
+      "uses": 10,
+      "tags": [
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Lightning Blitz": {
+      "name": "Lightning Blitz",
+      "element": "electric",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up.",
+      "power": "85",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Thunderstorm": {
+      "name": "Thunderstorm",
+      "element": "electric",
+      "category": "status",
+      "description": "Changes the weather to [Thunderstorm].",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Weather"
+      ]
+    },
+    "Thorn Dash": {
+      "name": "Thorn Dash",
+      "element": "grass",
+      "category": "physical",
+      "description": "Deals Physical damage to the target; Also deals 25% of the damage dealt to Evomon.",
+      "obtained": "via Level up.",
+      "power": "135",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Poison Coat": {
+      "name": "Poison Coat",
+      "element": "poison",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and inflicts 2 stacks of [Poison].",
+      "obtained": "via Level up.",
+      "power": "60",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Poison": {
+      "name": "Poison",
+      "element": "poison",
+      "category": "status",
+      "description": "Inflicts 5 stacks of [Poison] to one target.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 10,
+      "tags": [
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Venom Spray": {
+      "name": "Venom Spray",
+      "element": "poison",
+      "category": "special",
+      "description": "Deals Special damage to the target, and inflicts 3 stacks of [Poison].",
+      "obtained": "via Level up.",
+      "power": "90",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Immolate": {
+      "name": "Immolate",
+      "element": "normal",
+      "category": "status",
+      "description": "Increases Atk and SpA by 8, but lowers Def and SpD by 4.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 3,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Venom Burst": {
+      "name": "Venom Burst",
+      "element": "poison",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and gains +5 Skill Power per stack of [Poison] on the target.",
+      "obtained": "via Level up.",
+      "power": "100",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Rock Slide": {
+      "name": "Rock Slide",
+      "element": "rock",
+      "category": "special",
+      "description": "Deals Special damage to the target; Removes all status conditions from your Evomon.",
+      "obtained": "via Level up.",
+      "power": "90",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Sand Attack": {
+      "name": "Sand Attack",
+      "element": "rock",
+      "category": "special",
+      "description": "Deals 3x to 5x Power in damage to the target.",
+      "obtained": "via Level up.",
+      "power": "25",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Prism Fusion": {
+      "name": "Prism Fusion",
+      "element": "rock",
+      "category": "special",
+      "description": "Deals Special damage to all targets.",
+      "obtained": "via Level up.",
+      "power": "60",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "AoE"
+      ]
+    },
+    "Earth Power": {
+      "name": "Earth Power",
+      "element": "rock",
+      "category": "special",
+      "description": "Deals Special damage to the target; increases Def and SpD by 1.",
+      "obtained": "via Level up.",
+      "power": "100",
+      "uses": 5,
+      "tags": [
+        "Sp. Atk",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Scratch": {
+      "name": "Scratch",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals physical damage to one target.",
+      "obtained": "via Level up.",
+      "power": "40",
+      "uses": 30,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Cinder": {
+      "name": "Cinder",
+      "element": "fire",
+      "category": "special",
+      "description": "Deals Special damage to the target.",
+      "obtained": "via Level up.",
+      "power": "60",
+      "uses": 20,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Radiance": {
+      "name": "Radiance",
+      "element": "light",
+      "category": "status",
+      "description": "Gains 4 stacks of [Sun's Grace].",
+      "obtained": "via Level Up",
+      "power": "—",
+      "uses": 10,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Sparkle Burst": {
+      "name": "Sparkle Burst",
+      "element": "light",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up.",
+      "power": "60",
+      "uses": 20,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Purge Beam": {
+      "name": "Purge Beam",
+      "element": "light",
+      "category": "special",
+      "description": "Deals Special damage to the target, clear your evomon's debuff instantly. Your evomon immune to status conditions for 2 turns.",
+      "obtained": "lv. 100",
+      "power": "75",
+      "uses": 15,
+      "tags": [
+        "Sp. Atk",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Radiant Blade": {
+      "name": "Radiant Blade",
+      "element": "light",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "lv 60",
+      "power": "80",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Giga Drain": {
+      "name": "Giga Drain",
+      "element": "grass",
+      "category": "special",
+      "description": "Deals Special damage to the target with 50% Lifesteal.",
+      "obtained": "via Skill shop.",
+      "power": "80",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Thunder Retribution": {
+      "name": "Thunder Retribution",
+      "element": "electric",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and inflicts 30 fixed damage.",
+      "obtained": "via Level up.",
+      "power": "100",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Platinum Rush": {
+      "name": "Platinum Rush",
+      "element": "light",
+      "category": "physical",
+      "description": "Deals Physical damage. +5 Power per non-Light skill used.",
+      "obtained": "via Level up.",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Battle Stance": {
+      "name": "Battle Stance",
+      "element": "normal",
+      "category": "status",
+      "description": "Increases Atk by 5 and Def by 5.",
+      "obtained": "via Skill shop.",
+      "power": "—",
+      "uses": 10,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Dawnstrike": {
+      "name": "Dawnstrike",
+      "element": "light",
+      "category": "special",
+      "description": "Deals Special damage to the target; Your Evomon gains 1 stack of [Sun's Grace].",
+      "obtained": "via Skill shop.",
+      "power": "85",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Rest": {
+      "name": "Rest",
+      "element": "normal",
+      "category": "status",
+      "description": "Restores 20% of max HP at the end of each turn for 3 turns.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Aqua Spiral": {
+      "name": "Aqua Spiral",
+      "element": "water",
+      "category": "physical",
+      "description": "Deals Physical damage. +40 Power if your Evomon has [Soak].",
+      "obtained": "Via level up",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Bubble Slam": {
+      "name": "Bubble Slam",
+      "element": "water",
+      "category": "special",
+      "description": "Deals Special damage to the target and gains 1 stack of [Soak].",
+      "obtained": "via Skill shop.",
+      "power": "85",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Combat Spirit": {
+      "name": "Combat Spirit",
+      "element": "normal",
+      "category": "status",
+      "description": "Increases Atk and SpA by 8",
+      "obtained": "via Skill shop.",
+      "power": "—",
+      "uses": 5,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Viridis Pop": {
+      "name": "Viridis Pop",
+      "element": "grass",
+      "category": "physical",
+      "description": "Deals Physical damage. If weather is [Sunny], increases Atk by 2.",
+      "obtained": "Via level up",
+      "power": "90",
+      "uses": 10,
+      "tags": [
+        "Physical",
+        "Support",
+        "Weather"
+      ]
+    },
+    "Calyx Seal": {
+      "name": "Calyx Seal",
+      "element": "grass",
+      "category": "physical",
+      "description": "Deals Physical damage. Doubles Power if the target is below 50% HP.",
+      "obtained": "Via level up",
+      "power": "120",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Horn Strike": {
+      "name": "Horn Strike",
+      "element": "dragon",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up.",
+      "power": "80",
+      "uses": 15,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Dragon Breath": {
+      "name": "Dragon Breath",
+      "element": "dragon",
+      "category": "special",
+      "description": "Deals Special damage to the target, and inflicts 2 stacks of [Dragonmark].",
+      "obtained": "via Skill shop.",
+      "power": "75",
+      "uses": 10,
+      "tags": [
+        "Sp. Atk",
+        "Single target"
+      ]
+    },
+    "Dragon Pursuit": {
+      "name": "Dragon Pursuit",
+      "element": "dragon",
+      "category": "physical",
+      "description": "Deals Physical damage to the target with +20 Power per use.",
+      "obtained": "via Level up.",
+      "power": "100",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Dragon Fang": {
+      "name": "Dragon Fang",
+      "element": "dragon",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, plus 15% of target's max HP as bonus damage (capped) against targets below 50% HP.",
+      "obtained": "Via level up",
+      "power": "120",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    }
+  },
+  "learnsets": {
+    "Bubble": [
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Power Strike",
+        70,
+        "level"
+      ],
+      [
+        "Rain Dance",
+        90,
+        "level"
+      ],
+      [
+        "Vortex",
+        100,
+        "level"
+      ],
+      [
+        "Bubble Beam",
+        120,
+        "level"
+      ],
+      [
+        "Water Pulse",
+        140,
+        "level"
+      ]
+    ],
+    "Bubboxer": [
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Power Strike",
+        70,
+        "level"
+      ],
+      [
+        "Rain Dance",
+        90,
+        "level"
+      ],
+      [
+        "Vortex",
+        100,
+        "level"
+      ],
+      [
+        "Bubble Beam",
+        120,
+        "level"
+      ],
+      [
+        "Water Pulse",
+        140,
+        "level"
+      ]
+    ],
+    "Bubblade": [
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Power Strike",
+        70,
+        "level"
+      ],
+      [
+        "Rain Dance",
+        90,
+        "level"
+      ],
+      [
+        "Vortex",
+        100,
+        "level"
+      ],
+      [
+        "Bubble Beam",
+        120,
+        "level"
+      ],
+      [
+        "Water Pulse",
+        140,
+        "level"
+      ]
+    ],
+    "Blazpup": [
+      [
+        "Power Strike",
+        60,
+        "level"
+      ],
+      [
+        "Fireball Blast",
+        70,
+        "level"
+      ],
+      [
+        "Cremate",
+        90,
+        "level"
+      ],
+      [
+        "Flamethrower",
+        100,
+        "level"
+      ],
+      [
+        "Meltdown",
+        120,
+        "level"
+      ],
+      [
+        "Flame Tear",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Blazgrowl": [
+      [
+        "Power Strike",
+        60,
+        "level"
+      ],
+      [
+        "Fireball Blast",
+        70,
+        "level"
+      ],
+      [
+        "Cremate",
+        90,
+        "level"
+      ],
+      [
+        "Flamethrower",
+        100,
+        "level"
+      ],
+      [
+        "Meltdown",
+        120,
+        "level"
+      ],
+      [
+        "Flame Tear",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Blazmane": [
+      [
+        "Power Strike",
+        60,
+        "level"
+      ],
+      [
+        "Fireball Blast",
+        70,
+        "level"
+      ],
+      [
+        "Cremate",
+        90,
+        "level"
+      ],
+      [
+        "Flamethrower",
+        100,
+        "level"
+      ],
+      [
+        "Meltdown",
+        120,
+        "level"
+      ],
+      [
+        "Flame Tear",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Leafbun": [
+      [
+        "Full Purify",
+        60,
+        "level"
+      ],
+      [
+        "Wrap Assault",
+        70,
+        "level"
+      ],
+      [
+        "Thorn Pierce",
+        90,
+        "level"
+      ],
+      [
+        "Leech Seed",
+        100,
+        "level"
+      ],
+      [
+        "Verdant Beam",
+        120,
+        "level"
+      ],
+      [
+        "Leaf Razor",
+        140,
+        "level"
+      ]
+    ],
+    "Leafroge": [
+      [
+        "Full Purify",
+        60,
+        "level"
+      ],
+      [
+        "Wrap Assault",
+        70,
+        "level"
+      ],
+      [
+        "Thorn Pierce",
+        90,
+        "level"
+      ],
+      [
+        "Leech Seed",
+        100,
+        "level"
+      ],
+      [
+        "Verdant Beam",
+        120,
+        "level"
+      ],
+      [
+        "Leaf Razor",
+        140,
+        "level"
+      ]
+    ],
+    "Leafblade": [
+      [
+        "Full Purify",
+        60,
+        "level"
+      ],
+      [
+        "Wrap Assault",
+        70,
+        "level"
+      ],
+      [
+        "Thorn Pierce",
+        90,
+        "level"
+      ],
+      [
+        "Leech Seed",
+        100,
+        "level"
+      ],
+      [
+        "Verdant Beam",
+        120,
+        "level"
+      ],
+      [
+        "Leaf Razor",
+        140,
+        "level"
+      ]
+    ],
+    "Chirppy": [
+      [
+        "Gale Thrust",
+        60,
+        "level"
+      ],
+      [
+        "Heavy Slam",
+        70,
+        "level"
+      ],
+      [
+        "Wound",
+        90,
+        "level"
+      ],
+      [
+        "Wing Smash",
+        100,
+        "level"
+      ],
+      [
+        "Hone 1",
+        120,
+        "level"
+      ],
+      [
+        "Razor Wing",
+        140,
+        "level"
+      ]
+    ],
+    "Chirplume": [
+      [
+        "Gale Thrust",
+        60,
+        "level"
+      ],
+      [
+        "Heavy Slam",
+        70,
+        "level"
+      ],
+      [
+        "Wound",
+        90,
+        "level"
+      ],
+      [
+        "Wing Smash",
+        100,
+        "level"
+      ],
+      [
+        "Hone 1",
+        120,
+        "level"
+      ],
+      [
+        "Razor Wing",
+        140,
+        "level"
+      ]
+    ],
+    "Chirphantom": [
+      [
+        "Gale Thrust",
+        60,
+        "level"
+      ],
+      [
+        "Heavy Slam",
+        70,
+        "level"
+      ],
+      [
+        "Wound",
+        90,
+        "level"
+      ],
+      [
+        "Wing Smash",
+        100,
+        "level"
+      ],
+      [
+        "Hone 1",
+        120,
+        "level"
+      ],
+      [
+        "Razor Wing",
+        140,
+        "level"
+      ]
+    ],
+    "Humding": [
+      [
+        "Heavy Slam",
+        60,
+        "level"
+      ],
+      [
+        "Web Bind",
+        70,
+        "level"
+      ],
+      [
+        "Inversion",
+        90,
+        "level"
+      ],
+      [
+        "Wing Combo",
+        100,
+        "level"
+      ],
+      [
+        "Fighting Will 1",
+        120,
+        "level"
+      ],
+      [
+        "Silkburst",
+        140,
+        "level"
+      ]
+    ],
+    "Flutterby": [
+      [
+        "Heavy Slam",
+        60,
+        "level"
+      ],
+      [
+        "Web Bind",
+        70,
+        "level"
+      ],
+      [
+        "Inversion",
+        90,
+        "level"
+      ],
+      [
+        "Wing Combo",
+        100,
+        "level"
+      ],
+      [
+        "Fighting Will 1",
+        120,
+        "level"
+      ],
+      [
+        "Silkburst",
+        140,
+        "level"
+      ]
+    ],
+    "Twirlby": [
+      [
+        "Heavy Slam",
+        60,
+        "level"
+      ],
+      [
+        "Web Bind",
+        70,
+        "level"
+      ],
+      [
+        "Inversion",
+        90,
+        "level"
+      ],
+      [
+        "Wing Combo",
+        100,
+        "level"
+      ],
+      [
+        "Fighting Will 1",
+        120,
+        "level"
+      ],
+      [
+        "Silkburst",
+        140,
+        "level"
+      ]
+    ],
+    "Mopebun": [
+      [
+        "Savage Slam",
+        60,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        70,
+        "level"
+      ],
+      [
+        "True Hit",
+        90,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        100,
+        "level"
+      ],
+      [
+        "Critical Focus",
+        120,
+        "level"
+      ],
+      [
+        "Gravity Crush",
+        140,
+        "level"
+      ]
+    ],
+    "Mopillow": [
+      [
+        "Savage Slam",
+        60,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        70,
+        "level"
+      ],
+      [
+        "True Hit",
+        90,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        100,
+        "level"
+      ],
+      [
+        "Critical Focus",
+        120,
+        "level"
+      ],
+      [
+        "Gravity Crush",
+        140,
+        "level"
+      ]
+    ],
+    "Pebble": [
+      [
+        "Wild Ram",
+        60,
+        "level"
+      ],
+      [
+        "Stone Edge",
+        70,
+        "level"
+      ],
+      [
+        "Sandstorm",
+        90,
+        "level"
+      ],
+      [
+        "Ancient Power",
+        100,
+        "level"
+      ],
+      [
+        "Earthquake",
+        120,
+        "level"
+      ],
+      [
+        "Thrash",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Pebroll": [
+      [
+        "Wild Ram",
+        60,
+        "level"
+      ],
+      [
+        "Stone Edge",
+        70,
+        "level"
+      ],
+      [
+        "Sandstorm",
+        90,
+        "level"
+      ],
+      [
+        "Ancient Power",
+        100,
+        "level"
+      ],
+      [
+        "Earthquake",
+        120,
+        "level"
+      ],
+      [
+        "Thrash",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Pebgolem": [
+      [
+        "Wild Ram",
+        60,
+        "level"
+      ],
+      [
+        "Stone Edge",
+        70,
+        "level"
+      ],
+      [
+        "Sandstorm",
+        90,
+        "level"
+      ],
+      [
+        "Ancient Power",
+        100,
+        "level"
+      ],
+      [
+        "Earthquake",
+        120,
+        "level"
+      ],
+      [
+        "Thrash",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Sparkit": [
+      [
+        "Wild Ram",
+        60,
+        "level"
+      ],
+      [
+        "Fireball Blast",
+        70,
+        "level"
+      ],
+      [
+        "Burn",
+        90,
+        "level"
+      ],
+      [
+        "Flamethrower",
+        100,
+        "level"
+      ],
+      [
+        "Meltdown",
+        120,
+        "level"
+      ],
+      [
+        "Soulburn Strike",
+        140,
+        "level"
+      ]
+    ],
+    "Emfox": [
+      [
+        "Wild Ram",
+        60,
+        "level"
+      ],
+      [
+        "Fireball Blast",
+        70,
+        "level"
+      ],
+      [
+        "Burn",
+        90,
+        "level"
+      ],
+      [
+        "Flamethrower",
+        100,
+        "level"
+      ],
+      [
+        "Meltdown",
+        120,
+        "level"
+      ],
+      [
+        "Soulburn Strike",
+        140,
+        "level"
+      ]
+    ],
+    "Empixy": [
+      [
+        "Wild Ram",
+        60,
+        "level"
+      ],
+      [
+        "Fireball Blast",
+        70,
+        "level"
+      ],
+      [
+        "Burn",
+        90,
+        "level"
+      ],
+      [
+        "Flamethrower",
+        100,
+        "level"
+      ],
+      [
+        "Meltdown",
+        120,
+        "level"
+      ],
+      [
+        "Soulburn Strike",
+        140,
+        "level"
+      ]
+    ],
+    "Gulpfish": [
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Vortex",
+        70,
+        "level"
+      ],
+      [
+        "Sandstorm",
+        90,
+        "level"
+      ],
+      [
+        "Quicksand",
+        100,
+        "level"
+      ],
+      [
+        "Wave Strike",
+        120,
+        "level"
+      ],
+      [
+        "Aqua Rush",
+        140,
+        "level"
+      ]
+    ],
+    "Mirefish": [
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Vortex",
+        70,
+        "level"
+      ],
+      [
+        "Sandstorm",
+        90,
+        "level"
+      ],
+      [
+        "Quicksand",
+        100,
+        "level"
+      ],
+      [
+        "Wave Strike",
+        120,
+        "level"
+      ],
+      [
+        "Aqua Rush",
+        140,
+        "level"
+      ]
+    ],
+    "Bluebird": [
+      [
+        "Heavy Slam",
+        60,
+        "level"
+      ],
+      [
+        "Wing Combo",
+        70,
+        "level"
+      ],
+      [
+        "Rally",
+        90,
+        "level"
+      ],
+      [
+        "Volt Tempest",
+        100,
+        "level"
+      ],
+      [
+        "Thunderous Wind",
+        120,
+        "level"
+      ],
+      [
+        "Heaven's Thunder",
+        140,
+        "level"
+      ]
+    ],
+    "Volcrest": [
+      [
+        "Heavy Slam",
+        60,
+        "level"
+      ],
+      [
+        "Wing Combo",
+        70,
+        "level"
+      ],
+      [
+        "Rally",
+        90,
+        "level"
+      ],
+      [
+        "Volt Tempest",
+        100,
+        "level"
+      ],
+      [
+        "Thunderous Wind",
+        120,
+        "level"
+      ],
+      [
+        "Heaven's Thunder",
+        140,
+        "level"
+      ]
+    ],
+    "Coulomb": [
+      [
+        "Savage Slam",
+        60,
+        "level"
+      ],
+      [
+        "Electrify",
+        70,
+        "level"
+      ],
+      [
+        "Lightning Blitz",
+        90,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        100,
+        "level"
+      ],
+      [
+        "Thunderstorm",
+        120,
+        "level"
+      ],
+      [
+        "Heaven's Thunder",
+        140,
+        "level"
+      ]
+    ],
+    "Coultron": [
+      [
+        "Savage Slam",
+        60,
+        "level"
+      ],
+      [
+        "Electrify",
+        70,
+        "level"
+      ],
+      [
+        "Lightning Blitz",
+        90,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        100,
+        "level"
+      ],
+      [
+        "Thunderstorm",
+        120,
+        "level"
+      ],
+      [
+        "Heaven's Thunder",
+        140,
+        "level"
+      ]
+    ],
+    "Coulomtis": [
+      [
+        "Savage Slam",
+        60,
+        "level"
+      ],
+      [
+        "Electrify",
+        70,
+        "level"
+      ],
+      [
+        "Lightning Blitz",
+        90,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        100,
+        "level"
+      ],
+      [
+        "Thunderstorm",
+        120,
+        "level"
+      ],
+      [
+        "Heaven's Thunder",
+        140,
+        "level"
+      ]
+    ],
+    "Budling": [
+      [
+        "Wild Ram",
+        50,
+        "level"
+      ],
+      [
+        "Hone 1",
+        60,
+        "level"
+      ],
+      [
+        "Wrap Assault",
+        70,
+        "level"
+      ],
+      [
+        "Thorn Pierce",
+        90,
+        "level"
+      ],
+      [
+        "Leech Seed",
+        100,
+        "level"
+      ],
+      [
+        "Verdant Beam",
+        120,
+        "level"
+      ],
+      [
+        "Thorn Dash",
+        140,
+        "level"
+      ]
+    ],
+    "Florawn": [
+      [
+        "Wild Ram",
+        50,
+        "level"
+      ],
+      [
+        "Hone 1",
+        60,
+        "level"
+      ],
+      [
+        "Wrap Assault",
+        70,
+        "level"
+      ],
+      [
+        "Thorn Pierce",
+        90,
+        "level"
+      ],
+      [
+        "Leech Seed",
+        100,
+        "level"
+      ],
+      [
+        "Verdant Beam",
+        120,
+        "level"
+      ],
+      [
+        "Thorn Dash",
+        140,
+        "level"
+      ]
+    ],
+    "Silvanarch": [
+      [
+        "Wild Ram",
+        50,
+        "level"
+      ],
+      [
+        "Hone 1",
+        60,
+        "level"
+      ],
+      [
+        "Wrap Assault",
+        70,
+        "level"
+      ],
+      [
+        "Thorn Pierce",
+        90,
+        "level"
+      ],
+      [
+        "Leech Seed",
+        100,
+        "level"
+      ],
+      [
+        "Verdant Beam",
+        120,
+        "level"
+      ],
+      [
+        "Thorn Dash",
+        140,
+        "level"
+      ]
+    ],
+    "Vipip": [
+      [
+        "Poison Coat",
+        60,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        70,
+        "level"
+      ],
+      [
+        "Poison",
+        90,
+        "level"
+      ],
+      [
+        "Venom Spray",
+        100,
+        "level"
+      ],
+      [
+        "Immolate",
+        120,
+        "level"
+      ],
+      [
+        "Venom Burst",
+        140,
+        "level"
+      ]
+    ],
+    "Vipour": [
+      [
+        "Poison Coat",
+        60,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        70,
+        "level"
+      ],
+      [
+        "Poison",
+        90,
+        "level"
+      ],
+      [
+        "Venom Spray",
+        100,
+        "level"
+      ],
+      [
+        "Immolate",
+        120,
+        "level"
+      ],
+      [
+        "Venom Burst",
+        140,
+        "level"
+      ]
+    ],
+    "Viparch": [
+      [
+        "Poison Coat",
+        60,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        70,
+        "level"
+      ],
+      [
+        "Poison",
+        90,
+        "level"
+      ],
+      [
+        "Venom Spray",
+        100,
+        "level"
+      ],
+      [
+        "Immolate",
+        120,
+        "level"
+      ],
+      [
+        "Venom Burst",
+        140,
+        "level"
+      ]
+    ],
+    "Fluffet": [
+      [
+        "Wild Ram",
+        60,
+        "level"
+      ],
+      [
+        "Rock Slide",
+        70,
+        "level"
+      ],
+      [
+        "Fighting Will 1",
+        90,
+        "level"
+      ],
+      [
+        "Sand Attack",
+        100,
+        "level"
+      ],
+      [
+        "Prism Fusion",
+        120,
+        "level"
+      ],
+      [
+        "Earth Power",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Fluffastar": [
+      [
+        "Wild Ram",
+        60,
+        "level"
+      ],
+      [
+        "Rock Slide",
+        70,
+        "level"
+      ],
+      [
+        "Fighting Will 1",
+        90,
+        "level"
+      ],
+      [
+        "Sand Attack",
+        100,
+        "level"
+      ],
+      [
+        "Prism Fusion",
+        120,
+        "level"
+      ],
+      [
+        "Earth Power",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Lavite": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Lavarock": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Spikub": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Spikumane": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Magma": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Magmaxor": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Tinkog": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Tinkore": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Clipdow": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Cliphas": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Clipexor": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Clanx": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Clanxor": [
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Ignibud": [
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Ignifist": [
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Aurevix": [
+      [
+        "Hone 1",
+        1,
+        "level"
+      ],
+      [
+        "Scratch",
+        1,
+        "level"
+      ],
+      [
+        "Cinder",
+        10,
+        "level"
+      ],
+      [
+        "Radiance",
+        20,
+        "level"
+      ],
+      [
+        "Sparkle Burst",
+        40,
+        "level"
+      ],
+      [
+        "Purge Beam",
+        50,
+        "level"
+      ],
+      [
+        "Radiant Blade",
+        60,
+        "level"
+      ],
+      [
+        "Giga Drain",
+        70,
+        "level"
+      ],
+      [
+        "Wave Strike",
+        90,
+        "level"
+      ],
+      [
+        "Thunder Retribution",
+        100,
+        "level"
+      ],
+      [
+        "Full Purify",
+        120,
+        "level"
+      ],
+      [
+        "Platinum Rush",
+        140,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ],
+      [
+        "Battle Stance",
+        null,
+        "level"
+      ],
+      [
+        "Dawnstrike",
+        null,
+        "level"
+      ]
+    ],
+    "Rillfin": [
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Power Strike",
+        70,
+        "level"
+      ],
+      [
+        "Bubble Beam",
+        90,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        100,
+        "level"
+      ],
+      [
+        "Rest",
+        120,
+        "level"
+      ],
+      [
+        "Aqua Spiral",
+        140,
+        "level"
+      ],
+      [
+        "Bubble Slam",
+        null,
+        "level"
+      ],
+      [
+        "Combat Spirit",
+        null,
+        "level"
+      ]
+    ],
+    "Rillcrest": [
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Power Strike",
+        70,
+        "level"
+      ],
+      [
+        "Bubble Beam",
+        90,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        100,
+        "level"
+      ],
+      [
+        "Rest",
+        120,
+        "level"
+      ],
+      [
+        "Aqua Spiral",
+        140,
+        "level"
+      ],
+      [
+        "Bubble Slam",
+        null,
+        "level"
+      ],
+      [
+        "Combat Spirit",
+        null,
+        "level"
+      ]
+    ],
+    "Budelle": [
+      [
+        "Wrap Assault",
+        50,
+        "level"
+      ],
+      [
+        "Rally",
+        60,
+        "level"
+      ],
+      [
+        "Thorn Pierce",
+        70,
+        "level"
+      ],
+      [
+        "Leech Seed",
+        90,
+        "level"
+      ],
+      [
+        "Verdant Beam",
+        100,
+        "level"
+      ],
+      [
+        "Viridis Pop",
+        120,
+        "level"
+      ],
+      [
+        "Calyx Seal",
+        140,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ],
+      [
+        "Combat Spirit",
+        null,
+        "level"
+      ]
+    ],
+    "Budelora": [
+      [
+        "Wrap Assault",
+        50,
+        "level"
+      ],
+      [
+        "Rally",
+        60,
+        "level"
+      ],
+      [
+        "Thorn Pierce",
+        70,
+        "level"
+      ],
+      [
+        "Leech Seed",
+        90,
+        "level"
+      ],
+      [
+        "Verdant Beam",
+        100,
+        "level"
+      ],
+      [
+        "Viridis Pop",
+        120,
+        "level"
+      ],
+      [
+        "Calyx Seal",
+        140,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ],
+      [
+        "Combat Spirit",
+        null,
+        "level"
+      ]
+    ],
+    "Voidor": [
+      [
+        "Rest",
+        60,
+        "level"
+      ],
+      [
+        "Horn Strike",
+        70,
+        "level"
+      ],
+      [
+        "Dragon Breath",
+        90,
+        "level"
+      ],
+      [
+        "Combat Spirit",
+        100,
+        "level"
+      ],
+      [
+        "Dragon Pursuit",
+        120,
+        "level"
+      ],
+      [
+        "Dragon Fang",
+        140,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ],
+      [
+        "Battle Stance",
+        null,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ],
+    "Voidrex": [
+      [
+        "Rest",
+        60,
+        "level"
+      ],
+      [
+        "Horn Strike",
+        70,
+        "level"
+      ],
+      [
+        "Dragon Breath",
+        90,
+        "level"
+      ],
+      [
+        "Combat Spirit",
+        100,
+        "level"
+      ],
+      [
+        "Dragon Pursuit",
+        120,
+        "level"
+      ],
+      [
+        "Dragon Fang",
+        140,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ],
+      [
+        "Battle Stance",
+        null,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ]
+    ]
+  }
+}
