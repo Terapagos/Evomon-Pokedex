@@ -1,5 +1,6 @@
 import { Router, type IRouter } from "express";
 import { GetEvomonCatalogResponse } from "@workspace/api-zod";
+import replitMoveSupplement from "../data/replit-move-supplement.json";
 
 const WIKI_ORIGIN = "https://www.evomon.wiki";
 const WIKI_URL = `${WIKI_ORIGIN}/wiki`;
@@ -652,6 +653,29 @@ async function createCatalog(): Promise<unknown> {
         || (a.unlockLevel ?? Number.POSITIVE_INFINITY) - (b.unlockLevel ?? Number.POSITIVE_INFINITY)
         || a.name.localeCompare(b.name));
     }
+  }
+
+  // Preserve owner-maintained Replit moves that are absent from the public wiki
+  // links/definitions. Apply after inheritance so each verified learnset is kept
+  // exactly, without assigning a move to unrelated evolution lines.
+  const referenceDefinitions = replitMoveSupplement.definitions as Record<string, Omit<CatalogMove, "unlockLevel" | "slot">>;
+  const referenceLearnsets = replitMoveSupplement.learnsets as Record<string, [string, number | null, string][]>;
+  for (const mon of mons) {
+    for (const [name, unlockLevel, slot] of referenceLearnsets[mon.name] ?? []) {
+      // The wiki calls regular level moves "basic"; Replit calls them "level".
+      const alreadyPresent = mon.moves.some((move) => move.name === name
+        && move.unlockLevel === unlockLevel
+        && (move.slot === "ultimate") === (slot === "ultimate"));
+      if (!alreadyPresent) {
+        const definition = referenceDefinitions[name];
+        if (!definition) throw new Error(`Missing maintained move definition: ${name}`);
+        mon.moves.push({ ...definition, tags: [...definition.tags], unlockLevel, slot });
+      }
+    }
+    mon.moves.sort((a, b) =>
+      Number(a.slot === "ultimate") - Number(b.slot === "ultimate")
+      || (a.unlockLevel ?? Number.POSITIVE_INFINITY) - (b.unlockLevel ?? Number.POSITIVE_INFINITY)
+      || a.name.localeCompare(b.name));
   }
 
   return GetEvomonCatalogResponse.parse({
