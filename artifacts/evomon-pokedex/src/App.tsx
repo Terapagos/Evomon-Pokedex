@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import NotFound from '@/pages/not-found';
+import { applyMaintainedMovesets } from '@/data/maintainedMovesets';
 
 const queryClient = new QueryClient();
 type Variant = 'normal' | 'shiny';
@@ -591,7 +592,10 @@ function Router() {
 
 function CatalogLoader({ children }: { children: ReactNode }) {
   const catalogQuery = useGetEvomonCatalog();
-  const catalog = catalogQuery.data?.mons ?? evomonData;
+  const catalog = useMemo(
+    () => applyMaintainedMovesets(catalogQuery.data?.mons ?? evomonData),
+    [catalogQuery.data?.mons],
+  );
   return <CatalogContext.Provider value={{ catalog, isLoading: catalogQuery.isLoading, isError: catalogQuery.isError }}>{children}</CatalogContext.Provider>;
 }
 
@@ -600,3 +604,4 @@ function App() {
 }
 
 export default App;
+
