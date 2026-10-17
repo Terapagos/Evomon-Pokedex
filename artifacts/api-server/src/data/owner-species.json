@@ -10,7 +10,14 @@
     "stage": "Base form",
     "image": "https://r2.e-z.host/3eba238d-bb8e-4137-b17a-4548203a42d4/bl7xrql9.png",
     "shinyImage": "https://r2.e-z.host/3eba238d-bb8e-4137-b17a-4548203a42d4/vnl9zygo.png",
-    "baseStats": {},
+    "baseStats": {
+      "hp": 62,
+      "atk": 40,
+      "def": 49,
+      "spatk": 59,
+      "spdef": 75,
+      "speed": 42
+    },
     "shinyBaseStats": {},
     "shinyStatsRecorded": false,
     "legendaryTrait": null,
@@ -270,7 +277,14 @@
     "stage": "Stage 2",
     "image": "https://r2.e-z.host/3eba238d-bb8e-4137-b17a-4548203a42d4/b8dlhf4u.png",
     "shinyImage": "https://r2.e-z.host/3eba238d-bb8e-4137-b17a-4548203a42d4/3391ruo3.png",
-    "baseStats": {},
+    "baseStats": {
+      "hp": 101,
+      "atk": 71,
+      "def": 79,
+      "spatk": 98,
+      "spdef": 101,
+      "speed": 62
+    },
     "shinyBaseStats": {},
     "shinyStatsRecorded": false,
     "legendaryTrait": null,
