@@ -292,8 +292,15 @@
       "spdef": 101,
       "speed": 62
     },
-    "shinyBaseStats": {},
-    "shinyStatsRecorded": false,
+    "shinyBaseStats": {
+      "hp": 107,
+      "atk": 71,
+      "def": 79,
+      "spatk": 105,
+      "spdef": 108,
+      "speed": 62
+    },
+    "shinyStatsRecorded": true,
     "legendaryTrait": null,
     "legendaryTraitEffect": null,
     "catchLocation": "Not recorded in supplied notes",

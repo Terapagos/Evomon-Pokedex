@@ -44,6 +44,19 @@ jobs:
         with:
           path: artifacts/evomon-pokedex/dist/public
 
+      - name: Build dat.place subdirectory version
+        env:
+          BASE_PATH: /evomon/
+        run: |
+          pnpm --filter @workspace/evomon-pokedex build
+          node scripts/prepare-dat-place.mjs
+          node scripts/verify-pages.mjs
+      - name: Upload dat.place release
+        uses: actions/upload-artifact@v4
+        with:
+          name: dat-place-evomon
+          path: artifacts/evomon-pokedex/dist/public
+
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
@@ -72,3 +85,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+

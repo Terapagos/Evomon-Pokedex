@@ -76,3 +76,13 @@ PORT=3000 BASE_PATH=/Evomon-Pokedex/ pnpm --filter @workspace/evomon-pokedex bui
 cp artifacts/evomon-pokedex/dist/public/index.html artifacts/evomon-pokedex/dist/public/404.html
 node scripts/verify-pages.mjs
 ```
+
+## dat.place/evomon
+
+The reviewed dark theme uses dat.place's gold (#ffbc00) and pink (#ff0058) accents.
+The Pages workflow also builds a dat-place-evomon release artifact with BASE_PATH=/evomon/.
+Publish that artifact's contents in the evomon/ directory of Terapagos/bio, which owns dat.place.
+Preserve the bio repository's CNAME and other pages. The preparation script creates
+static entry pages for catalog and Skills links, so refreshing them works on branch-based Pages.
+Backend updates still require a separate Fly deployment from main and scripts/verify-api.mjs.
+

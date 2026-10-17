@@ -3,7 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 
 const output = path.resolve('artifacts/evomon-pokedex/dist/public');
-const base = '/Evomon-Pokedex/';
+const base = process.env.BASE_PATH || '/Evomon-Pokedex/';
 const html = await readFile(path.join(output, 'index.html'), 'utf8');
 const localAssets = [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
   .map((match) => match[1])
@@ -19,3 +19,4 @@ for (const file of ['bubboxer.png', 'blazpup.png', 'favicon.svg']) {
   assert((await stat(path.join(output, file))).isFile(), `Missing public asset: ${file}`);
 }
 console.log('Pages output verified: built assets, base path, artwork, and direct-link fallback.');
+
