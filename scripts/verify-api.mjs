@@ -38,6 +38,12 @@ for (const [name, moves] of Object.entries(supplement.learnsets)) {
     verifiedMoves++;
   }
 }
+for (const [name, moves] of Object.entries(supplement.exactLearnsets ?? {})) {
+  const mon = catalog.mons.find((entry) => entry.name === name);
+  assert(mon, `Missing reference Evomon: ${name}`);
+  assert.deepEqual(mon.moves, moves, `${name}: moveset must match the Replit reference exactly`);
+}
 assert(catalog.mons.find((mon) => mon.name === 'Bubble').moves.some((move) => move.name === 'Water Pulse' && move.unlockLevel === 140), 'Bubble must retain its late-level Water Pulse');
 console.log(`Verified ${verifiedMoves} restored move assignments across ${Object.keys(supplement.learnsets).length} Evomon.`);
 console.log(`API verified: health, ${catalog.mons.length} catalog entries, skills, and Pages CORS.`);
+
