@@ -661,4 +661,15 @@ select option { background: #202020; color: white; }
 .trait-heading { color: #ffbc00; }
 
 .radar-label { fill: #bdb7b0; }
+/* Keep text black on the colored move cards and matching Skills results. */
+.move-card[class*="move-card-"] { --foreground: 0 0% 0%; --muted-foreground: 0 0% 0%; }
+.move-card[class*="move-card-"] [class$="-move-main"] h3,
+.move-card[class*="move-card-"] .move-description,
+.move-card[class*="move-card-"] .move-tag,
+.move-card[class*="move-card-"] .move-meta,
+.move-card[class*="move-card-"] .move-meta b { color: #000; text-shadow: none; }
+.move-card [class$="-move-power"],
+.move-card [class$="-move-uses"] { background: #ffffffb3; color: #000; text-shadow: none; }
+.skill-result .skill-result-name { color: #000; text-shadow: none; }
+.skill-result .skill-result-meta { padding: 4px 7px; border-radius: 10px; background: #ffffffd9; color: #000; text-shadow: none; }
 
