@@ -2852,5 +2852,1062 @@
         "level"
       ]
     ]
+  },
+  "exactLearnsets": {
+    "Craglet": [
+      {
+        "name": "Confuse",
+        "element": "normal",
+        "category": "status",
+        "description": "Inflicts [Confusion] to one target, with a 25% chance.",
+        "obtained": "via Level up.",
+        "unlockLevel": 1,
+        "slot": "level",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Mega Smash",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals Physical damage to one target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 1,
+        "slot": "level",
+        "power": "40",
+        "uses": 30,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Ambush",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 10,
+        "slot": "level",
+        "power": "50",
+        "uses": 30,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Expose",
+        "element": "normal",
+        "category": "status",
+        "description": "Lowers the target's Def by 5.",
+        "obtained": "via Level up.",
+        "unlockLevel": 20,
+        "slot": "level",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Fatal Rebound",
+        "element": "normal",
+        "category": "physical",
+        "description": "Priority -6; When hit, counterattacks for 1.75 times the damage received.",
+        "obtained": "via Level up.",
+        "unlockLevel": 40,
+        "slot": "level",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Priority",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Rest",
+        "element": "normal",
+        "category": "status",
+        "description": "Restores 20% of max HP at the end of each turn for 3 turns.",
+        "obtained": "via Level up.",
+        "unlockLevel": 50,
+        "slot": "level",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Savage Slam",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals Physical damage to one target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 60,
+        "slot": "level",
+        "power": "75",
+        "uses": 15,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Earthquake",
+        "element": "ground",
+        "category": "special",
+        "description": "Deals Special damage to all targets.",
+        "obtained": "via Level up.",
+        "unlockLevel": 70,
+        "slot": "level",
+        "power": "60",
+        "uses": 10,
+        "tags": [
+          "Sp. Atk",
+          "AoE"
+        ]
+      },
+      {
+        "name": "Hone 1",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases ATK by 5.",
+        "obtained": "via Level up.",
+        "unlockLevel": 90,
+        "slot": "level",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Earth Pulse",
+        "element": "ground",
+        "category": "status",
+        "description": "Doubles the Skill Power of the next Ground-type skill.",
+        "obtained": "via Level up.",
+        "unlockLevel": 100,
+        "slot": "level",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Quicksand",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage to the target, and lowers the target's Def by 2 stages each turn for 3 turns.",
+        "obtained": "via Level up.",
+        "unlockLevel": 120,
+        "slot": "level",
+        "power": "70",
+        "uses": 10,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Ruthless Rush",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage to the target, and gains +10 Skill Power per Def stage lowered on the target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 140,
+        "slot": "level",
+        "power": "100",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "All-Out Attack",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Skill shop and Level up.",
+        "unlockLevel": null,
+        "slot": "level",
+        "power": "100",
+        "uses": 10,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Intimidation",
+        "element": "normal",
+        "category": "status",
+        "description": "Lowers the target's Def and SpD by 8.",
+        "obtained": "Via Skill Shop",
+        "unlockLevel": null,
+        "slot": "level",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Faultline Rupture 1",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+        "obtained": "via reaching Level 30.",
+        "unlockLevel": 30,
+        "slot": "ultimate",
+        "power": "80",
+        "uses": null,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Faultline Rupture 2",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+        "obtained": "via reaching Level 80.",
+        "unlockLevel": 80,
+        "slot": "ultimate",
+        "power": "140",
+        "uses": null,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Faultline Rupture 3",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+        "obtained": "via reaching Level 150.",
+        "unlockLevel": 150,
+        "slot": "ultimate",
+        "power": "200",
+        "uses": null,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      }
+    ],
+    "Cragmar": [
+      {
+        "name": "Confuse",
+        "element": "normal",
+        "category": "status",
+        "description": "Inflicts [Confusion] to one target, with a 25% chance.",
+        "obtained": "via Level up.",
+        "unlockLevel": 1,
+        "slot": "basic",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Mega Smash",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals Physical damage to one target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 1,
+        "slot": "basic",
+        "power": "40",
+        "uses": 30,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Ambush",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 10,
+        "slot": "basic",
+        "power": "50",
+        "uses": 30,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Expose",
+        "element": "normal",
+        "category": "status",
+        "description": "Lowers the target's Def by 5.",
+        "obtained": "via Level up.",
+        "unlockLevel": 20,
+        "slot": "basic",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Fatal Rebound",
+        "element": "normal",
+        "category": "physical",
+        "description": "Priority -6; When hit, counterattacks for 1.75 times the damage received.",
+        "obtained": "via Level up.",
+        "unlockLevel": 40,
+        "slot": "basic",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Priority",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Rest",
+        "element": "normal",
+        "category": "status",
+        "description": "Restores 20% of max HP at the end of each turn for 3 turns.",
+        "obtained": "via Level up.",
+        "unlockLevel": 50,
+        "slot": "basic",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Savage Slam",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals Physical damage to one target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 60,
+        "slot": "level",
+        "power": "75",
+        "uses": 15,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Earthquake",
+        "element": "ground",
+        "category": "special",
+        "description": "Deals Special damage to all targets.",
+        "obtained": "via Level up.",
+        "unlockLevel": 70,
+        "slot": "level",
+        "power": "60",
+        "uses": 10,
+        "tags": [
+          "Sp. Atk",
+          "AoE"
+        ]
+      },
+      {
+        "name": "Hone 1",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases ATK by 5.",
+        "obtained": "via Level up.",
+        "unlockLevel": 90,
+        "slot": "level",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Earth Pulse",
+        "element": "ground",
+        "category": "status",
+        "description": "Doubles the Skill Power of the next Ground-type skill.",
+        "obtained": "via Level up.",
+        "unlockLevel": 100,
+        "slot": "level",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Quicksand",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage to the target, and lowers the target's Def by 2 stages each turn for 3 turns.",
+        "obtained": "via Level up.",
+        "unlockLevel": 120,
+        "slot": "level",
+        "power": "70",
+        "uses": 10,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Ruthless Rush",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage to the target, and gains +10 Skill Power per Def stage lowered on the target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 140,
+        "slot": "level",
+        "power": "100",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "All-Out Attack",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Skill shop and Level up.",
+        "unlockLevel": null,
+        "slot": "level",
+        "power": "100",
+        "uses": 10,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Intimidation",
+        "element": "normal",
+        "category": "status",
+        "description": "Lowers the target's Def and SpD by 8.",
+        "obtained": "Via Skill Shop",
+        "unlockLevel": null,
+        "slot": "level",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Faultline Rupture 1",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+        "obtained": "via reaching Level 30.",
+        "unlockLevel": 30,
+        "slot": "ultimate",
+        "power": "80",
+        "uses": null,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Faultline Rupture 2",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+        "obtained": "via reaching Level 80.",
+        "unlockLevel": 80,
+        "slot": "ultimate",
+        "power": "140",
+        "uses": null,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Faultline Rupture 3",
+        "element": "ground",
+        "category": "physical",
+        "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+        "obtained": "via reaching Level 150.",
+        "unlockLevel": 150,
+        "slot": "ultimate",
+        "power": "200",
+        "uses": null,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      }
+    ],
+    "Mushjell": [
+      {
+        "name": "Hone 1",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases ATK by 5.",
+        "obtained": "via Level up.",
+        "unlockLevel": 1,
+        "slot": "level",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Ram",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals physical damage to one target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 1,
+        "slot": "level",
+        "power": "40",
+        "uses": 30,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Aqua Splash",
+        "element": "water",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 10,
+        "slot": "level",
+        "power": "50",
+        "uses": 30,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Speed Rush",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases Spe by 3.",
+        "obtained": "via Level up.",
+        "unlockLevel": 20,
+        "slot": "level",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Tsunami Whirl",
+        "element": "water",
+        "category": "special",
+        "description": "Deals Special damage to the target. Gains 1 stack of [Soak].",
+        "obtained": "via Level up.",
+        "unlockLevel": 40,
+        "slot": "level",
+        "power": "55",
+        "uses": 20,
+        "tags": [
+          "Sp. Atk",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Poison",
+        "element": "poison",
+        "category": "status",
+        "description": "Inflicts 5 stacks of [Poison] to one target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 50,
+        "slot": "level",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Mud Slide",
+        "element": "water",
+        "category": "physical",
+        "description": "Deals Physical damage to the target, and lowers the target's Spe by 1 stage.",
+        "obtained": "via Level up.",
+        "unlockLevel": 60,
+        "slot": "level",
+        "power": "70",
+        "uses": 15,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Fatal Rebound",
+        "element": "normal",
+        "category": "physical",
+        "description": "Priority -6; When hit, counterattacks for 1.75 times the damage received.",
+        "obtained": "via Level up.",
+        "unlockLevel": 70,
+        "slot": "level",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Priority",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Rain Dance",
+        "element": "water",
+        "category": "status",
+        "description": "Changes the weather to [Rain].",
+        "obtained": "via Level up.",
+        "unlockLevel": 90,
+        "slot": "level",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Weather"
+        ]
+      },
+      {
+        "name": "Venom Spray",
+        "element": "poison",
+        "category": "special",
+        "description": "Deals Special damage to the target, and inflicts 3 stacks of [Poison].",
+        "obtained": "via Level up.",
+        "unlockLevel": 100,
+        "slot": "level",
+        "power": "90",
+        "uses": 10,
+        "tags": [
+          "Sp. Atk",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Water Spout",
+        "element": "water",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 120,
+        "slot": "level",
+        "power": "120",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Venom Claw",
+        "element": "poison",
+        "category": "physical",
+        "description": "Deals Physical damage, then inflicts [Poison] equal to 2x your [Soak] stacks.",
+        "obtained": "Via level up",
+        "unlockLevel": 140,
+        "slot": "level",
+        "power": "110",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "All-Out Attack",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Skill shop and Level up.",
+        "unlockLevel": null,
+        "slot": "level",
+        "power": "100",
+        "uses": 10,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Battle Stance",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases Atk by 5 and Def by 5.",
+        "obtained": "via Skill shop.",
+        "unlockLevel": null,
+        "slot": "level",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Vortex Burst 1",
+        "element": "water",
+        "category": "status",
+        "description": "Restores 20% max HP, and inflicts 6 stacks of [Poison].",
+        "obtained": "via reaching Level 30.",
+        "unlockLevel": 30,
+        "slot": "ultimate",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Vortex Burst 2",
+        "element": "water",
+        "category": "status",
+        "description": "Restores 30% max HP, and inflicts 8 stacks of [Poison].",
+        "obtained": "via reaching Level 150.",
+        "unlockLevel": 80,
+        "slot": "ultimate",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Vortex Burst 3",
+        "element": "water",
+        "category": "status",
+        "description": "Restores 40% max HP, and inflicts 10 stacks of [Poison].",
+        "obtained": "via reaching Level 150.",
+        "unlockLevel": 150,
+        "slot": "ultimate",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Status condition",
+          "Single target"
+        ]
+      }
+    ],
+    "Florajell": [
+      {
+        "name": "Hone 1",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases ATK by 5.",
+        "obtained": "via Level up.",
+        "unlockLevel": 1,
+        "slot": "basic",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Ram",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals physical damage to one target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 1,
+        "slot": "basic",
+        "power": "40",
+        "uses": 30,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Aqua Splash",
+        "element": "water",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 10,
+        "slot": "basic",
+        "power": "50",
+        "uses": 30,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Speed Rush",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases Spe by 3.",
+        "obtained": "via Level up.",
+        "unlockLevel": 20,
+        "slot": "basic",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Tsunami Whirl",
+        "element": "water",
+        "category": "special",
+        "description": "Deals Special damage to the target. Gains 1 stack of [Soak].",
+        "obtained": "via Level up.",
+        "unlockLevel": 40,
+        "slot": "basic",
+        "power": "55",
+        "uses": 20,
+        "tags": [
+          "Sp. Atk",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Poison",
+        "element": "poison",
+        "category": "status",
+        "description": "Inflicts 5 stacks of [Poison] to one target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 50,
+        "slot": "basic",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Mud Slide",
+        "element": "water",
+        "category": "physical",
+        "description": "Deals Physical damage to the target, and lowers the target's Spe by 1 stage.",
+        "obtained": "via Level up.",
+        "unlockLevel": 60,
+        "slot": "level",
+        "power": "70",
+        "uses": 15,
+        "tags": [
+          "Physical",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Fatal Rebound",
+        "element": "normal",
+        "category": "physical",
+        "description": "Priority -6; When hit, counterattacks for 1.75 times the damage received.",
+        "obtained": "via Level up.",
+        "unlockLevel": 70,
+        "slot": "level",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Priority",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Rain Dance",
+        "element": "water",
+        "category": "status",
+        "description": "Changes the weather to [Rain].",
+        "obtained": "via Level up.",
+        "unlockLevel": 90,
+        "slot": "level",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Weather"
+        ]
+      },
+      {
+        "name": "Venom Spray",
+        "element": "poison",
+        "category": "special",
+        "description": "Deals Special damage to the target, and inflicts 3 stacks of [Poison].",
+        "obtained": "via Level up.",
+        "unlockLevel": 100,
+        "slot": "level",
+        "power": "90",
+        "uses": 10,
+        "tags": [
+          "Sp. Atk",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Water Spout",
+        "element": "water",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Level up.",
+        "unlockLevel": 120,
+        "slot": "level",
+        "power": "120",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Venom Claw",
+        "element": "poison",
+        "category": "physical",
+        "description": "Deals Physical damage, then inflicts [Poison] equal to 2x your [Soak] stacks.",
+        "obtained": "Via level up",
+        "unlockLevel": 140,
+        "slot": "level",
+        "power": "110",
+        "uses": 5,
+        "tags": [
+          "Physical",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "All-Out Attack",
+        "element": "normal",
+        "category": "physical",
+        "description": "Deals Physical damage to the target.",
+        "obtained": "via Skill shop and Level up.",
+        "unlockLevel": null,
+        "slot": "level",
+        "power": "100",
+        "uses": 10,
+        "tags": [
+          "Physical",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Battle Stance",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases Atk by 5 and Def by 5.",
+        "obtained": "via Skill shop.",
+        "unlockLevel": null,
+        "slot": "level",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Vortex Burst 1",
+        "element": "water",
+        "category": "status",
+        "description": "Restores 20% max HP, and inflicts 6 stacks of [Poison].",
+        "obtained": "via reaching Level 30.",
+        "unlockLevel": 30,
+        "slot": "ultimate",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Vortex Burst 2",
+        "element": "water",
+        "category": "status",
+        "description": "Restores 30% max HP, and inflicts 8 stacks of [Poison].",
+        "obtained": "via reaching Level 150.",
+        "unlockLevel": 80,
+        "slot": "ultimate",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Vortex Burst 3",
+        "element": "water",
+        "category": "status",
+        "description": "Restores 40% max HP, and inflicts 10 stacks of [Poison].",
+        "obtained": "via reaching Level 150.",
+        "unlockLevel": 150,
+        "slot": "ultimate",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Status condition",
+          "Single target"
+        ]
+      }
+    ]
   }
 }
+
