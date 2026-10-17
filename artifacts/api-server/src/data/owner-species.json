@@ -177,60 +177,84 @@
         "unlockLevel": 120,
         "slot": "level",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "status",
+        "description": "Priority +1; Reduces damage taken this turn by 150 and inflicts 5 stacks of [Poison] on the target.",
         "obtained": "via Level up.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
       },
       {
         "name": "Graystone Circle",
         "unlockLevel": 140,
         "slot": "level",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "special",
+        "description": "Deals Special damage to the target. Gains +5 Skill Power for each stage of the user's SpD increase.",
         "obtained": "via Level up.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Sp. Atk",
+          "Support",
+          "Single target"
+        ]
       },
       {
         "name": "Venom Charge 1",
         "unlockLevel": 30,
         "slot": "ultimate",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 3 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 4 stacks of [Poison] on the attacker.",
         "obtained": "via reaching Level 30.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
       },
       {
         "name": "Venom Charge 2",
         "unlockLevel": 80,
         "slot": "ultimate",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 4 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 6 stacks of [Poison] on the attacker.",
         "obtained": "via reaching Level 80.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
       },
       {
         "name": "Venom Charge 3",
         "unlockLevel": 150,
         "slot": "ultimate",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 5 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 8 stacks of [Poison] on the attacker.",
         "obtained": "via reaching Level 150.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
       }
     ],
     "sourceUrl": "https://i.e-z.host/📸/bl7xrql9.png"
@@ -413,60 +437,84 @@
         "unlockLevel": 120,
         "slot": "level",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "status",
+        "description": "Priority +1; Reduces damage taken this turn by 150 and inflicts 5 stacks of [Poison] on the target.",
         "obtained": "via Level up.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
       },
       {
         "name": "Graystone Circle",
         "unlockLevel": 140,
         "slot": "level",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "special",
+        "description": "Deals Special damage to the target. Gains +5 Skill Power for each stage of the user's SpD increase.",
         "obtained": "via Level up.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Sp. Atk",
+          "Support",
+          "Single target"
+        ]
       },
       {
         "name": "Venom Charge 1",
         "unlockLevel": 30,
         "slot": "ultimate",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 3 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 4 stacks of [Poison] on the attacker.",
         "obtained": "via reaching Level 30.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
       },
       {
         "name": "Venom Charge 2",
         "unlockLevel": 80,
         "slot": "ultimate",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 4 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 6 stacks of [Poison] on the attacker.",
         "obtained": "via reaching Level 80.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
       },
       {
         "name": "Venom Charge 3",
         "unlockLevel": 150,
         "slot": "ultimate",
         "element": "unrecorded",
-        "category": "unrecorded",
-        "description": "Move details have not been recorded.",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 5 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 8 stacks of [Poison] on the attacker.",
         "obtained": "via reaching Level 150.",
         "power": null,
         "uses": null,
-        "tags": []
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
       }
     ],
     "sourceUrl": "https://i.e-z.host/📸/b8dlhf4u.png"
