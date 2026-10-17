@@ -672,4 +672,6 @@ select option { background: #202020; color: white; }
 .move-card [class$="-move-uses"] { background: #ffffffb3; color: #000; text-shadow: none; }
 .skill-result .skill-result-name { color: #000; text-shadow: none; }
 .skill-result .skill-result-meta { padding: 4px 7px; border-radius: 10px; background: #ffffffd9; color: #000; text-shadow: none; }
+.move-card[class*="move-card-"] .move-tag { background: #ffffffa3; border: 1px solid #0003; }
+.move-card[class*="move-card-"] .move-obtained { color: #000; }
 
