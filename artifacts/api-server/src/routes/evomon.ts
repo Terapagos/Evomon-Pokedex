@@ -678,6 +678,14 @@ async function createCatalog(): Promise<unknown> {
       || a.name.localeCompare(b.name));
   }
 
+  // These owner-selected reference learnsets replace wiki assignments entirely.
+  // Preserve their definitions, slots, levels, and order exactly as captured.
+  const exactLearnsets = replitMoveSupplement.exactLearnsets as Record<string, CatalogMove[]>;
+  for (const mon of mons) {
+    const exactMoves = exactLearnsets[mon.name];
+    if (exactMoves) mon.moves = exactMoves.map((move) => ({ ...move, tags: [...move.tags] }));
+  }
+
   return GetEvomonCatalogResponse.parse({
     source: WIKI_URL,
     traitsSource: TRAITS_URL,
@@ -717,3 +725,4 @@ router.get("/evomon", async (req, res): Promise<void> => {
 });
 
 export default router;
+
