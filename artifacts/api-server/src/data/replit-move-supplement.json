@@ -1273,6 +1273,90 @@
         "Status condition",
         "Single target"
       ]
+    },
+    "Faultline Rupture 1": {
+      "name": "Faultline Rupture 1",
+      "element": "ground",
+      "category": "physical",
+      "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+      "obtained": "via reaching Level 30.",
+      "power": "80",
+      "uses": null,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Faultline Rupture 2": {
+      "name": "Faultline Rupture 2",
+      "element": "ground",
+      "category": "physical",
+      "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+      "obtained": "via reaching Level 80.",
+      "power": "140",
+      "uses": null,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Faultline Rupture 3": {
+      "name": "Faultline Rupture 3",
+      "element": "ground",
+      "category": "physical",
+      "description": "Deals Physical damage, then lowers the target Def and SpD by 5.",
+      "obtained": "via reaching Level 150.",
+      "power": "200",
+      "uses": null,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Vortex Burst 1": {
+      "name": "Vortex Burst 1",
+      "element": "water",
+      "category": "status",
+      "description": "Restores 20% max HP, and inflicts 6 stacks of [Poison].",
+      "obtained": "via reaching Level 30.",
+      "power": "—",
+      "uses": null,
+      "tags": [
+        "Support",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Vortex Burst 2": {
+      "name": "Vortex Burst 2",
+      "element": "water",
+      "category": "status",
+      "description": "Restores 30% max HP, and inflicts 8 stacks of [Poison].",
+      "obtained": "via reaching Level 150.",
+      "power": "—",
+      "uses": null,
+      "tags": [
+        "Support",
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Vortex Burst 3": {
+      "name": "Vortex Burst 3",
+      "element": "water",
+      "category": "status",
+      "description": "Restores 40% max HP, and inflicts 10 stacks of [Poison].",
+      "obtained": "via reaching Level 150.",
+      "power": "—",
+      "uses": null,
+      "tags": [
+        "Support",
+        "Status condition",
+        "Single target"
+      ]
     }
   },
   "learnsets": {
@@ -3081,6 +3165,21 @@
         "All-Out Attack",
         null,
         "level"
+      ],
+      [
+        "Faultline Rupture 1",
+        30,
+        "ultimate"
+      ],
+      [
+        "Faultline Rupture 2",
+        80,
+        "ultimate"
+      ],
+      [
+        "Faultline Rupture 3",
+        150,
+        "ultimate"
       ]
     ],
     "Cragmar": [
@@ -3153,6 +3252,21 @@
         "All-Out Attack",
         null,
         "level"
+      ],
+      [
+        "Faultline Rupture 1",
+        30,
+        "ultimate"
+      ],
+      [
+        "Faultline Rupture 2",
+        80,
+        "ultimate"
+      ],
+      [
+        "Faultline Rupture 3",
+        150,
+        "ultimate"
       ]
     ],
     "Mushjell": [
@@ -3225,6 +3339,21 @@
         "All-Out Attack",
         null,
         "level"
+      ],
+      [
+        "Vortex Burst 1",
+        30,
+        "ultimate"
+      ],
+      [
+        "Vortex Burst 2",
+        80,
+        "ultimate"
+      ],
+      [
+        "Vortex Burst 3",
+        150,
+        "ultimate"
       ]
     ],
     "Florajell": [
@@ -3297,6 +3426,21 @@
         "All-Out Attack",
         null,
         "level"
+      ],
+      [
+        "Vortex Burst 1",
+        30,
+        "ultimate"
+      ],
+      [
+        "Vortex Burst 2",
+        80,
+        "ultimate"
+      ],
+      [
+        "Vortex Burst 3",
+        150,
+        "ultimate"
       ]
     ]
   }
