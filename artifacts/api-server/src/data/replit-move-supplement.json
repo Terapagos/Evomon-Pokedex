@@ -1114,6 +1114,165 @@
         "Physical",
         "Single target"
       ]
+    },
+    "Mega Smash": {
+      "name": "Mega Smash",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals Physical damage to one target.",
+      "obtained": "via Level up.",
+      "power": "40",
+      "uses": 30,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Confuse": {
+      "name": "Confuse",
+      "element": "normal",
+      "category": "status",
+      "description": "Inflicts [Confusion] to one target, with a 25% chance.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 10,
+      "tags": [
+        "Status condition",
+        "Single target"
+      ]
+    },
+    "Ambush": {
+      "name": "Ambush",
+      "element": "ground",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up.",
+      "power": "50",
+      "uses": 30,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Expose": {
+      "name": "Expose",
+      "element": "normal",
+      "category": "status",
+      "description": "Lowers the target's Def by 5.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 15,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Earth Pulse": {
+      "name": "Earth Pulse",
+      "element": "ground",
+      "category": "status",
+      "description": "Doubles the Skill Power of the next Ground-type skill.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 10,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Ruthless Rush": {
+      "name": "Ruthless Rush",
+      "element": "ground",
+      "category": "physical",
+      "description": "Deals Physical damage to the target, and gains +10 Skill Power per Def stage lowered on the target.",
+      "obtained": "via Level up.",
+      "power": "100",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Ram": {
+      "name": "Ram",
+      "element": "normal",
+      "category": "physical",
+      "description": "Deals physical damage to one target.",
+      "obtained": "via Level up.",
+      "power": "40",
+      "uses": 30,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Aqua Splash": {
+      "name": "Aqua Splash",
+      "element": "water",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up.",
+      "power": "50",
+      "uses": 30,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Speed Rush": {
+      "name": "Speed Rush",
+      "element": "normal",
+      "category": "status",
+      "description": "Increases Spe by 3.",
+      "obtained": "via Level up.",
+      "power": "—",
+      "uses": 15,
+      "tags": [
+        "Support",
+        "Single target"
+      ]
+    },
+    "Tsunami Whirl": {
+      "name": "Tsunami Whirl",
+      "element": "water",
+      "category": "special",
+      "description": "Deals Special damage to the target. Gains 1 stack of [Soak].",
+      "obtained": "via Level up.",
+      "power": "55",
+      "uses": 20,
+      "tags": [
+        "Sp. Atk",
+        "Support",
+        "Single target"
+      ]
+    },
+    "Water Spout": {
+      "name": "Water Spout",
+      "element": "water",
+      "category": "physical",
+      "description": "Deals Physical damage to the target.",
+      "obtained": "via Level up.",
+      "power": "120",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Single target"
+      ]
+    },
+    "Venom Claw": {
+      "name": "Venom Claw",
+      "element": "poison",
+      "category": "physical",
+      "description": "Deals Physical damage, then inflicts [Poison] equal to 2x your [Soak] stacks.",
+      "obtained": "Via level up",
+      "power": "110",
+      "uses": 5,
+      "tags": [
+        "Physical",
+        "Status condition",
+        "Single target"
+      ]
     }
   },
   "learnsets": {
@@ -2851,6 +3010,295 @@
         null,
         "level"
       ]
+    ],
+    "Craglet": [
+      [
+        "Mega Smash",
+        1,
+        "level"
+      ],
+      [
+        "Confuse",
+        1,
+        "level"
+      ],
+      [
+        "Ambush",
+        10,
+        "level"
+      ],
+      [
+        "Expose",
+        20,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        40,
+        "level"
+      ],
+      [
+        "Rest",
+        50,
+        "level"
+      ],
+      [
+        "Savage Slam",
+        60,
+        "level"
+      ],
+      [
+        "Earthquake",
+        70,
+        "level"
+      ],
+      [
+        "Hone 1",
+        90,
+        "level"
+      ],
+      [
+        "Earth Pulse",
+        100,
+        "level"
+      ],
+      [
+        "Quicksand",
+        120,
+        "level"
+      ],
+      [
+        "Ruthless Rush",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ]
+    ],
+    "Cragmar": [
+      [
+        "Mega Smash",
+        1,
+        "level"
+      ],
+      [
+        "Confuse",
+        1,
+        "level"
+      ],
+      [
+        "Ambush",
+        10,
+        "level"
+      ],
+      [
+        "Expose",
+        20,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        40,
+        "level"
+      ],
+      [
+        "Rest",
+        50,
+        "level"
+      ],
+      [
+        "Savage Slam",
+        60,
+        "level"
+      ],
+      [
+        "Earthquake",
+        70,
+        "level"
+      ],
+      [
+        "Hone 1",
+        90,
+        "level"
+      ],
+      [
+        "Earth Pulse",
+        100,
+        "level"
+      ],
+      [
+        "Quicksand",
+        120,
+        "level"
+      ],
+      [
+        "Ruthless Rush",
+        140,
+        "level"
+      ],
+      [
+        "Intimidation",
+        null,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ]
+    ],
+    "Mushjell": [
+      [
+        "Ram",
+        1,
+        "level"
+      ],
+      [
+        "Hone 1",
+        1,
+        "level"
+      ],
+      [
+        "Aqua Splash",
+        10,
+        "level"
+      ],
+      [
+        "Speed Rush",
+        20,
+        "level"
+      ],
+      [
+        "Tsunami Whirl",
+        40,
+        "level"
+      ],
+      [
+        "Poison",
+        50,
+        "level"
+      ],
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        70,
+        "level"
+      ],
+      [
+        "Rain Dance",
+        90,
+        "level"
+      ],
+      [
+        "Venom Spray",
+        100,
+        "level"
+      ],
+      [
+        "Water Spout",
+        120,
+        "level"
+      ],
+      [
+        "Venom Claw",
+        140,
+        "level"
+      ],
+      [
+        "Battle Stance",
+        null,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ]
+    ],
+    "Florajell": [
+      [
+        "Ram",
+        1,
+        "level"
+      ],
+      [
+        "Hone 1",
+        1,
+        "level"
+      ],
+      [
+        "Aqua Splash",
+        10,
+        "level"
+      ],
+      [
+        "Speed Rush",
+        20,
+        "level"
+      ],
+      [
+        "Tsunami Whirl",
+        40,
+        "level"
+      ],
+      [
+        "Poison",
+        50,
+        "level"
+      ],
+      [
+        "Mud Slide",
+        60,
+        "level"
+      ],
+      [
+        "Fatal Rebound",
+        70,
+        "level"
+      ],
+      [
+        "Rain Dance",
+        90,
+        "level"
+      ],
+      [
+        "Venom Spray",
+        100,
+        "level"
+      ],
+      [
+        "Water Spout",
+        120,
+        "level"
+      ],
+      [
+        "Venom Claw",
+        140,
+        "level"
+      ],
+      [
+        "Battle Stance",
+        null,
+        "level"
+      ],
+      [
+        "All-Out Attack",
+        null,
+        "level"
+      ]
     ]
   }
 }
+
