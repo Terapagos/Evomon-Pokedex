@@ -27,8 +27,8 @@
       "speed": 42
     },
     "shinyStatsRecorded": true,
-    "legendaryTrait": null,
-    "legendaryTraitEffect": null,
+    "legendaryTrait": "Leech",
+    "legendaryTraitEffect": "When any foe takes [Poison] damage: heals for 66% of it.",
     "catchLocation": "Not recorded in supplied notes",
     "eventStatus": "Not recorded in supplied notes",
     "evolutionLine": [
@@ -301,8 +301,8 @@
       "speed": 62
     },
     "shinyStatsRecorded": true,
-    "legendaryTrait": null,
-    "legendaryTraitEffect": null,
+    "legendaryTrait": "Leech",
+    "legendaryTraitEffect": "When any foe takes [Poison] damage: heals for 66% of it.",
     "catchLocation": "Not recorded in supplied notes",
     "eventStatus": "Not recorded in supplied notes",
     "evolutionLine": [
@@ -548,4 +548,3 @@
     "sourceUrl": "https://i.e-z.host/📸/b8dlhf4u.png"
   }
 ]
-
