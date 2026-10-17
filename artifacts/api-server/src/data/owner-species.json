@@ -1,0 +1,544 @@
+[
+  {
+    "id": "scorpite",
+    "name": "Scorpite",
+    "dexNumber": 133,
+    "element": [
+      "poison",
+      "rock"
+    ],
+    "stage": "Base form",
+    "image": "https://r2.e-z.host/3eba238d-bb8e-4137-b17a-4548203a42d4/bl7xrql9.png",
+    "shinyImage": "https://r2.e-z.host/3eba238d-bb8e-4137-b17a-4548203a42d4/vnl9zygo.png",
+    "baseStats": {
+      "hp": 62,
+      "atk": 40,
+      "def": 49,
+      "spatk": 59,
+      "spdef": 75,
+      "speed": 42
+    },
+    "shinyBaseStats": {
+      "hp": 66,
+      "atk": 40,
+      "def": 49,
+      "spatk": 64,
+      "spdef": 80,
+      "speed": 42
+    },
+    "shinyStatsRecorded": true,
+    "legendaryTrait": null,
+    "legendaryTraitEffect": null,
+    "catchLocation": "Not recorded in supplied notes",
+    "eventStatus": "Not recorded in supplied notes",
+    "evolutionLine": [
+      "Scorpite",
+      "Scorpolith"
+    ],
+    "moves": [
+      {
+        "name": "Flash Strike",
+        "element": "normal",
+        "category": "special",
+        "description": "Deals Special damage to one target.",
+        "obtained": "via Level up.",
+        "power": "40",
+        "uses": 30,
+        "tags": [
+          "Sp. Atk",
+          "Single target"
+        ],
+        "unlockLevel": 1,
+        "slot": "level"
+      },
+      {
+        "name": "Block",
+        "element": "normal",
+        "category": "status",
+        "description": "Reduces damage taken by 100 this turn.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Single target"
+        ],
+        "unlockLevel": 1,
+        "slot": "level"
+      },
+      {
+        "name": "Rock Blast",
+        "element": "rock",
+        "category": "special",
+        "description": "Deals Special damage to the target.",
+        "obtained": "via Level up.",
+        "power": "50",
+        "uses": 30,
+        "tags": [
+          "Sp. Atk",
+          "Single target"
+        ],
+        "unlockLevel": 10,
+        "slot": "level"
+      },
+      {
+        "name": "Tenacity",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases SpD by 5.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ],
+        "unlockLevel": 20,
+        "slot": "level"
+      },
+      {
+        "name": "Poison Coat",
+        "element": "poison",
+        "category": "physical",
+        "description": "Deals Physical damage to the target, and inflicts 2 stacks of [Poison].",
+        "obtained": "via Level up.",
+        "power": "60",
+        "uses": 15,
+        "tags": [
+          "Physical",
+          "Status condition",
+          "Single target"
+        ],
+        "unlockLevel": 40,
+        "slot": "level"
+      },
+      {
+        "name": "Poison",
+        "element": "poison",
+        "category": "status",
+        "description": "Inflicts 5 stacks of [Poison] to one target.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Status condition",
+          "Single target"
+        ],
+        "unlockLevel": 50,
+        "slot": "level"
+      },
+      {
+        "name": "Venom Spray",
+        "element": "poison",
+        "category": "special",
+        "description": "Deals Special damage to the target, and inflicts 3 stacks of [Poison].",
+        "obtained": "via Level up.",
+        "power": "90",
+        "uses": 10,
+        "tags": [
+          "Sp. Atk",
+          "Status condition",
+          "Single target"
+        ],
+        "unlockLevel": 60,
+        "slot": "level"
+      },
+      {
+        "name": "Sand Attack",
+        "element": "rock",
+        "category": "special",
+        "description": "Deals 3x to 5x Power in damage to the target.",
+        "obtained": "via Level up.",
+        "power": "25",
+        "uses": 10,
+        "tags": [
+          "Sp. Atk",
+          "Single target"
+        ],
+        "unlockLevel": 70,
+        "slot": "level"
+      },
+      {
+        "name": "Torment",
+        "element": "normal",
+        "category": "status",
+        "description": "Prevents the target from using its last used skill on its next turn.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Single target"
+        ],
+        "unlockLevel": 90,
+        "slot": "level"
+      },
+      {
+        "name": "Gravity Crush",
+        "element": "normal",
+        "category": "special",
+        "description": "Deals Special damage to the target, and inflicts 25 fixed damage.",
+        "obtained": "via Level up.",
+        "power": "110",
+        "uses": 5,
+        "tags": [
+          "Sp. Atk",
+          "Single target"
+        ],
+        "unlockLevel": 100,
+        "slot": "level"
+      },
+      {
+        "name": "Toxic Burst",
+        "unlockLevel": 120,
+        "slot": "level",
+        "element": "poison",
+        "category": "status",
+        "description": "Priority +1; Reduces damage taken this turn by 150 and inflicts 5 stacks of [Poison] on the target.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Graystone Circle",
+        "unlockLevel": 140,
+        "slot": "level",
+        "element": "rock",
+        "category": "special",
+        "description": "Deals Special damage to the target. Gains +5 Skill Power for each stage of the user's SpD increase.",
+        "obtained": "via Level up.",
+        "power": "110",
+        "uses": 5,
+        "tags": [
+          "Sp. Atk",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Venom Charge 1",
+        "unlockLevel": 30,
+        "slot": "ultimate",
+        "element": "poison",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 3 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 4 stacks of [Poison] on the attacker.",
+        "obtained": "via reaching Level 30.",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Venom Charge 2",
+        "unlockLevel": 80,
+        "slot": "ultimate",
+        "element": "poison",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 4 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 6 stacks of [Poison] on the attacker.",
+        "obtained": "via reaching Level 80.",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Venom Charge 3",
+        "unlockLevel": 150,
+        "slot": "ultimate",
+        "element": "poison",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 5 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 8 stacks of [Poison] on the attacker.",
+        "obtained": "via reaching Level 150.",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
+      }
+    ],
+    "sourceUrl": "https://i.e-z.host/📸/bl7xrql9.png"
+  },
+  {
+    "id": "scorpolith",
+    "name": "Scorpolith",
+    "dexNumber": 134,
+    "element": [
+      "poison",
+      "rock"
+    ],
+    "stage": "Stage 2",
+    "image": "https://r2.e-z.host/3eba238d-bb8e-4137-b17a-4548203a42d4/b8dlhf4u.png",
+    "shinyImage": "https://r2.e-z.host/3eba238d-bb8e-4137-b17a-4548203a42d4/3391ruo3.png",
+    "baseStats": {
+      "hp": 101,
+      "atk": 71,
+      "def": 79,
+      "spatk": 98,
+      "spdef": 101,
+      "speed": 62
+    },
+    "shinyBaseStats": {},
+    "shinyStatsRecorded": false,
+    "legendaryTrait": null,
+    "legendaryTraitEffect": null,
+    "catchLocation": "Not recorded in supplied notes",
+    "eventStatus": "Not recorded in supplied notes",
+    "evolutionLine": [
+      "Scorpite",
+      "Scorpolith"
+    ],
+    "moves": [
+      {
+        "name": "Flash Strike",
+        "element": "normal",
+        "category": "special",
+        "description": "Deals Special damage to one target.",
+        "obtained": "via Level up.",
+        "power": "40",
+        "uses": 30,
+        "tags": [
+          "Sp. Atk",
+          "Single target"
+        ],
+        "unlockLevel": 1,
+        "slot": "level"
+      },
+      {
+        "name": "Block",
+        "element": "normal",
+        "category": "status",
+        "description": "Reduces damage taken by 100 this turn.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Single target"
+        ],
+        "unlockLevel": 1,
+        "slot": "level"
+      },
+      {
+        "name": "Rock Blast",
+        "element": "rock",
+        "category": "special",
+        "description": "Deals Special damage to the target.",
+        "obtained": "via Level up.",
+        "power": "50",
+        "uses": 30,
+        "tags": [
+          "Sp. Atk",
+          "Single target"
+        ],
+        "unlockLevel": 10,
+        "slot": "level"
+      },
+      {
+        "name": "Tenacity",
+        "element": "normal",
+        "category": "status",
+        "description": "Increases SpD by 5.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 15,
+        "tags": [
+          "Support",
+          "Single target"
+        ],
+        "unlockLevel": 20,
+        "slot": "level"
+      },
+      {
+        "name": "Poison Coat",
+        "element": "poison",
+        "category": "physical",
+        "description": "Deals Physical damage to the target, and inflicts 2 stacks of [Poison].",
+        "obtained": "via Level up.",
+        "power": "60",
+        "uses": 15,
+        "tags": [
+          "Physical",
+          "Status condition",
+          "Single target"
+        ],
+        "unlockLevel": 40,
+        "slot": "level"
+      },
+      {
+        "name": "Poison",
+        "element": "poison",
+        "category": "status",
+        "description": "Inflicts 5 stacks of [Poison] to one target.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 10,
+        "tags": [
+          "Status condition",
+          "Single target"
+        ],
+        "unlockLevel": 50,
+        "slot": "level"
+      },
+      {
+        "name": "Venom Spray",
+        "element": "poison",
+        "category": "special",
+        "description": "Deals Special damage to the target, and inflicts 3 stacks of [Poison].",
+        "obtained": "via Level up.",
+        "power": "90",
+        "uses": 10,
+        "tags": [
+          "Sp. Atk",
+          "Status condition",
+          "Single target"
+        ],
+        "unlockLevel": 60,
+        "slot": "level"
+      },
+      {
+        "name": "Sand Attack",
+        "element": "rock",
+        "category": "special",
+        "description": "Deals 3x to 5x Power in damage to the target.",
+        "obtained": "via Level up.",
+        "power": "25",
+        "uses": 10,
+        "tags": [
+          "Sp. Atk",
+          "Single target"
+        ],
+        "unlockLevel": 70,
+        "slot": "level"
+      },
+      {
+        "name": "Torment",
+        "element": "normal",
+        "category": "status",
+        "description": "Prevents the target from using its last used skill on its next turn.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Single target"
+        ],
+        "unlockLevel": 90,
+        "slot": "level"
+      },
+      {
+        "name": "Gravity Crush",
+        "element": "normal",
+        "category": "special",
+        "description": "Deals Special damage to the target, and inflicts 25 fixed damage.",
+        "obtained": "via Level up.",
+        "power": "110",
+        "uses": 5,
+        "tags": [
+          "Sp. Atk",
+          "Single target"
+        ],
+        "unlockLevel": 100,
+        "slot": "level"
+      },
+      {
+        "name": "Toxic Burst",
+        "unlockLevel": 120,
+        "slot": "level",
+        "element": "poison",
+        "category": "status",
+        "description": "Priority +1; Reduces damage taken this turn by 150 and inflicts 5 stacks of [Poison] on the target.",
+        "obtained": "via Level up.",
+        "power": "—",
+        "uses": 5,
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Graystone Circle",
+        "unlockLevel": 140,
+        "slot": "level",
+        "element": "rock",
+        "category": "special",
+        "description": "Deals Special damage to the target. Gains +5 Skill Power for each stage of the user's SpD increase.",
+        "obtained": "via Level up.",
+        "power": "110",
+        "uses": 5,
+        "tags": [
+          "Sp. Atk",
+          "Support",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Venom Charge 1",
+        "unlockLevel": 30,
+        "slot": "ultimate",
+        "element": "poison",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 3 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 4 stacks of [Poison] on the attacker.",
+        "obtained": "via reaching Level 30.",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Venom Charge 2",
+        "unlockLevel": 80,
+        "slot": "ultimate",
+        "element": "poison",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 4 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 6 stacks of [Poison] on the attacker.",
+        "obtained": "via reaching Level 80.",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
+      },
+      {
+        "name": "Venom Charge 3",
+        "unlockLevel": 150,
+        "slot": "ultimate",
+        "element": "poison",
+        "category": "status",
+        "description": "Priority +1; Raises your Evomon's Def and SpD by 5 stages for 2 turns. Whenever your Evomon is hit during this effect, inflicts 8 stacks of [Poison] on the attacker.",
+        "obtained": "via reaching Level 150.",
+        "power": "—",
+        "uses": null,
+        "tags": [
+          "Support",
+          "Priority",
+          "Status condition",
+          "Single target"
+        ]
+      }
+    ],
+    "sourceUrl": "https://i.e-z.host/📸/b8dlhf4u.png"
+  }
+]
+

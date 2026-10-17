@@ -1,6 +1,7 @@
 import { Router, type IRouter } from "express";
 import { GetEvomonCatalogResponse } from "@workspace/api-zod";
 import replitMoveSupplement from "../data/replit-move-supplement.json";
+import ownerSpecies from "../data/owner-species.json";
 
 const WIKI_ORIGIN = "https://www.evomon.wiki";
 const WIKI_URL = `${WIKI_ORIGIN}/wiki`;
@@ -686,6 +687,19 @@ async function createCatalog(): Promise<unknown> {
     if (exactMoves) mon.moves = exactMoves.map((move) => ({ ...move, tags: [...move.tags] }));
   }
 
+  // Owner-supplied species may not yet exist in the public wiki catalog.
+  // Match by stable ID/name so a later wiki addition does not duplicate them.
+  for (const supplied of ownerSpecies) {
+    const entry = {
+      ...supplied,
+      moves: supplied.moves.map((move) => ({ ...move, tags: move.tags as MoveTag[] })),
+    };
+    const existingIndex = mons.findIndex((mon) => mon.id === entry.id || mon.name === entry.name);
+    if (existingIndex >= 0) mons[existingIndex] = entry;
+    else mons.push(entry);
+  }
+  mons.sort((a, b) => a.dexNumber - b.dexNumber);
+
   return GetEvomonCatalogResponse.parse({
     source: WIKI_URL,
     traitsSource: TRAITS_URL,
@@ -725,4 +739,5 @@ router.get("/evomon", async (req, res): Promise<void> => {
 });
 
 export default router;
+
 
