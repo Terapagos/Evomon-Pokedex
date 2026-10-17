@@ -47,3 +47,12 @@ assert(catalog.mons.find((mon) => mon.name === 'Bubble').moves.some((move) => mo
 console.log(`Verified ${verifiedMoves} restored move assignments across ${Object.keys(supplement.learnsets).length} Evomon.`);
 console.log(`API verified: health, ${catalog.mons.length} catalog entries, skills, and Pages CORS.`);
 
+
+const ownerSpecies = JSON.parse(await readFile(new URL('../artifacts/api-server/src/data/owner-species.json', import.meta.url), 'utf8'));
+for (const expected of ownerSpecies) {
+  const matches = catalog.mons.filter((mon) => mon.id === expected.id || mon.name === expected.name);
+  assert.equal(matches.length, 1, expected.name + ': expected one catalog entry');
+  assert.deepEqual(matches[0], expected, expected.name + ': must preserve owner-supplied forms and moves');
+}
+console.log('Verified owner-supplied species, evolution lines, forms, and complete movesets.');
+
