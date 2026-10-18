@@ -1,0 +1,27 @@
+{
+  "name": "dat-evomon-site",
+  "account_id": "ac7adb7f07d3dfa22a3c5a888cfcb44d",
+  "compatibility_date": "2026-10-18",
+  "workers_dev": true,
+  "preview_urls": false,
+  "main": "site-worker.mjs",
+  "assets": {
+    "directory": "artifacts/evomon-pokedex/dist/public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": [
+      "/evomon*",
+      "/__move"
+    ]
+  },
+  "routes": [
+    {
+      "pattern": "evomon.dat.place",
+      "custom_domain": true
+    },
+    {
+      "pattern": "dat.place/evomon*",
+      "zone_name": "dat.place"
+    }
+  ]
+}

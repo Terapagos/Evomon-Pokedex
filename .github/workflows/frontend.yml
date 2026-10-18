@@ -1,0 +1,31 @@
+name: Build independent evomon frontend
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    env:
+      PORT: '3000'
+      BASE_PATH: '/'
+      VITE_API_URL: 'https://terapagos-evomon-api.fly.dev'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - run: pnpm --filter @workspace/evomon-pokedex build
+      - run: node --test site-worker.test.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evomon-static-frontend
+          path: artifacts/evomon-pokedex/dist/public
+          if-no-files-found: error
