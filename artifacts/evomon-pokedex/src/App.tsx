@@ -581,7 +581,7 @@ function Router() {
 }
 
 function CatalogLoader({ children }: { children: ReactNode }) {
-  const catalogQuery = useGetEvomonCatalog();
+  const catalogQuery = useGetEvomonCatalog({ request: { responseType: 'json' } });
   const catalog = catalogQuery.data?.mons ?? evomonData;
   return <CatalogContext.Provider value={{ catalog, isLoading: catalogQuery.isLoading, isError: catalogQuery.isError }}>{children}</CatalogContext.Provider>;
 }

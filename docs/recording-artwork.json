@@ -1,0 +1,435 @@
+{
+  "sourceFile": "codex-clipboard-77b060c3-7b9e-42a1-ae86-cdaa1b4fc991.gif",
+  "notes": "Lossless native-resolution card crops. No upscaling. Unknown silhouettes excluded. Only images with at least 20% more pixels replace existing artwork. Stats, learnsets and evolution links were not visible for new entries.",
+  "images": [
+    {
+      "dexNumber": 40,
+      "variant": "normal",
+      "file": "040-normal.png",
+      "frame": 75,
+      "box": [
+        117,
+        696,
+        251,
+        830
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 41,
+      "variant": "normal",
+      "file": "041-normal.png",
+      "frame": 75,
+      "box": [
+        279,
+        696,
+        413,
+        830
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 111,
+      "variant": "normal",
+      "file": "111-normal.png",
+      "frame": 180,
+      "box": [
+        441,
+        470,
+        575,
+        604
+      ],
+      "previousDimensions": [
+        53,
+        54
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 118,
+      "variant": "normal",
+      "file": "118-normal.png",
+      "frame": 185,
+      "box": [
+        279,
+        424,
+        413,
+        558
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 119,
+      "variant": "normal",
+      "file": "119-normal.png",
+      "frame": 185,
+      "box": [
+        441,
+        424,
+        575,
+        558
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 121,
+      "variant": "normal",
+      "file": "121-normal.png",
+      "frame": 195,
+      "box": [
+        279,
+        126,
+        413,
+        260
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 122,
+      "variant": "normal",
+      "file": "122-normal.png",
+      "frame": 195,
+      "box": [
+        441,
+        126,
+        575,
+        260
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 123,
+      "variant": "normal",
+      "file": "123-normal.png",
+      "frame": 195,
+      "box": [
+        117,
+        304,
+        251,
+        438
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 124,
+      "variant": "normal",
+      "file": "124-normal.png",
+      "frame": 195,
+      "box": [
+        279,
+        304,
+        413,
+        438
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 153,
+      "variant": "normal",
+      "file": "153-normal.png",
+      "frame": 195,
+      "box": [
+        279,
+        481,
+        413,
+        615
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 40,
+      "variant": "shiny",
+      "file": "040-shiny.png",
+      "frame": 235,
+      "box": [
+        279,
+        226,
+        413,
+        360
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 43,
+      "variant": "shiny",
+      "file": "043-shiny.png",
+      "frame": 235,
+      "box": [
+        279,
+        403,
+        413,
+        537
+      ],
+      "previousDimensions": [
+        53,
+        54
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 63,
+      "variant": "shiny",
+      "file": "063-shiny.png",
+      "frame": 250,
+      "box": [
+        117,
+        294,
+        251,
+        428
+      ],
+      "previousDimensions": [
+        52,
+        53
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 114,
+      "variant": "shiny",
+      "file": "114-shiny.png",
+      "frame": 330,
+      "box": [
+        117,
+        203,
+        251,
+        337
+      ],
+      "previousDimensions": [
+        51,
+        51
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 115,
+      "variant": "shiny",
+      "file": "115-shiny.png",
+      "frame": 330,
+      "box": [
+        279,
+        203,
+        413,
+        337
+      ],
+      "previousDimensions": [
+        52,
+        53
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 118,
+      "variant": "shiny",
+      "file": "118-shiny.png",
+      "frame": 330,
+      "box": [
+        441,
+        203,
+        575,
+        337
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 119,
+      "variant": "shiny",
+      "file": "119-shiny.png",
+      "frame": 330,
+      "box": [
+        117,
+        380,
+        251,
+        514
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 121,
+      "variant": "shiny",
+      "file": "121-shiny.png",
+      "frame": 330,
+      "box": [
+        441,
+        380,
+        575,
+        514
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 122,
+      "variant": "shiny",
+      "file": "122-shiny.png",
+      "frame": 330,
+      "box": [
+        117,
+        558,
+        251,
+        692
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 123,
+      "variant": "shiny",
+      "file": "123-shiny.png",
+      "frame": 330,
+      "box": [
+        279,
+        558,
+        413,
+        692
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 124,
+      "variant": "shiny",
+      "file": "124-shiny.png",
+      "frame": 330,
+      "box": [
+        441,
+        558,
+        575,
+        692
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 133,
+      "variant": "shiny",
+      "file": "133-shiny.png",
+      "frame": 330,
+      "box": [
+        117,
+        736,
+        251,
+        870
+      ],
+      "previousDimensions": [
+        84,
+        85
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 134,
+      "variant": "shiny",
+      "file": "134-shiny.png",
+      "frame": 330,
+      "box": [
+        279,
+        736,
+        413,
+        870
+      ],
+      "previousDimensions": [
+        82,
+        91
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 153,
+      "variant": "shiny",
+      "file": "153-shiny.png",
+      "frame": 330,
+      "box": [
+        441,
+        736,
+        575,
+        870
+      ],
+      "previousDimensions": null,
+      "dimensions": [
+        134,
+        134
+      ]
+    }
+  ]
+}

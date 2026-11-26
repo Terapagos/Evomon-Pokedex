@@ -2,6 +2,7 @@ import { Router, type IRouter } from "express";
 import { GetEvomonCatalogResponse } from "@workspace/api-zod";
 import replitMoveSupplement from "../data/replit-move-supplement.json";
 import ownerSpecies from "../data/owner-species.json";
+import recordingCatalog from "../data/recording-catalog.json";
 
 const WIKI_ORIGIN = "https://www.evomon.wiki";
 const WIKI_URL = `${WIKI_ORIGIN}/wiki`;
@@ -660,7 +661,7 @@ async function createCatalog(): Promise<unknown> {
   // links/definitions. Apply after inheritance so each verified learnset is kept
   // exactly, without assigning a move to unrelated evolution lines.
   const referenceDefinitions = replitMoveSupplement.definitions as Record<string, Omit<CatalogMove, "unlockLevel" | "slot">>;
-  const referenceLearnsets = replitMoveSupplement.learnsets as Record<string, [string, number | null, string][]>;
+  const referenceLearnsets = replitMoveSupplement.learnsets as unknown as Record<string, [string, number | null, string][]>;
   for (const mon of mons) {
     for (const [name, unlockLevel, slot] of referenceLearnsets[mon.name] ?? []) {
       // The wiki calls regular level moves "basic"; Replit calls them "level".
@@ -698,6 +699,15 @@ async function createCatalog(): Promise<unknown> {
     if (existingIndex >= 0) mons[existingIndex] = entry;
     else mons.push(entry);
   }
+  // Add only identities visible in the recording. Future wiki records take
+  // precedence for details that could not be observed in the recording.
+  for (const supplied of recordingCatalog.entries) {
+    if (!mons.some((mon) => mon.dexNumber === supplied.dexNumber || mon.id === supplied.id)) {
+      mons.push({ ...supplied, moves: [] });
+    }
+  }
+  const recordedArtwork = recordingCatalog.artwork as Record<string, { image?: string; shinyImage?: string }>;
+  for (const mon of mons) Object.assign(mon, recordedArtwork[String(mon.dexNumber)] ?? {});
   mons.sort((a, b) => a.dexNumber - b.dexNumber);
 
   return GetEvomonCatalogResponse.parse({

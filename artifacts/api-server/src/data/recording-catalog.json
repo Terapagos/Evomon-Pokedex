@@ -1,0 +1,277 @@
+{
+  "source": "Owner-supplied in-game index recording, 2026-11-26",
+  "entries": [
+    {
+      "id": "bonkoo",
+      "dexNumber": 40,
+      "name": "Bonkoo",
+      "element": [
+        "normal",
+        "fighting"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/040-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/040-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Bonkoo"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "titanking",
+      "dexNumber": 41,
+      "name": "Titanking",
+      "element": [
+        "normal",
+        "fighting"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/041-normal.png",
+      "shinyImage": null,
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Titanking"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "pumpkling",
+      "dexNumber": 118,
+      "name": "Pumpkling",
+      "element": [
+        "dark",
+        "grass"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/118-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/118-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Pumpkling"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "pumphex",
+      "dexNumber": 119,
+      "name": "Pumphex",
+      "element": [
+        "dark",
+        "grass"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/119-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/119-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Pumphex"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "armorb",
+      "dexNumber": 121,
+      "name": "Armorb",
+      "element": [
+        "light",
+        "fighting"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/121-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/121-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Armorb"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "lumiknight",
+      "dexNumber": 122,
+      "name": "Lumiknight",
+      "element": [
+        "light",
+        "fighting"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/122-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/122-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Lumiknight"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "sweetsting",
+      "dexNumber": 123,
+      "name": "Sweetsting",
+      "element": [
+        "bug"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/123-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/123-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Sweetsting"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "stingsweet-queen",
+      "dexNumber": 124,
+      "name": "Stingsweet Queen",
+      "element": [
+        "bug"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/124-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/124-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Stingsweet Queen"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "candymare",
+      "dexNumber": 153,
+      "name": "Candymare",
+      "element": [
+        "psychic",
+        "dark"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/153-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/153-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Candymare"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    }
+  ],
+  "artwork": {
+    "40": {
+      "image": "https://evomon.dat.place/artwork/recording/040-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/040-shiny.png"
+    },
+    "41": {
+      "image": "https://evomon.dat.place/artwork/recording/041-normal.png"
+    },
+    "111": {
+      "image": "https://evomon.dat.place/artwork/recording/111-normal.png"
+    },
+    "118": {
+      "image": "https://evomon.dat.place/artwork/recording/118-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/118-shiny.png"
+    },
+    "119": {
+      "image": "https://evomon.dat.place/artwork/recording/119-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/119-shiny.png"
+    },
+    "121": {
+      "image": "https://evomon.dat.place/artwork/recording/121-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/121-shiny.png"
+    },
+    "122": {
+      "image": "https://evomon.dat.place/artwork/recording/122-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/122-shiny.png"
+    },
+    "123": {
+      "image": "https://evomon.dat.place/artwork/recording/123-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/123-shiny.png"
+    },
+    "124": {
+      "image": "https://evomon.dat.place/artwork/recording/124-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/124-shiny.png"
+    },
+    "153": {
+      "image": "https://evomon.dat.place/artwork/recording/153-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/153-shiny.png"
+    },
+    "43": {
+      "shinyImage": "https://evomon.dat.place/artwork/recording/043-shiny.png"
+    },
+    "63": {
+      "shinyImage": "https://evomon.dat.place/artwork/recording/063-shiny.png"
+    },
+    "114": {
+      "shinyImage": "https://evomon.dat.place/artwork/recording/114-shiny.png"
+    },
+    "115": {
+      "shinyImage": "https://evomon.dat.place/artwork/recording/115-shiny.png"
+    },
+    "133": {
+      "shinyImage": "https://evomon.dat.place/artwork/recording/133-shiny.png"
+    },
+    "134": {
+      "shinyImage": "https://evomon.dat.place/artwork/recording/134-shiny.png"
+    }
+  }
+}

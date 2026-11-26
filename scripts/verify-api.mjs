@@ -49,10 +49,26 @@ console.log(`API verified: health, ${catalog.mons.length} catalog entries, skill
 
 
 const ownerSpecies = JSON.parse(await readFile(new URL('../artifacts/api-server/src/data/owner-species.json', import.meta.url), 'utf8'));
+const recording = JSON.parse(await readFile(new URL('../artifacts/api-server/src/data/recording-catalog.json', import.meta.url), 'utf8'));
 for (const expected of ownerSpecies) {
   const matches = catalog.mons.filter((mon) => mon.id === expected.id || mon.name === expected.name);
   assert.equal(matches.length, 1, expected.name + ': expected one catalog entry');
-  assert.deepEqual(matches[0], expected, expected.name + ': must preserve owner-supplied forms and moves');
+  assert.deepEqual(matches[0], { ...expected, ...recording.artwork[String(expected.dexNumber)] }, expected.name + ': must preserve owner-supplied forms and moves');
 }
 console.log('Verified owner-supplied species, evolution lines, forms, and complete movesets.');
+for (const expected of recording.entries) {
+  const matches = catalog.mons.filter((mon) => mon.dexNumber === expected.dexNumber);
+  assert.equal(matches.length, 1, `${expected.name}: expected one catalog entry`);
+  assert.equal(matches[0].name, expected.name);
+  assert.deepEqual(matches[0].element, expected.element);
+  assert.deepEqual(matches[0].baseStats, {}, 'Unseen stats must stay unrecorded');
+  assert.deepEqual(matches[0].moves, [], 'Unseen moves must stay unrecorded');
+}
+for (const [number, artwork] of Object.entries(recording.artwork)) {
+  const mon = catalog.mons.find((entry) => entry.dexNumber === Number(number));
+  assert(mon, `Missing artwork recipient #${number}`);
+  for (const [field, url] of Object.entries(artwork)) assert.equal(mon[field], url);
+}
+assert.equal(new Set(catalog.mons.map((mon) => mon.id)).size, catalog.mons.length, 'Duplicate catalog IDs');
+console.log(`Verified ${recording.entries.length} recording additions and all artwork assignments.`);
 
