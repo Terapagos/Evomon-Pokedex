@@ -2041,14 +2041,230 @@
       "baseStats": {},
       "shinyBaseStats": {},
       "shinyStatsRecorded": false,
-      "legendaryTrait": null,
-      "legendaryTraitEffect": null,
+      "legendaryTrait": "EnergyLeech",
+      "legendaryTraitEffect": "Each Energy removed from foes by this Evomon grants Atk +2 stages.",
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
         "Candymare"
       ],
-      "moves": [],
+      "moves": [
+        {
+          "name": "Tackle",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "40",
+          "uses": 30,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Hallucination",
+          "element": "psychic",
+          "category": "status",
+          "description": "Inflicts 3 stacks of [Psymark] to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Status condition",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Psychic Blast",
+          "element": "psychic",
+          "category": "special",
+          "description": "Deals Special damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 10,
+          "slot": "level",
+          "power": "50",
+          "uses": 30,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Full Purify",
+          "element": "normal",
+          "category": "status",
+          "description": "Removes all stat debuffs and status conditions from your Evomon.",
+          "obtained": "via Level up.",
+          "unlockLevel": 20,
+          "slot": "level",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Energy Siphon",
+          "element": "dark",
+          "category": "special",
+          "description": "Deals Special damage to the target, and steals 1 Ultimate Energy from the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 40,
+          "slot": "level",
+          "power": "50",
+          "uses": 20,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Shadow Ambush",
+          "element": "dark",
+          "category": "physical",
+          "description": "Deals physical damage to the target with +1 priority.",
+          "obtained": "via Level up.",
+          "unlockLevel": 50,
+          "slot": "level",
+          "power": "60",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Time Warp",
+          "element": "psychic",
+          "category": "special",
+          "description": "Deals Special damage to the target, and inflicts 2 stacks of [Psymark].",
+          "obtained": "via Level up.",
+          "unlockLevel": 60,
+          "slot": "level",
+          "power": "80",
+          "uses": 10,
+          "tags": [
+            "Sp. Atk",
+            "Status condition",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Protect",
+          "element": "normal",
+          "category": "status",
+          "description": "Grants +1 Priority and becomes immune to damage this turn. When hit, reduce attacker 1 PP.",
+          "obtained": "via Level up.",
+          "unlockLevel": 70,
+          "slot": "level",
+          "power": "—",
+          "uses": 3,
+          "tags": [
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Psychic Cast",
+          "element": "psychic",
+          "category": "special",
+          "description": "Deals Special damage to the target, and +40 Power against Evomons with [Psymark].",
+          "obtained": "via Level up.",
+          "unlockLevel": 90,
+          "slot": "level",
+          "power": "85",
+          "uses": 10,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Rally",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases Atk and SpA by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 100,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Psychic Crush",
+          "element": "psychic",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and gains +10 Power per Atk stage raised on the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 120,
+          "slot": "level",
+          "power": "95",
+          "uses": 5,
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Core Overdrive",
+          "element": "dark",
+          "category": "physical",
+          "description": "Deals Physical damage to the target; If you have Ultimate Energy, consume 1 to gain +20 Skill Power.",
+          "obtained": "via Level up.",
+          "unlockLevel": 140,
+          "slot": "level",
+          "power": "120",
+          "uses": 5,
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Store Power",
+          "element": "normal",
+          "category": "status",
+          "description": "Guarantees critical hits for the next 2 turns.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Single target"
+          ]
+        },
+        {
+          "name": "Phantom Diffusion 3",
+          "element": "psychic",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, removes 2 Ultimate Energy from it, and inflicts 3 stacks of [Psymark]. [Psymark]: Triggers upon taking non-Psychic damage, dealing 2.5% of max HP damage (capped). Up to 15 stacks. Persists after switching out.",
+          "obtained": "Owner-supplied Phantom Diffusion III recording; earlier ranks unrecorded.",
+          "unlockLevel": 150,
+          "slot": "ultimate",
+          "power": "180",
+          "uses": null,
+          "tags": [
+            "Physical",
+            "Support",
+            "Status condition",
+            "Single target"
+          ]
+        }
+      ],
       "sourceUrl": "https://evomon.dat.place/"
     }
   ],
