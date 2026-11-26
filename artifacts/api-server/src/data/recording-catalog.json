@@ -35,7 +35,7 @@
       ],
       "stage": "Unclassified",
       "image": "https://evomon.dat.place/artwork/recording/041-normal.png",
-      "shinyImage": null,
+      "shinyImage": "https://evomon.dat.place/artwork/recording/041-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
       "shinyStatsRecorded": false,
@@ -93,6 +93,30 @@
       "eventStatus": "Not recorded",
       "evolutionLine": [
         "Pumphex"
+      ],
+      "moves": [],
+      "sourceUrl": "https://evomon.dat.place/"
+    },
+    {
+      "id": "pyronix",
+      "dexNumber": 120,
+      "name": "Pyronix",
+      "element": [
+        "flying",
+        "fire"
+      ],
+      "stage": "Unclassified",
+      "image": "https://evomon.dat.place/artwork/recording/120-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/120-shiny.png",
+      "baseStats": {},
+      "shinyBaseStats": {},
+      "shinyStatsRecorded": false,
+      "legendaryTrait": null,
+      "legendaryTraitEffect": null,
+      "catchLocation": "Not recorded",
+      "eventStatus": "Not recorded",
+      "evolutionLine": [
+        "Pyronix"
       ],
       "moves": [],
       "sourceUrl": "https://evomon.dat.place/"
@@ -222,7 +246,8 @@
       "shinyImage": "https://evomon.dat.place/artwork/recording/040-shiny.png"
     },
     "41": {
-      "image": "https://evomon.dat.place/artwork/recording/041-normal.png"
+      "image": "https://evomon.dat.place/artwork/recording/041-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/041-shiny.png"
     },
     "111": {
       "image": "https://evomon.dat.place/artwork/recording/111-normal.png"
@@ -272,6 +297,10 @@
     },
     "134": {
       "shinyImage": "https://evomon.dat.place/artwork/recording/134-shiny.png"
+    },
+    "120": {
+      "image": "https://evomon.dat.place/artwork/recording/120-normal.png",
+      "shinyImage": "https://evomon.dat.place/artwork/recording/120-shiny.png"
     }
   }
 }

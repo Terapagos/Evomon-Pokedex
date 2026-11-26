@@ -1,0 +1,54 @@
+{
+  "sourceFile": "codex-clipboard-a52dd6cd-bf3a-497c-a3b6-eb0893481626.gif",
+  "notes": "Native 134px card crops. Newly visible normal and shiny Pyronix and shiny Titanking. Bubble stays selected throughout; no other stats or moves are inferred. Existing higher-quality artwork retained.",
+  "images": [
+    {
+      "dexNumber": 120,
+      "variant": "normal",
+      "file": "120-normal.png",
+      "frame": 140,
+      "box": [
+        117,
+        565,
+        251,
+        699
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 120,
+      "variant": "shiny",
+      "file": "120-shiny.png",
+      "frame": 320,
+      "box": [
+        279,
+        380,
+        413,
+        514
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    },
+    {
+      "dexNumber": 41,
+      "variant": "shiny",
+      "file": "041-shiny.png",
+      "frame": 200,
+      "box": [
+        441,
+        444,
+        575,
+        578
+      ],
+      "dimensions": [
+        134,
+        134
+      ]
+    }
+  ]
+}
