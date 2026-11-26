@@ -696,6 +696,36 @@
             "Sp. Atk",
             "Single target"
           ]
+        },
+        {
+          "name": "All-Out Attack",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "100",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Intimidation",
+          "element": "normal",
+          "category": "status",
+          "description": "Lowers the target's Def and SpD by 8.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 5,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
         }
       ],
       "sourceUrl": "https://evomon.dat.place/"
@@ -917,6 +947,36 @@
           "uses": null,
           "tags": [
             "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "All-Out Attack",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "100",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Intimidation",
+          "element": "normal",
+          "category": "status",
+          "description": "Lowers the target's Def and SpD by 8.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 5,
+          "tags": [
+            "Support",
             "Single target"
           ]
         }
