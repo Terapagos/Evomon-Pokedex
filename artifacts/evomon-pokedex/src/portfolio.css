@@ -194,18 +194,21 @@ select option { background: #11171f; color: #f4f6f5; }
 .minimal-skills .skill-detail-stats span:last-child { color: #aebbb8; margin-left: 0; }
 .minimal-skills .skill-learners-heading { margin-top: 28px; font: 11px var(--app-font-sans); text-transform: none; letter-spacing: 0; color: #aebbb8; }
 .minimal-skills .skill-learners-heading b { font-weight: 500; color: #aebbb8; }
-.minimal-skills .skill-learners { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 20px; }
-.minimal-skills .skill-learner { min-height: 45px; border: 0; border-bottom: 1px solid #ffffff0d; padding: 0 4px; }
+.minimal-skills .skill-learners { grid-template-columns: repeat(auto-fill, 100px); gap: 12px; }
+.minimal-skills .skill-learner { min-height: 122px; display: flex; flex-direction: column; justify-content: center; gap: 9px; border: 1px solid #ffffff12; border-radius: 8px; padding: 8px; }
 .minimal-skills .skill-learner:hover { background: #ffffff08; }
-.minimal-skills .skill-learner-name { font-size: 13px; font-weight: 500; }
-.minimal-skills .skill-learner-level { font: 10px var(--app-font-sans); color: #aebbb8; }
+.skill-learner-art { width: 80px; height: 80px; display: grid; place-items: center; }
+.skill-learner-art .art-image { width: 80px; height: 80px; object-fit: contain; }
+.skill-learner-art .art-fallback { width: 80px; height: 80px; display: grid; place-items: center; border-radius: 6px; background: #ffffff08; }
+.skill-learner-art .art-initial { font-size: 30px; color: #ffb0c7; }
+.minimal-skills .skill-learner-level { margin: 0; font: 10px var(--app-font-sans); color: #aebbb8; }
 .minimal-skills .skill-empty { border: 0; background: transparent; }
 @media (max-width: 760px) {
   .minimal-skills .skill-toolbar { grid-template-columns: minmax(0, 1fr) 170px; gap: 8px; }
   .minimal-skills .skill-browser { grid-template-columns: minmax(220px, .9fr) minmax(0, 1.1fr); }
   .minimal-skills .skill-detail { padding: 24px 18px; }
   .minimal-skills .skill-detail-stats { gap: 12px; }
-  .minimal-skills .skill-learners { grid-template-columns: 1fr; }
+  .minimal-skills .skill-learners { grid-template-columns: repeat(auto-fill, 100px); }
 }
 @media (max-width: 520px) {
   .collection-only .home-main { width: calc(100% - 16px); padding: 8px 0; }

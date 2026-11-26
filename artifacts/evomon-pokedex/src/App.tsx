@@ -451,10 +451,9 @@ function skillIndexFor(catalog: Evomon[]): SkillIndexEntry[] {
 
 function SkillLearner({ learner }: { learner: SkillIndexEntry['learners'][number] }) {
   return (
-    <Link href={`/evomon/${encodeURIComponent(idFor(learner.entry))}`} className="skill-learner" data-testid={`skill-learner-${idFor(learner.entry)}`}>
-      <span className="skill-learner-name">{learner.entry.name}</span>
+    <Link href={`/evomon/${encodeURIComponent(idFor(learner.entry))}`} className="skill-learner" aria-label={`Open ${learner.entry.name}`} title={learner.entry.name} data-testid={`skill-learner-${idFor(learner.entry)}`}>
+      <span className="skill-learner-art"><Artwork entry={learner.entry} variant="normal" /></span>
       <span className="skill-learner-level">{learner.ultimateRange ? `ULT · ${learner.ultimateRange}` : learner.unlockLevel !== null ? `${learner.slot === 'ultimate' ? 'ULT · ' : ''}Lv ${learner.unlockLevel}` : 'Skill cache'}</span>
-      <ArrowRight size={13} aria-hidden="true" />
     </Link>
   );
 }
