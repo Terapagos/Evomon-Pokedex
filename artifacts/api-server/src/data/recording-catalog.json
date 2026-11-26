@@ -1070,15 +1070,245 @@
       "baseStats": {},
       "shinyBaseStats": {},
       "shinyStatsRecorded": false,
-      "legendaryTrait": null,
-      "legendaryTraitEffect": null,
+      "legendaryTrait": "Willpower",
+      "legendaryTraitEffect": "Foes' skills and traits cannot lower its stats.",
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
         "Sweetsting",
         "Stingsweet Queen"
       ],
-      "moves": [],
+      "moves": [
+        {
+          "name": "Intimidate",
+          "element": "normal",
+          "category": "status",
+          "description": "Lowers the target's Atk by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Heavy Strike",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "40",
+          "uses": 30,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Insect Rush",
+          "element": "bug",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 10,
+          "slot": "level",
+          "power": "50",
+          "uses": 30,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Fighting Will 1",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases SpA by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 20,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Insect Sonic",
+          "element": "bug",
+          "category": "special",
+          "description": "Deals Special damage to the target with +1 Priority.",
+          "obtained": "via Level up.",
+          "unlockLevel": 40,
+          "slot": "level",
+          "power": "60",
+          "uses": 15,
+          "tags": [
+            "Sp. Atk",
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Poison Spike",
+          "element": "bug",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and removes the target's stat boosts.",
+          "obtained": "via Level up.",
+          "unlockLevel": 50,
+          "slot": "level",
+          "power": "60",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Heavy Slam",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to one target.",
+          "obtained": "via Level Up",
+          "unlockLevel": 60,
+          "slot": "level",
+          "power": "80",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Protect",
+          "element": "normal",
+          "category": "status",
+          "description": "Grants +1 Priority and becomes immune to damage this turn. When hit, reduce attacker 1 PP.",
+          "obtained": "via Level up.",
+          "unlockLevel": 70,
+          "slot": "level",
+          "power": "—",
+          "uses": 3,
+          "tags": [
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Venom Spray",
+          "element": "poison",
+          "category": "special",
+          "description": "Deals Special damage to the target, and inflicts 3 stacks of [Poison].",
+          "obtained": "via Level up.",
+          "unlockLevel": 90,
+          "slot": "level",
+          "power": "90",
+          "uses": 10,
+          "tags": [
+            "Sp. Atk",
+            "Status condition",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Inversion",
+          "element": "normal",
+          "category": "status",
+          "description": "Inverts all of the target's stat changes.",
+          "obtained": "via Level up.",
+          "unlockLevel": 100,
+          "slot": "level",
+          "power": "—",
+          "uses": 5,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Bee Sting",
+          "element": "bug",
+          "category": "special",
+          "description": "Deals damage to the target. This move's power increases by 20 each time it is used.",
+          "obtained": "via Level up.",
+          "unlockLevel": 120,
+          "slot": "level",
+          "power": "100",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Entangling Fangs",
+          "element": "bug",
+          "category": "special",
+          "description": "Deals damage to the target and removes all of the target's stat boosts.",
+          "obtained": "via Level up.",
+          "unlockLevel": 140,
+          "slot": "level",
+          "power": "120",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "All-Out Attack",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "100",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Store Power",
+          "element": "normal",
+          "category": "status",
+          "description": "Guarantees critical hits for the next 2 turns.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Single target"
+          ]
+        },
+        {
+          "name": "Scalding Venom 3",
+          "element": "bug",
+          "category": "special",
+          "description": "Deals Special damage to the target, and lowers the target's Atk and SpA by 10 stages.",
+          "obtained": "Owner-supplied Scalding Venom III recording; earlier ranks unrecorded.",
+          "unlockLevel": 150,
+          "slot": "ultimate",
+          "power": "200",
+          "uses": null,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        }
+      ],
       "sourceUrl": "https://evomon.dat.place/"
     },
     {
@@ -1094,15 +1324,245 @@
       "baseStats": {},
       "shinyBaseStats": {},
       "shinyStatsRecorded": false,
-      "legendaryTrait": null,
-      "legendaryTraitEffect": null,
+      "legendaryTrait": "Willpower",
+      "legendaryTraitEffect": "Foes' skills and traits cannot lower its stats.",
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
         "Sweetsting",
         "Stingsweet Queen"
       ],
-      "moves": [],
+      "moves": [
+        {
+          "name": "Intimidate",
+          "element": "normal",
+          "category": "status",
+          "description": "Lowers the target's Atk by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Heavy Strike",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "40",
+          "uses": 30,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Insect Rush",
+          "element": "bug",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 10,
+          "slot": "level",
+          "power": "50",
+          "uses": 30,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Fighting Will 1",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases SpA by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 20,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Insect Sonic",
+          "element": "bug",
+          "category": "special",
+          "description": "Deals Special damage to the target with +1 Priority.",
+          "obtained": "via Level up.",
+          "unlockLevel": 40,
+          "slot": "level",
+          "power": "60",
+          "uses": 15,
+          "tags": [
+            "Sp. Atk",
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Poison Spike",
+          "element": "bug",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and removes the target's stat boosts.",
+          "obtained": "via Level up.",
+          "unlockLevel": 50,
+          "slot": "level",
+          "power": "60",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Heavy Slam",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to one target.",
+          "obtained": "via Level Up",
+          "unlockLevel": 60,
+          "slot": "level",
+          "power": "80",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Protect",
+          "element": "normal",
+          "category": "status",
+          "description": "Grants +1 Priority and becomes immune to damage this turn. When hit, reduce attacker 1 PP.",
+          "obtained": "via Level up.",
+          "unlockLevel": 70,
+          "slot": "level",
+          "power": "—",
+          "uses": 3,
+          "tags": [
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Venom Spray",
+          "element": "poison",
+          "category": "special",
+          "description": "Deals Special damage to the target, and inflicts 3 stacks of [Poison].",
+          "obtained": "via Level up.",
+          "unlockLevel": 90,
+          "slot": "level",
+          "power": "90",
+          "uses": 10,
+          "tags": [
+            "Sp. Atk",
+            "Status condition",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Inversion",
+          "element": "normal",
+          "category": "status",
+          "description": "Inverts all of the target's stat changes.",
+          "obtained": "via Level up.",
+          "unlockLevel": 100,
+          "slot": "level",
+          "power": "—",
+          "uses": 5,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Bee Sting",
+          "element": "bug",
+          "category": "special",
+          "description": "Deals damage to the target. This move's power increases by 20 each time it is used.",
+          "obtained": "via Level up.",
+          "unlockLevel": 120,
+          "slot": "level",
+          "power": "100",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Entangling Fangs",
+          "element": "bug",
+          "category": "special",
+          "description": "Deals damage to the target and removes all of the target's stat boosts.",
+          "obtained": "via Level up.",
+          "unlockLevel": 140,
+          "slot": "level",
+          "power": "120",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "All-Out Attack",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "100",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Store Power",
+          "element": "normal",
+          "category": "status",
+          "description": "Guarantees critical hits for the next 2 turns.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Single target"
+          ]
+        },
+        {
+          "name": "Scalding Venom 3",
+          "element": "bug",
+          "category": "special",
+          "description": "Deals Special damage to the target, and lowers the target's Atk and SpA by 10 stages.",
+          "obtained": "Owner-supplied Scalding Venom III recording; earlier ranks unrecorded.",
+          "unlockLevel": 150,
+          "slot": "ultimate",
+          "power": "200",
+          "uses": null,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        }
+      ],
       "sourceUrl": "https://evomon.dat.place/"
     },
     {
