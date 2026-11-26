@@ -666,14 +666,18 @@
         {
           "name": "Shadow Convergence",
           "element": "dark",
-          "category": "unrecorded",
-          "description": "Effect not recorded in supplied moveset recording.",
-          "obtained": "Owner-supplied recording; effect and damage category unrecorded.",
+          "category": "physical",
+          "description": "Deals Physical damage to the target and removes 1 Ultimate Energy from it. Your Evomon gains 1 Ultimate Energy and 2 stacks of [Growth].",
+          "obtained": "via Level up.",
           "unlockLevel": 140,
           "slot": "level",
           "power": "90",
           "uses": 5,
-          "tags": []
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
         },
         {
           "name": "Abyssal Flame 3",
@@ -884,14 +888,18 @@
         {
           "name": "Shadow Convergence",
           "element": "dark",
-          "category": "unrecorded",
-          "description": "Effect not recorded in supplied moveset recording.",
-          "obtained": "Owner-supplied recording; effect and damage category unrecorded.",
+          "category": "physical",
+          "description": "Deals Physical damage to the target and removes 1 Ultimate Energy from it. Your Evomon gains 1 Ultimate Energy and 2 stacks of [Growth].",
+          "obtained": "via Level up.",
           "unlockLevel": 140,
           "slot": "level",
           "power": "90",
           "uses": 5,
-          "tags": []
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
         },
         {
           "name": "Abyssal Flame 3",
