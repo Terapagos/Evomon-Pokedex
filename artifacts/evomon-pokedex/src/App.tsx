@@ -51,8 +51,8 @@ function Artwork({ entry, variant, large = false }: { entry: Evomon; variant: Va
 function Brand() {
   return (
     <Link href="/" className="brand-link" data-testid="link-home">
-      <span className="brand-mark" aria-hidden="true"><span /></span>
-      <span><strong>EVO<span>MON</span></strong><small>PERSONAL FIELD DEVICE / 001</small></span>
+      <span className="brand-mark" aria-hidden="true">EV</span>
+      <span><strong>Evomon</strong><small>THE FIELD COLLECTION</small></span>
     </Link>
   );
 }
@@ -164,10 +164,10 @@ function EvomonRow({ entry, index, variant }: { entry: Evomon; index: number; va
 
 function Device({ children, count, total }: { children: ReactNode; count: number; total: number }) {
   return (
-    <section className="pokedex-device" aria-label="Evomon handheld Pokédex">
-      <div className="device-topbar"><span className="device-screw" /><span className="device-label">EVOMON // SCANNER UNIT</span><span className="device-led" /><span className="device-battery">BAT 87%</span></div>
+    <section className="pokedex-device" aria-label="Evomon collection">
+      <div className="device-topbar"><span className="device-label">THE FIELD COLLECTION / VOL. 01</span><span className="device-led" /><span className="device-battery">LIVE ARCHIVE</span></div>
       <div className="device-bezel">
-        <div className="screen-header"><div><span className="screen-kicker">FIELD SCAN / LIVE</span><strong>EVOMON CATALOG</strong></div><div className="screen-count"><b>{String(count).padStart(3, '0')}</b><span>/ {String(total).padStart(3, '0')} FOUND</span></div></div>
+        <div className="screen-header"><div><span className="screen-kicker">BROWSE & DISCOVER</span><strong>The Evomon collection</strong></div><div className="screen-count"><b>{String(count).padStart(3, '0')}</b><span>/ {String(total).padStart(3, '0')} FOUND</span></div></div>
         {children}
       </div>
       <div className="device-footer"><span className="speaker-lines" /><span>SELECT AN ENTRY TO OPEN FULL READINGS</span><span className="device-model">EV-01</span></div>
@@ -194,9 +194,9 @@ function Home() {
     <Shell>
       <main className="home-main">
         <section className="intro-strip fade-up">
-          <div><p className="eyebrow">Personal field guide / vol. 01</p><h1 className="font-display">Scan the <em>unknown.</em></h1></div>
+          <div><p className="eyebrow">A field guide for the curious</p><h1 className="font-display">Meet your{' '}<br />next <em>discovery.</em></h1></div>
           <p className="intro-copy">A pocket-sized archive for curious trainers. Search the roster, compare forms, and open any specimen for its full field reading.</p>
-          <div className="intro-index"><span>UNIT</span><b>001</b><span>ROSTER / {catalog.length || '—'}</span></div>
+          <div className="intro-index"><b>{catalog.length || '—'}</b><span>Evomon to discover</span><a href="https://portfolio.dat.place/">Explore Dat’s projects <ArrowRight size={14} /></a></div>
         </section>
         <ErrorNotice />
         <Device count={filtered.length} total={catalog.length}>
