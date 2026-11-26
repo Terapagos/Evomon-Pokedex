@@ -334,7 +334,7 @@ function Moveset({ moves }: { moves?: EvomonMove[] }) {
         <div className="section-kicker"><span>03</span><div><h2 className="font-display">Moveset</h2><p className="section-caption">{recordedMoves.length} documented moves · sorted by unlock level</p></div></div>
       </div>
       {recordedMoves.length
-        ? <div className="moves-grid">{recordedMoves.map((move) => <MoveCard move={move} key={`${move.slot}-${move.unlockLevel}-${move.name}`} />)}</div>
+        ? <div className="moves-grid" role="region" aria-label="Scrollable moveset" tabIndex={0}>{recordedMoves.map((move) => <MoveCard move={move} key={`${move.slot}-${move.unlockLevel}-${move.name}`} />)}</div>
         : <div className="missing-panel">No moves or unlock levels are recorded for this Evomon on the current Wiki Moves page.</div>}
     </section>
   );
