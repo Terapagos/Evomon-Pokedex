@@ -1,0 +1,148 @@
+/* Shared visual language with portfolio.dat.place: ink, plum light, case spines. */
+:root, .dark {
+  --background: 210 31% 5%;
+  --foreground: 150 10% 96%;
+  --border: 210 12% 25%;
+  --input: 210 12% 25%;
+  --ring: 343 100% 85%;
+  --primary: 343 100% 85%;
+  --primary-foreground: 210 31% 8%;
+  --secondary: 155 45% 71%;
+  --secondary-foreground: 210 31% 8%;
+  --accent: 343 100% 85%;
+  --accent-foreground: 210 31% 8%;
+  --card: 215 24% 9%;
+  --card-foreground: 150 10% 96%;
+  --muted: 210 17% 14%;
+  --muted-foreground: 158 9% 72%;
+  --device: 215 24% 9%;
+  --device-deep: 210 31% 5%;
+  --screen: 215 24% 9%;
+  --screen-deep: 210 23% 11%;
+  --app-font-sans: Inter, system-ui, sans-serif;
+  --app-font-display: Inter, system-ui, sans-serif;
+  --app-font-mono: ui-monospace, monospace;
+}
+.app-shell { background: radial-gradient(ellipse at 65% 34%, #3d2336, transparent 66%), #090d11; }
+.grain::after { display: none; }
+.site-header, .home-main, .skills-main, .detail-main, .site-footer { width: min(1360px, calc(100% - 10vw)); }
+.site-header { min-height: 81px; border-color: #ffffff19; gap: 20px; }
+.brand-mark { width: 32px; height: 32px; border: 1px solid #ffffff47; border-radius: 8px; transform: none; color: #ffb0c7; font: 700 11px ui-monospace, monospace; }
+.brand-mark::before, .brand-mark::after { display: none; }
+.brand-link strong { font-size: 16px; letter-spacing: -.03em; line-height: 1.2; font-weight: 750; }
+.brand-link small { font-size: 7px; margin-top: 4px; letter-spacing: .12em; }
+.header-link { font-size: 11px; letter-spacing: .04em; }
+.header-status { font-size: 8px; }
+.header-link.active { color: #ffb0c7; }
+.status-light, .device-led { background: #9effc5; box-shadow: 0 0 10px #9effc533; }
+.home-main { display: grid; grid-template-columns: minmax(260px, .8fr) minmax(0, 1.7fr); column-gap: clamp(24px, 4vw, 72px); align-items: center; padding: 65px 0 48px; min-height: calc(100svh - 160px); }
+.intro-strip { display: block; min-height: 0; padding: 0; }
+.eyebrow { font-size: 10px; letter-spacing: .1em; }
+.intro-strip h1 { margin-top: 21px; font-size: clamp(46px, 4.7vw, 75px); line-height: .99; letter-spacing: -.075em; font-weight: 750; }
+.intro-strip h1 em { display: block; color: #ffb0c7; }
+.intro-copy { max-width: 33ch; font-size: 14px; line-height: 1.75; color: #c6d0ce; margin: 27px 0 29px; }
+.intro-index { padding: 23px 0 0; border: 0; border-top: 1px solid #ffffff19; gap: 9px; font-size: 9px; letter-spacing: .08em; }
+.intro-index b { font-size: 33px; letter-spacing: -.06em; }
+.intro-index a { display: inline-flex; align-items: center; gap: 10px; width: fit-content; margin-top: 22px; padding: 10px 14px; border: 1px solid #ffffff35; border-radius: 8px; background: #111b20; color: #f4f6f5; text-decoration: none; font: 12px var(--app-font-sans); letter-spacing: 0; }
+.intro-index a:hover { border-color: #ffb0c7; }
+.home-main > .catalog-notice { grid-column: 2; }
+.pokedex-device, .skill-device, .detail-device { border: 1px solid #ffffff35; border-left: 8px solid #77616f; border-radius: 7px 15px 15px 7px; background: linear-gradient(150deg, #201a26aa, #11171fee 45%); box-shadow: 8px 8px 0 #080b10, 10px 10px 0 #ffffff18, 0 25px 65px #0005; }
+.pokedex-device { width: 100%; min-width: 0; margin: 0; padding: 14px; }
+.pokedex-device::before, .pokedex-device::after { display: none; }
+.device-topbar { min-height: 24px; justify-content: flex-start; font-size: 7px; letter-spacing: .1em; padding: 0 4px 8px; }
+.device-battery { color: #aebbb8; }
+.device-bezel { padding: 0; border: 0; border-radius: 0; background: transparent; }
+.screen-header { border: 0; background: transparent; padding: 16px 8px 20px; gap: 10px; }
+.screen-kicker { color: #ffb0c7; font-size: 8px; margin-bottom: 8px; }
+.screen-header strong { font-size: clamp(20px, 2.3vw, 31px); letter-spacing: -.055em; line-height: 1; }
+.screen-count b { color: #f4f6f5; font-size: 25px; }
+.screen-count span { color: #aebbb8; font-size: 7px; }
+.device-controls { border: 0; border-top: 1px solid #ffffff19; border-bottom: 1px solid #ffffff19; background: transparent; padding: 13px 0; grid-template-columns: minmax(100px, 1fr) 115px 110px; gap: 8px; }
+.control-search, .device-select, .variant-toggle { border: 1px solid #ffffff25; background: #090d1180; border-radius: 7px; min-height: 43px; }
+.control-search { grid-column: 1 / -1; }
+.control-search input { font-size: 12px; }
+.device-select span { color: #aebbb8; font-size: 7px; }
+.device-select select { font-size: 10px; }
+.device-select { padding-left: 9px; }
+.variant-toggle { grid-column: 1; grid-row: 2; padding: 3px; }
+.variant-toggle button { border-radius: 4px; font-size: 9px; }
+.variant-toggle button.selected, .detail-variant-toggle button.selected { background: #ffb0c7; color: #111b20; }
+.variant-toggle button.selected.shiny, .detail-variant-toggle button.selected.shiny { background: #9effc5; color: #111b20; }
+.roster-heading { display: none; }
+.roster-scroll { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-content: start; gap: 14px; height: 435px; min-height: 0; overflow-y: auto; padding: 18px 9px 20px 3px; border: 0; background: transparent; scrollbar-color: #77616f #090d11; }
+.roster-row { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto 122px auto auto auto; gap: 9px 5px; min-width: 0; min-height: 240px; padding: 14px 12px 13px; border: 1px solid #ffffff2b; border-left: 5px solid #655b6b; border-radius: 5px 10px 10px 5px; background: repeating-linear-gradient(0deg, #ffffff03 0 1px, transparent 1px 4px), radial-gradient(ellipse at 90% 0, #733a5338, transparent 65%), #11171f; box-shadow: 4px 4px 0 #080b10, 5px 5px 0 #ffffff16; transition: transform .2s, border-color .2s, background .2s; }
+.roster-row:hover { transform: translateY(-3px); border-color: #ffb0c799; background-color: #1d202a; }
+.row-number { grid-column: 1; grid-row: 1; color: #ffb0c7; font-size: 8px; letter-spacing: .08em; }
+.row-arrow { grid-column: 2; grid-row: 1; width: 12px; color: #aebbb8; }
+.row-art, .row-art-shiny { grid-column: 1 / -1; grid-row: 2; width: 100%; height: 122px; border: 0; border-radius: 0; background: transparent; overflow: visible; display: grid; place-items: center; }
+.row-art .art-image { width: 118px; height: 118px; max-width: 100%; object-fit: contain; filter: drop-shadow(0 10px 16px #0005); }
+.row-art .art-fallback { width: 100%; height: 100%; display: grid; place-items: center; background: radial-gradient(ellipse, #733a5328, transparent 70%); }
+.row-art .art-initial { font-size: 62px; color: #ffb0c74d; }
+.row-name { grid-column: 1 / -1; grid-row: 3; font-size: clamp(15px, 1.5vw, 22px); font-weight: 750; letter-spacing: -.055em; line-height: 1.2; }
+.row-elements { grid-column: 1 / -1; grid-row: 4; display: flex; gap: 4px; }
+.row-elements span { font-size: 7px; background: #ffb0c712; color: #e6becf; border: 1px solid #ffb0c722; border-radius: 4px; }
+.row-stage { grid-column: 1 / -1; grid-row: 5; display: block; font-size: 7px; color: #aebbb8; letter-spacing: .06em; }
+.roster-footnote { justify-content: flex-end; padding: 9px 4px 0; font-size: 6px; }
+.roster-footnote span:first-child, .roster-footnote span:nth-child(2) { display: none; }
+.device-footer { padding: 9px 4px 0; min-height: 25px; font-size: 6px; color: #aebbb8; }
+.speaker-lines, .device-model { display: none; }
+.home-note { grid-column: 1 / -1; width: 100%; margin: 45px 0 0; border-color: #ffffff19; font-size: 10px; }
+.home-note > span { color: #ffb0c7; font-size: 8px; }
+.site-footer { border-color: #ffffff19; color: #aebbb8; min-height: 74px; }
+.site-footer a { color: #c6d0ce; }
+.skills-intro h1, .detail-title h1 { letter-spacing: -.065em; font-weight: 750; }
+.skill-screen { background: #090d1177; border-color: #ffffff19; }
+.skill-attributes button:hover, .skill-attributes button.selected { background: #ffb0c7; color: #111b20; }
+.button-secondary { color: #ffb0c7; border-color: #ffb0c755; }
+.trait-card { background: #ffb0c708; border-color: #ffb0c744; }
+.trait-heading { color: #ffb0c7; }
+.detail-art-wrap { background: radial-gradient(ellipse, #733a5333, transparent 70%), #11171f; border-color: #ffffff25; }
+.radar-label { fill: #aebbb8; }
+.radar-value-shiny { fill: #9effc526; stroke: #9effc5; }
+.radar-dot-shiny { fill: #9effc5; }
+select option { background: #11171f; color: #f4f6f5; }
+::selection { background: #ffb0c7; color: #090d11; }
+@media (min-width: 1500px) { .roster-scroll { height: 510px; } }
+@media (max-width: 1050px) {
+  .home-main { grid-template-columns: minmax(220px, .8fr) minmax(0, 1.5fr); gap: 28px; }
+  .roster-scroll { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .intro-strip h1 { font-size: clamp(43px, 5vw, 60px); }
+}
+@media (max-width: 760px) {
+  .site-header, .home-main, .skills-main, .detail-main, .site-footer { width: calc(100% - 40px); }
+  .header-status { display: none; }
+  .header-nav { margin-right: 0; gap: 20px; }
+  .home-main { display: block; padding: 38px 0 26px; }
+  .intro-strip { display: block; padding: 0 0 30px; }
+  .intro-strip h1 { font-size: clamp(44px, 9vw, 65px); margin-top: 16px; }
+  .intro-strip h1 br { display: none; }
+  .intro-strip h1 em { display: inline; }
+  .intro-copy { max-width: 48ch; margin: 18px 0; font-size: 13px; }
+  .intro-index { flex-direction: row; align-items: center; flex-wrap: wrap; padding-top: 16px; gap: 10px; }
+  .intro-index b { font-size: 24px; }
+  .intro-index a { margin: 0 0 0 auto; padding: 8px 10px; font-size: 11px; }
+  .pokedex-device { padding: 10px; border-left-width: 5px; }
+  .roster-scroll { height: 510px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .roster-row { padding: 12px 9px; }
+  .home-note { margin-top: 35px; }
+}
+@media (max-width: 520px) {
+  .roster-scroll { grid-template-columns: repeat(2, minmax(0, 1fr)); height: 490px; }
+  .roster-row { grid-template-rows: auto 110px auto auto auto; min-height: 225px; }
+  .row-art, .row-art-shiny { height: 110px; }
+  .row-art .art-image { width: 106px; height: 106px; }
+  .row-name { font-size: 18px; }
+  .screen-header strong { font-size: 23px; }
+  .screen-count b { font-size: 21px; }
+  .screen-count span { display: none; }
+  .device-controls { grid-template-columns: 1fr 1fr; }
+  .variant-toggle { grid-column: 1 / -1; grid-row: 3; min-height: 37px; }
+  .device-select { grid-row: 2; }
+  .header-nav { display: flex; gap: 15px; }
+  .header-link { font-size: 10px; }
+  .intro-index a { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .roster-row, .row-arrow, .fade-up { transition: none; animation: none; }
+  .roster-row:hover { transform: none; }
+}

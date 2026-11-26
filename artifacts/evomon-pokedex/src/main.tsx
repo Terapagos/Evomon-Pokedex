@@ -6,6 +6,7 @@ import App from './App';
 import { ErrorBoundary } from '@/components/error-boundary';
 
 import './index.css';
+import './portfolio.css';
 
 // Keep same-origin API requests for Replit; Pages uses the public backend origin.
 setBaseUrl(import.meta.env.VITE_API_URL || null);
