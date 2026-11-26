@@ -226,7 +226,7 @@ select option { background: #11171f; color: #f4f6f5; }
 .minimal-detail .detail-top { margin: 8px 0 20px; }
 .minimal-detail .back-link, .minimal-detail .detail-position { font: 12px var(--app-font-sans); letter-spacing: 0; }
 .minimal-detail .detail-device { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
-.minimal-detail .detail-hero { grid-template-columns: 240px minmax(0, 1fr); gap: 48px; padding: 12px 0 36px; background: transparent; }
+.minimal-detail .detail-hero { grid-template-columns: 210px minmax(0, 1fr) minmax(0, .9fr); gap: 32px; padding: 12px 0 36px; background: transparent; }
 .minimal-detail .detail-art-wrap { min-height: 230px; border: 0; background: transparent; }
 .minimal-detail .detail-art-wrap::before, .minimal-detail .detail-art-wrap::after { display: none; }
 .minimal-detail .art-image-large { width: 190px; height: 190px; max-width: 100%; }
@@ -239,7 +239,15 @@ select option { background: #11171f; color: #f4f6f5; }
 .minimal-detail .detail-subline { font: 13px var(--app-font-sans); letter-spacing: 0; text-transform: none; }
 .minimal-detail .detail-variant-toggle { margin-top: 22px; border-radius: 7px; background: #ffffff08; }
 .minimal-detail .detail-variant-toggle button { font: 12px var(--app-font-sans); border-radius: 5px; }
-.minimal-detail .detail-content { grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr); gap: 48px; padding: 32px 0; background: transparent; border-top: 1px solid #ffffff15; }
+.minimal-detail .detail-content { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 48px; padding: 32px 0; background: transparent; border-top: 1px solid #ffffff15; align-items: start; }
+.minimal-detail .detail-content .moves-section { padding: 0; border: 0; min-width: 0; }
+.minimal-detail .detail-content .moves-grid { grid-template-columns: 1fr; max-height: min(360px, 60svh); }
+.minimal-detail .journal-sidebar { min-width: 0; }
+@media (min-width: 641px) and (max-width: 900px) {
+  .minimal-detail .detail-hero { grid-template-columns: 190px minmax(0, 1fr); }
+  .minimal-detail .journal-sidebar { grid-column: 1 / -1; }
+  .minimal-detail .details-list { display: flex; gap: 32px; }
+}
 .minimal-detail .section-kicker { margin-bottom: 20px; }
 .minimal-detail .section-kicker > span, .minimal-detail .section-caption { display: none; }
 .minimal-detail .section-kicker h2 { font-size: 22px; line-height: 1.25; letter-spacing: -.03em; }
