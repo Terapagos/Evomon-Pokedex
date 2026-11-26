@@ -150,14 +150,20 @@ select option { background: #11171f; color: #f4f6f5; }
 /* The catalog is just the collection panel, matching the supplied crop. */
 .collection-only .home-main {
   display: block;
-  width: min(1000px, calc(100% - 40px));
+  width: calc(100% - 32px);
   min-height: 100svh;
-  padding: 24px 0;
+  padding: 16px 0;
 }
 .collection-only .device-controls { border-top: 0; padding-top: 0; }
-.collection-only .roster-scroll { height: calc(100svh - 220px); min-height: 420px; }
+.collection-only .roster-scroll { height: calc(100svh - 250px); min-height: 420px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.collection-only .pokedex-device { border-left-width: 1px; box-shadow: 0 12px 35px #0004; }
+.collection-tabs { display: flex; gap: 6px; padding: 0 0 14px; }
+.collection-tabs a { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 8px 18px; border-radius: 6px; color: #aebbb8; font-size: 12px; font-weight: 650; text-decoration: none; transition: color .15s, background .15s; }
+.collection-tabs a[aria-current="page"] { color: #111b20; background: #ffb0c7; }
+.collection-tabs a:hover { color: #f4f6f5; background: #ffffff12; }
+.collection-tabs a[aria-current="page"]:hover { color: #111b20; background: #ffc4d5; }
 .collection-only .catalog-notice { width: 100%; }
 @media (max-width: 520px) {
-  .collection-only .home-main { width: calc(100% - 24px); padding: 12px 0; }
-  .collection-only .roster-scroll { height: calc(100svh - 245px); min-height: 350px; }
+  .collection-only .home-main { width: calc(100% - 16px); padding: 8px 0; }
+  .collection-only .roster-scroll { height: calc(100svh - 280px); min-height: 350px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

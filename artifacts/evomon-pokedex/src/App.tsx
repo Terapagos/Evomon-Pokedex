@@ -165,6 +165,10 @@ function EvomonRow({ entry, index, variant }: { entry: Evomon; index: number; va
 function Device({ children }: { children: ReactNode }) {
   return (
     <section className="pokedex-device" aria-label="Evomon collection">
+      <nav className="collection-tabs" aria-label="Primary navigation">
+        <Link href="/" aria-current="page">Catalog</Link>
+        <Link href="/skills">Skills</Link>
+      </nav>
       <div className="device-bezel">
         {children}
       </div>
