@@ -314,64 +314,14 @@ function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveSt
 }
 
 function MoveCard({ move }: { move: EvomonMove }) {
-  const level = move.unlockLevel !== null ? `Lv ${move.unlockLevel}` : 'Skill cache';
-  const moveText = `${move.name} ${move.element}`.toLowerCase();
-  const battleMoveStyle: BattleMoveStyle | null = moveText.includes('rock')
-    ? 'rock'
-    : moveText.includes('ground')
-      ? 'ground'
-      : moveText.includes('normal')
-        ? 'normal'
-        : moveText.includes('fire')
-          ? 'fire'
-          : moveText.includes('ice')
-            ? 'ice'
-            : moveText.includes('flying')
-              ? 'flying'
-              : moveText.includes('electric')
-                ? 'electric'
-                : moveText.includes('water')
-                  ? 'water'
-                  : moveText.includes('fighting')
-                    ? 'fighting'
-                    : moveText.includes('poison')
-                      ? 'poison'
-                      : moveText.includes('bug')
-                        ? 'bug'
-                        : moveText.includes('grass')
-                          ? 'grass'
-                          : moveText.includes('dark')
-                            ? 'dark'
-                            : moveText.includes('steel')
-                              ? 'steel'
-                              : moveText.includes('psychic')
-                                ? 'psychic'
-                                : moveText.includes('light')
-                                  ? 'light'
-                                  : moveText.includes('dragon')
-                                    ? 'dragon'
-                                    : null;
   return (
-    <article className={`move-card ${battleMoveStyle ? `move-card-${battleMoveStyle}` : ''}`} data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
-      {battleMoveStyle ? <BattleMoveFace move={move} style={battleMoveStyle} /> : (
-        <div className="move-card-head">
-          <div>
-            <span className="move-level">{move.slot === 'ultimate' ? 'ULT · ' : ''}{level}</span>
-            <h3 className="font-display">{move.name}</h3>
-          </div>
-          <span className="move-element">{move.element}</span>
-        </div>
-      )}
-      <div className="move-tags" aria-label={`${move.name} classifications`}>
-        {move.tags.map((tag) => <span className={`move-tag move-tag-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`} key={tag}>{tag}</span>)}
-      </div>
+    <article className="move-card minimal-move" data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
+      <div className="minimal-move-heading"><h3>{move.name}</h3><span>{move.slot === 'ultimate' ? 'Ultimate � ' : ''}{move.unlockLevel === null ? 'Skill cache' : `Lv. ${move.unlockLevel}`}</span></div>
+      <div className="minimal-move-type"><span>{move.element}</span><span>{move.category}</span></div>
       <p className="move-description">{move.description}</p>
-      <div className="move-meta">
-        {battleMoveStyle ? <span>{move.unlockLevel === null ? <b>Skill cache</b> : <>{move.slot === 'ultimate' ? 'Ultimate' : 'Unlock'} <b>{level}</b></>}</span> : null}
-        <span>Power <b>{move.power ?? '—'}</b></span>
-        <span>Uses <b>{move.uses ?? '—'}</b></span>
-        {move.obtained || move.unlockLevel === null ? <span className="move-obtained">{move.obtained ?? 'Skill cache'}</span> : null}
-      </div>
+      <div className="minimal-move-meta"><span>Power <b>{move.power ?? '�'}</b></span><span>Uses <b>{move.uses ?? '�'}</b></span></div>
+      <div className="move-tags" aria-label={`${move.name} classifications`}>{move.tags.map((tag) => <span className="move-tag" key={tag}>{tag}</span>)}</div>
+      {move.obtained && <p className="minimal-move-source">{move.obtained}</p>}
     </article>
   );
 }
@@ -542,23 +492,23 @@ function Detail() {
   const entryIndex = catalog.findIndex((entry) => idFor(entry) === decodeURIComponent(params.id ?? ''));
   const entry = entryIndex >= 0 ? catalog[entryIndex] : undefined;
   useEffect(() => { document.title = entry ? `${entry.name} — Evomon Wiki` : 'Entry not found — Evomon Wiki'; }, [entry]);
-  if (!entry) return <Shell><main className="detail-main"><EmptyCatalog /></main></Shell>;
+  if (!entry) return <div className="app-shell minimal-detail"><main className="detail-main"><CollectionTabs /><EmptyCatalog /></main></div>;
   const elements = elementsFor(entry);
   const line = Array.isArray(entry.evolutionLine) ? entry.evolutionLine : [];
   const previous = catalog[entryIndex - 1];
   const next = catalog[entryIndex + 1];
   return (
-    <Shell>
-      <main className="detail-main">
+    <div className="app-shell minimal-detail">
+      <main className="detail-main"><CollectionTabs />
         <div className="detail-top"><button type="button" className="back-link" onClick={() => setLocation('/')} data-testid="button-back-catalog"><ArrowLeft size={16} /> Back to roster</button><span className="detail-position">{String(entryIndex + 1).padStart(3, '0')} / {String(catalog.length).padStart(3, '0')}</span></div>
         <section className="detail-device">
-          <div className="detail-device-top"><span>EVOMON // SPECIMEN READOUT</span><span className="device-led" /> <span>{variant === 'shiny' ? 'SHINY PLATE' : 'STANDARD PLATE'}</span></div>
+          
           <div className="detail-hero">
             <div className="detail-art-wrap"><Artwork entry={entry} variant={variant} large /><div className="detail-art-caption"><span>{elements.length ? elements.join(' / ') : 'ELEMENT UNRECORDED'}</span><span>EV-{entry.dexNumber !== undefined ? String(entry.dexNumber).padStart(3, '0') : '???'}</span></div></div>
-            <div className="detail-title"><p className="eyebrow">{stageFor(entry)} <span>·</span> {entry.eventStatus || 'Event status unrecorded'}</p><h1 className="font-display">{entry.name}</h1><p className="detail-subline">Archive specimen {entry.dexNumber !== undefined ? String(entry.dexNumber).padStart(3, '0') : 'unrecorded'}<span className="title-dot" />{entry.catchLocation || 'Location unrecorded'}</p><div className="detail-variant-toggle"><button type="button" className={variant === 'normal' ? 'selected' : ''} onClick={() => setVariant('normal')} aria-pressed={variant === 'normal'} data-testid="button-detail-normal">Normal form</button><button type="button" className={variant === 'shiny' ? 'selected shiny' : ''} onClick={() => setVariant('shiny')} aria-pressed={variant === 'shiny'} data-testid="button-detail-shiny"><Sparkles size={14} /> Shiny form</button></div></div>
+            <div className="detail-title"><p className="eyebrow">{stageFor(entry)} <span>·</span> {entry.eventStatus || 'Event status unrecorded'}</p><h1 className="font-display">{entry.name}</h1><p className="detail-subline">#{entry.dexNumber !== undefined ? String(entry.dexNumber).padStart(3, '0') : 'unrecorded'}<span className="title-dot" />{entry.catchLocation || 'Location unrecorded'}</p><div className="detail-variant-toggle"><button type="button" className={variant === 'normal' ? 'selected' : ''} onClick={() => setVariant('normal')} aria-pressed={variant === 'normal'} data-testid="button-detail-normal">Normal form</button><button type="button" className={variant === 'shiny' ? 'selected shiny' : ''} onClick={() => setVariant('shiny')} aria-pressed={variant === 'shiny'} data-testid="button-detail-shiny"><Sparkles size={14} /> Shiny form</button></div></div>
           </div>
           <section className="detail-content">
-            <div className="stats-section"><div className="section-kicker"><span>01</span><div><h2 className="font-display">Base readings</h2><p className="section-caption">{variant === 'shiny' ? 'Shiny plate selected' : 'Standard plate selected'} · values shown on radar</p></div></div><StatRadar entry={entry} variant={variant} /></div>
+            <div className="stats-section"><div className="section-kicker"><span>01</span><div><h2 className="font-display">Base stats</h2><p className="section-caption">{variant === 'shiny' ? 'Shiny plate selected' : 'Standard plate selected'} · values shown on radar</p></div></div><StatRadar entry={entry} variant={variant} /></div>
             <aside className="journal-sidebar"><div className="trait-card"><div className="trait-heading"><Sparkles size={17} /><span>Legendary trait</span></div><h2 className="font-display" data-testid="text-legendary-trait">{entry.legendaryTrait || missing}</h2><p data-testid="text-legendary-effect">{entry.legendaryTraitEffect || missing}</p></div><div className="details-list"><DetailField label="Catch location" value={entry.catchLocation} testId="text-catch-location" /><DetailField label="Event status" value={entry.eventStatus} testId="text-event-status" /></div></aside>
           </section>
           <section className="evolution-section"><div className="section-kicker"><span>02</span><h2 className="font-display">Evolution line</h2></div>{line.length ? <div className="evolution-line">{line.map((item, index) => { const evolutionEntry = catalog.find((candidate) => candidate.name === item); return <div className={`evolution-node ${item === entry.name ? 'current' : ''}`} key={`${item}-${index}`}><span>{String(index + 1).padStart(2, '0')}</span><b>{evolutionEntry ? <Link href={`/evomon/${encodeURIComponent(idFor(evolutionEntry))}`} data-testid={`link-evolution-${idFor(evolutionEntry)}`}>{item}</Link> : item}</b>{index < line.length - 1 && <ArrowRight size={15} />}</div>; })}</div> : <div className="missing-panel">Evolution line not recorded in the current wiki notes.</div>}</section>
@@ -567,7 +517,7 @@ function Detail() {
         <div className="detail-nav"><div>{previous && <Link href={`/evomon/${encodeURIComponent(idFor(previous))}`} className="pager-link" data-testid="link-previous-entry"><ArrowLeft size={15} /><span>Previous specimen<b>{previous.name}</b></span></Link>}</div><div>{next && <Link href={`/evomon/${encodeURIComponent(idFor(next))}`} className="pager-link next" data-testid="link-next-entry"><span>Next specimen<b>{next.name}</b></span><ArrowRight size={15} /></Link>}</div></div>
         <p className="source-note">Unrecorded details are left blank rather than guessed.</p>
       </main>
-    </Shell>
+    </div>
   );
 }
 
