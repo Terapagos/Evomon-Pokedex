@@ -146,3 +146,18 @@ select option { background: #11171f; color: #f4f6f5; }
   .roster-row, .row-arrow, .fade-up { transition: none; animation: none; }
   .roster-row:hover { transform: none; }
 }
+
+/* The catalog is just the collection panel, matching the supplied crop. */
+.collection-only .home-main {
+  display: block;
+  width: min(1000px, calc(100% - 40px));
+  min-height: 100svh;
+  padding: 24px 0;
+}
+.collection-only .device-controls { border-top: 0; padding-top: 0; }
+.collection-only .roster-scroll { height: calc(100svh - 220px); min-height: 420px; }
+.collection-only .catalog-notice { width: 100%; }
+@media (max-width: 520px) {
+  .collection-only .home-main { width: calc(100% - 24px); padding: 12px 0; }
+  .collection-only .roster-scroll { height: calc(100svh - 245px); min-height: 350px; }
+}

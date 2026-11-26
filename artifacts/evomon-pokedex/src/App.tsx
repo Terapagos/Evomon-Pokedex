@@ -162,12 +162,10 @@ function EvomonRow({ entry, index, variant }: { entry: Evomon; index: number; va
   );
 }
 
-function Device({ children, count, total }: { children: ReactNode; count: number; total: number }) {
+function Device({ children }: { children: ReactNode }) {
   return (
     <section className="pokedex-device" aria-label="Evomon collection">
-      <div className="device-topbar"><span className="device-label">THE FIELD COLLECTION / VOL. 01</span><span className="device-led" /><span className="device-battery">LIVE ARCHIVE</span></div>
       <div className="device-bezel">
-        <div className="screen-header"><div><span className="screen-kicker">BROWSE & DISCOVER</span><strong>The Evomon collection</strong></div><div className="screen-count"><b>{String(count).padStart(3, '0')}</b><span>/ {String(total).padStart(3, '0')} FOUND</span></div></div>
         {children}
       </div>
       <div className="device-footer"><span className="speaker-lines" /><span>SELECT AN ENTRY TO OPEN FULL READINGS</span><span className="device-model">EV-01</span></div>
@@ -191,23 +189,17 @@ function Home() {
   const clearFilters = () => { setQuery(''); setElement('all'); setStage('all'); };
   const filtering = Boolean(query || element !== 'all' || stage !== 'all');
   return (
-    <Shell>
-      <main className="home-main">
-        <section className="intro-strip fade-up">
-          <div><p className="eyebrow">A field guide for the curious</p><h1 className="font-display">Meet your{' '}<br />next <em>discovery.</em></h1></div>
-          <p className="intro-copy">A pocket-sized archive for curious trainers. Search the roster, compare forms, and open any specimen for its full field reading.</p>
-          <div className="intro-index"><b>{catalog.length || '—'}</b><span>Evomon to discover</span><a href="https://portfolio.dat.place/">Explore Dat’s projects <ArrowRight size={14} /></a></div>
-        </section>
+    <div className="app-shell collection-only">
+      <main className="home-main" aria-label="Evomon catalog">
         <ErrorNotice />
-        <Device count={filtered.length} total={catalog.length}>
+        <Device>
           <Filters {...{ query, setQuery, element, setElement, stage, setStage, variant, setVariant, elements, stages }} />
           <div className="roster-heading" aria-hidden="true"><span>ART</span><span>DEX NO.</span><span>SPECIMEN NAME</span><span>ELEMENT</span><span>STAGE</span><span /></div>
           {isLoading ? <SkeletonRoster /> : filtered.length ? <div className="roster-scroll" role="list" aria-label="Evomon roster" data-testid="roster-scroll">{filtered.map((entry, index) => <EvomonRow key={idFor(entry)} entry={entry} index={index} variant={variant} />)}</div> : <EmptyCatalog filtered={filtering} onReset={clearFilters} />}
           <div className="roster-footnote"><span>↑ ↓ Navigate roster</span><span>ENTER Open specimen</span><span>{variant === 'shiny' ? 'SHINY PLATES ACTIVE' : 'STANDARD PLATES ACTIVE'}</span></div>
         </Device>
-        <div className="home-note"><span>CATALOG NOTE</span><p>Numbers follow the current archive. Blank fields are marked rather than guessed.</p><span>FIELD NOTES / 01</span></div>
       </main>
-    </Shell>
+    </div>
   );
 }
 
