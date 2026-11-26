@@ -1021,15 +1021,246 @@
       "baseStats": {},
       "shinyBaseStats": {},
       "shinyStatsRecorded": false,
-      "legendaryTrait": null,
-      "legendaryTraitEffect": null,
+      "legendaryTrait": "Eclipse",
+      "legendaryTraitEffect": "While bearing [Sun's Grace], damage dealt +25%.",
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
         "Armorb",
         "Lumiknight"
       ],
-      "moves": [],
+      "moves": [
+        {
+          "name": "Flash Strike",
+          "element": "normal",
+          "category": "special",
+          "description": "Deals Special damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "40",
+          "uses": 30,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Fighting Will 1",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases SpA by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Light Focus",
+          "element": "light",
+          "category": "special",
+          "description": "Deals Special damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 10,
+          "slot": "level",
+          "power": "50",
+          "uses": 30,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Radiance",
+          "element": "light",
+          "category": "status",
+          "description": "Gains 4 stacks of [Sun's Grace].",
+          "obtained": "via Level up.",
+          "unlockLevel": 20,
+          "slot": "level",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Radiant Blade",
+          "element": "light",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 40,
+          "slot": "level",
+          "power": "80",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Rest",
+          "element": "normal",
+          "category": "status",
+          "description": "Restores 20% of max HP at the end of each turn for 3 turns.",
+          "obtained": "via Level up.",
+          "unlockLevel": 50,
+          "slot": "level",
+          "power": "—",
+          "uses": 5,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Dawnstrike",
+          "element": "light",
+          "category": "special",
+          "description": "Deals Special damage to the target; Your Evomon gains 1 stack of [Sun's Grace].",
+          "obtained": "via Level up.",
+          "unlockLevel": 60,
+          "slot": "level",
+          "power": "85",
+          "uses": 10,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Unblemished Spirit",
+          "element": "fighting",
+          "category": "special",
+          "description": "Deals Special damage to the target; Clears all status conditions and grants immunity to status conditions for 2 turns.",
+          "obtained": "via Level up.",
+          "unlockLevel": 70,
+          "slot": "level",
+          "power": "90",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Charged Strike",
+          "element": "normal",
+          "category": "status",
+          "description": "Gains +50 fixed damage for 2 turns.",
+          "obtained": "via Level up.",
+          "unlockLevel": 90,
+          "slot": "level",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Multi Strike",
+          "element": "fighting",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and removes the target's stat boosts.",
+          "obtained": "via Level up.",
+          "unlockLevel": 100,
+          "slot": "level",
+          "power": "105",
+          "uses": 5,
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Golden Fist",
+          "element": "fighting",
+          "category": "special",
+          "description": "Deals Special damage to the target; consumes 1 stack of [Sun's Grace] to gain +40 Power for this attack.",
+          "obtained": "via Level up.",
+          "unlockLevel": 120,
+          "slot": "level",
+          "power": "100",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Radiance Cannon",
+          "element": "light",
+          "category": "special",
+          "description": "Deals Special damage to the target; If your Evomon has 4 or less Ultimate Energy, restores 1 Ultimate Energy.",
+          "obtained": "via Level up.",
+          "unlockLevel": 140,
+          "slot": "level",
+          "power": "120",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "All-Out Attack",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "100",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Battle Stance",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases Atk by 5 and Def by 5.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Solar Nimbus 3",
+          "element": "light",
+          "category": "status",
+          "description": "Priority +1. Grants your Evomon 4 stacks of [Sun's Grace] and reduces damage taken this turn by 300.",
+          "obtained": "Owner-supplied Solar Nimbus III recording; earlier ranks unrecorded.",
+          "unlockLevel": 150,
+          "slot": "ultimate",
+          "power": "—",
+          "uses": null,
+          "tags": [
+            "Support",
+            "Priority",
+            "Single target"
+          ]
+        }
+      ],
       "sourceUrl": "https://evomon.dat.place/"
     },
     {
@@ -1046,15 +1277,246 @@
       "baseStats": {},
       "shinyBaseStats": {},
       "shinyStatsRecorded": false,
-      "legendaryTrait": null,
-      "legendaryTraitEffect": null,
+      "legendaryTrait": "Eclipse",
+      "legendaryTraitEffect": "While bearing [Sun's Grace], damage dealt +25%.",
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
         "Armorb",
         "Lumiknight"
       ],
-      "moves": [],
+      "moves": [
+        {
+          "name": "Flash Strike",
+          "element": "normal",
+          "category": "special",
+          "description": "Deals Special damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "40",
+          "uses": 30,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Fighting Will 1",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases SpA by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Light Focus",
+          "element": "light",
+          "category": "special",
+          "description": "Deals Special damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 10,
+          "slot": "level",
+          "power": "50",
+          "uses": 30,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Radiance",
+          "element": "light",
+          "category": "status",
+          "description": "Gains 4 stacks of [Sun's Grace].",
+          "obtained": "via Level up.",
+          "unlockLevel": 20,
+          "slot": "level",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Radiant Blade",
+          "element": "light",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 40,
+          "slot": "level",
+          "power": "80",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Rest",
+          "element": "normal",
+          "category": "status",
+          "description": "Restores 20% of max HP at the end of each turn for 3 turns.",
+          "obtained": "via Level up.",
+          "unlockLevel": 50,
+          "slot": "level",
+          "power": "—",
+          "uses": 5,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Dawnstrike",
+          "element": "light",
+          "category": "special",
+          "description": "Deals Special damage to the target; Your Evomon gains 1 stack of [Sun's Grace].",
+          "obtained": "via Level up.",
+          "unlockLevel": 60,
+          "slot": "level",
+          "power": "85",
+          "uses": 10,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Unblemished Spirit",
+          "element": "fighting",
+          "category": "special",
+          "description": "Deals Special damage to the target; Clears all status conditions and grants immunity to status conditions for 2 turns.",
+          "obtained": "via Level up.",
+          "unlockLevel": 70,
+          "slot": "level",
+          "power": "90",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Charged Strike",
+          "element": "normal",
+          "category": "status",
+          "description": "Gains +50 fixed damage for 2 turns.",
+          "obtained": "via Level up.",
+          "unlockLevel": 90,
+          "slot": "level",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Multi Strike",
+          "element": "fighting",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and removes the target's stat boosts.",
+          "obtained": "via Level up.",
+          "unlockLevel": 100,
+          "slot": "level",
+          "power": "105",
+          "uses": 5,
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Golden Fist",
+          "element": "fighting",
+          "category": "special",
+          "description": "Deals Special damage to the target; consumes 1 stack of [Sun's Grace] to gain +40 Power for this attack.",
+          "obtained": "via Level up.",
+          "unlockLevel": 120,
+          "slot": "level",
+          "power": "100",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Radiance Cannon",
+          "element": "light",
+          "category": "special",
+          "description": "Deals Special damage to the target; If your Evomon has 4 or less Ultimate Energy, restores 1 Ultimate Energy.",
+          "obtained": "via Level up.",
+          "unlockLevel": 140,
+          "slot": "level",
+          "power": "120",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "All-Out Attack",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "100",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Battle Stance",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases Atk by 5 and Def by 5.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Solar Nimbus 3",
+          "element": "light",
+          "category": "status",
+          "description": "Priority +1. Grants your Evomon 4 stacks of [Sun's Grace] and reduces damage taken this turn by 300.",
+          "obtained": "Owner-supplied Solar Nimbus III recording; earlier ranks unrecorded.",
+          "unlockLevel": 150,
+          "slot": "ultimate",
+          "power": "—",
+          "uses": null,
+          "tags": [
+            "Support",
+            "Priority",
+            "Single target"
+          ]
+        }
+      ],
       "sourceUrl": "https://evomon.dat.place/"
     },
     {
