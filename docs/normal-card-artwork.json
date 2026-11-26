@@ -1,0 +1,1537 @@
+{
+  "notes": "Owner requested illustrated in-game cards for all normal forms. Both supplied recordings were reviewed. Coulomtis #30, Wisflare #95 and Cliphas #98 remain silhouettes, so their existing artwork is retained. Shiny artwork is unchanged. Cards are native 134px crops, not upscaled assets.",
+  "sources": {
+    "first-recording": "codex-clipboard-77b060c3-7b9e-42a1-ae86-cdaa1b4fc991.gif",
+    "second-recording": "codex-clipboard-a52dd6cd-bf3a-497c-a3b6-eb0893481626.gif"
+  },
+  "images": [
+    {
+      "dexNumber": 10,
+      "variant": "normal",
+      "file": "010-normal.png",
+      "frame": 45,
+      "box": [
+        117,
+        345,
+        251,
+        479
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 11,
+      "variant": "normal",
+      "file": "011-normal.png",
+      "frame": 45,
+      "box": [
+        279,
+        345,
+        413,
+        479
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 12,
+      "variant": "normal",
+      "file": "012-normal.png",
+      "frame": 45,
+      "box": [
+        441,
+        345,
+        575,
+        479
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 13,
+      "variant": "normal",
+      "file": "013-normal.png",
+      "frame": 45,
+      "box": [
+        117,
+        522,
+        251,
+        656
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 14,
+      "variant": "normal",
+      "file": "014-normal.png",
+      "frame": 45,
+      "box": [
+        279,
+        522,
+        413,
+        656
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 15,
+      "variant": "normal",
+      "file": "015-normal.png",
+      "frame": 45,
+      "box": [
+        441,
+        522,
+        575,
+        656
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 16,
+      "variant": "normal",
+      "file": "016-normal.png",
+      "frame": 45,
+      "box": [
+        117,
+        700,
+        251,
+        834
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 17,
+      "variant": "normal",
+      "file": "017-normal.png",
+      "frame": 45,
+      "box": [
+        279,
+        700,
+        413,
+        834
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 18,
+      "variant": "normal",
+      "file": "018-normal.png",
+      "frame": 45,
+      "box": [
+        441,
+        700,
+        575,
+        834
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 19,
+      "variant": "normal",
+      "file": "019-normal.png",
+      "frame": 60,
+      "box": [
+        117,
+        201,
+        251,
+        335
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 20,
+      "variant": "normal",
+      "file": "020-normal.png",
+      "frame": 60,
+      "box": [
+        279,
+        201,
+        413,
+        335
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 21,
+      "variant": "normal",
+      "file": "021-normal.png",
+      "frame": 60,
+      "box": [
+        441,
+        201,
+        575,
+        335
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 22,
+      "variant": "normal",
+      "file": "022-normal.png",
+      "frame": 60,
+      "box": [
+        117,
+        378,
+        251,
+        512
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 23,
+      "variant": "normal",
+      "file": "023-normal.png",
+      "frame": 60,
+      "box": [
+        279,
+        378,
+        413,
+        512
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 24,
+      "variant": "normal",
+      "file": "024-normal.png",
+      "frame": 60,
+      "box": [
+        441,
+        378,
+        575,
+        512
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 25,
+      "variant": "normal",
+      "file": "025-normal.png",
+      "frame": 60,
+      "box": [
+        117,
+        556,
+        251,
+        690
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 26,
+      "variant": "normal",
+      "file": "026-normal.png",
+      "frame": 60,
+      "box": [
+        279,
+        556,
+        413,
+        690
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 27,
+      "variant": "normal",
+      "file": "027-normal.png",
+      "frame": 60,
+      "box": [
+        441,
+        556,
+        575,
+        690
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 34,
+      "variant": "normal",
+      "file": "034-normal.png",
+      "frame": 75,
+      "box": [
+        117,
+        340,
+        251,
+        474
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 35,
+      "variant": "normal",
+      "file": "035-normal.png",
+      "frame": 75,
+      "box": [
+        279,
+        340,
+        413,
+        474
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 36,
+      "variant": "normal",
+      "file": "036-normal.png",
+      "frame": 75,
+      "box": [
+        441,
+        340,
+        575,
+        474
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 37,
+      "variant": "normal",
+      "file": "037-normal.png",
+      "frame": 75,
+      "box": [
+        117,
+        518,
+        251,
+        652
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 38,
+      "variant": "normal",
+      "file": "038-normal.png",
+      "frame": 75,
+      "box": [
+        279,
+        518,
+        413,
+        652
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 39,
+      "variant": "normal",
+      "file": "039-normal.png",
+      "frame": 75,
+      "box": [
+        441,
+        518,
+        575,
+        652
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 40,
+      "variant": "normal",
+      "file": "040-normal.png",
+      "frame": 75,
+      "box": [
+        117,
+        696,
+        251,
+        830
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 41,
+      "variant": "normal",
+      "file": "041-normal.png",
+      "frame": 75,
+      "box": [
+        279,
+        696,
+        413,
+        830
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 42,
+      "variant": "normal",
+      "file": "042-normal.png",
+      "frame": 75,
+      "box": [
+        441,
+        696,
+        575,
+        830
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 43,
+      "variant": "normal",
+      "file": "043-normal.png",
+      "frame": 90,
+      "box": [
+        117,
+        253,
+        251,
+        387
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 44,
+      "variant": "normal",
+      "file": "044-normal.png",
+      "frame": 90,
+      "box": [
+        279,
+        253,
+        413,
+        387
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 45,
+      "variant": "normal",
+      "file": "045-normal.png",
+      "frame": 90,
+      "box": [
+        441,
+        253,
+        575,
+        387
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 46,
+      "variant": "normal",
+      "file": "046-normal.png",
+      "frame": 90,
+      "box": [
+        117,
+        430,
+        251,
+        564
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 47,
+      "variant": "normal",
+      "file": "047-normal.png",
+      "frame": 90,
+      "box": [
+        279,
+        430,
+        413,
+        564
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 48,
+      "variant": "normal",
+      "file": "048-normal.png",
+      "frame": 90,
+      "box": [
+        441,
+        430,
+        575,
+        564
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 49,
+      "variant": "normal",
+      "file": "049-normal.png",
+      "frame": 90,
+      "box": [
+        117,
+        608,
+        251,
+        742
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 50,
+      "variant": "normal",
+      "file": "050-normal.png",
+      "frame": 90,
+      "box": [
+        279,
+        608,
+        413,
+        742
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 51,
+      "variant": "normal",
+      "file": "051-normal.png",
+      "frame": 90,
+      "box": [
+        441,
+        608,
+        575,
+        742
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 52,
+      "variant": "normal",
+      "file": "052-normal.png",
+      "frame": 105,
+      "box": [
+        117,
+        255,
+        251,
+        389
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 53,
+      "variant": "normal",
+      "file": "053-normal.png",
+      "frame": 105,
+      "box": [
+        279,
+        255,
+        413,
+        389
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 54,
+      "variant": "normal",
+      "file": "054-normal.png",
+      "frame": 105,
+      "box": [
+        441,
+        255,
+        575,
+        389
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 55,
+      "variant": "normal",
+      "file": "055-normal.png",
+      "frame": 105,
+      "box": [
+        117,
+        433,
+        251,
+        567
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 56,
+      "variant": "normal",
+      "file": "056-normal.png",
+      "frame": 105,
+      "box": [
+        279,
+        433,
+        413,
+        567
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 57,
+      "variant": "normal",
+      "file": "057-normal.png",
+      "frame": 105,
+      "box": [
+        441,
+        433,
+        575,
+        567
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 58,
+      "variant": "normal",
+      "file": "058-normal.png",
+      "frame": 105,
+      "box": [
+        117,
+        611,
+        251,
+        745
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 59,
+      "variant": "normal",
+      "file": "059-normal.png",
+      "frame": 105,
+      "box": [
+        279,
+        611,
+        413,
+        745
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 60,
+      "variant": "normal",
+      "file": "060-normal.png",
+      "frame": 105,
+      "box": [
+        441,
+        611,
+        575,
+        745
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 61,
+      "variant": "normal",
+      "file": "061-normal.png",
+      "frame": 120,
+      "box": [
+        117,
+        295,
+        251,
+        429
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 62,
+      "variant": "normal",
+      "file": "062-normal.png",
+      "frame": 120,
+      "box": [
+        279,
+        295,
+        413,
+        429
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 63,
+      "variant": "normal",
+      "file": "063-normal.png",
+      "frame": 120,
+      "box": [
+        441,
+        295,
+        575,
+        429
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 64,
+      "variant": "normal",
+      "file": "064-normal.png",
+      "frame": 120,
+      "box": [
+        117,
+        473,
+        251,
+        607
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 65,
+      "variant": "normal",
+      "file": "065-normal.png",
+      "frame": 120,
+      "box": [
+        279,
+        473,
+        413,
+        607
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 66,
+      "variant": "normal",
+      "file": "066-normal.png",
+      "frame": 120,
+      "box": [
+        441,
+        473,
+        575,
+        607
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 67,
+      "variant": "normal",
+      "file": "067-normal.png",
+      "frame": 120,
+      "box": [
+        117,
+        651,
+        251,
+        785
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 68,
+      "variant": "normal",
+      "file": "068-normal.png",
+      "frame": 120,
+      "box": [
+        279,
+        651,
+        413,
+        785
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 69,
+      "variant": "normal",
+      "file": "069-normal.png",
+      "frame": 120,
+      "box": [
+        441,
+        651,
+        575,
+        785
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 70,
+      "variant": "normal",
+      "file": "070-normal.png",
+      "frame": 135,
+      "box": [
+        117,
+        152,
+        251,
+        286
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 71,
+      "variant": "normal",
+      "file": "071-normal.png",
+      "frame": 135,
+      "box": [
+        279,
+        152,
+        413,
+        286
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 72,
+      "variant": "normal",
+      "file": "072-normal.png",
+      "frame": 135,
+      "box": [
+        441,
+        152,
+        575,
+        286
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 73,
+      "variant": "normal",
+      "file": "073-normal.png",
+      "frame": 135,
+      "box": [
+        117,
+        330,
+        251,
+        464
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 74,
+      "variant": "normal",
+      "file": "074-normal.png",
+      "frame": 135,
+      "box": [
+        279,
+        330,
+        413,
+        464
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 75,
+      "variant": "normal",
+      "file": "075-normal.png",
+      "frame": 135,
+      "box": [
+        441,
+        330,
+        575,
+        464
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 97,
+      "variant": "normal",
+      "file": "097-normal.png",
+      "frame": 165,
+      "box": [
+        117,
+        179,
+        251,
+        313
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 99,
+      "variant": "normal",
+      "file": "099-normal.png",
+      "frame": 165,
+      "box": [
+        441,
+        179,
+        575,
+        313
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 100,
+      "variant": "normal",
+      "file": "100-normal.png",
+      "frame": 165,
+      "box": [
+        117,
+        357,
+        251,
+        491
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 101,
+      "variant": "normal",
+      "file": "101-normal.png",
+      "frame": 165,
+      "box": [
+        279,
+        357,
+        413,
+        491
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 102,
+      "variant": "normal",
+      "file": "102-normal.png",
+      "frame": 165,
+      "box": [
+        441,
+        357,
+        575,
+        491
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 109,
+      "variant": "normal",
+      "file": "109-normal.png",
+      "frame": 180,
+      "box": [
+        117,
+        470,
+        251,
+        604
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 110,
+      "variant": "normal",
+      "file": "110-normal.png",
+      "frame": 180,
+      "box": [
+        279,
+        470,
+        413,
+        604
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 111,
+      "variant": "normal",
+      "file": "111-normal.png",
+      "frame": 180,
+      "box": [
+        441,
+        470,
+        575,
+        604
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 115,
+      "variant": "normal",
+      "file": "115-normal.png",
+      "frame": 185,
+      "box": [
+        117,
+        424,
+        251,
+        558
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 118,
+      "variant": "normal",
+      "file": "118-normal.png",
+      "frame": 185,
+      "box": [
+        279,
+        424,
+        413,
+        558
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 119,
+      "variant": "normal",
+      "file": "119-normal.png",
+      "frame": 185,
+      "box": [
+        441,
+        424,
+        575,
+        558
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 121,
+      "variant": "normal",
+      "file": "121-normal.png",
+      "frame": 195,
+      "box": [
+        279,
+        126,
+        413,
+        260
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 122,
+      "variant": "normal",
+      "file": "122-normal.png",
+      "frame": 195,
+      "box": [
+        441,
+        126,
+        575,
+        260
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 123,
+      "variant": "normal",
+      "file": "123-normal.png",
+      "frame": 195,
+      "box": [
+        117,
+        304,
+        251,
+        438
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 124,
+      "variant": "normal",
+      "file": "124-normal.png",
+      "frame": 195,
+      "box": [
+        279,
+        304,
+        413,
+        438
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 133,
+      "variant": "normal",
+      "file": "133-normal.png",
+      "frame": 195,
+      "box": [
+        441,
+        304,
+        575,
+        438
+      ],
+      "source": "first-recording"
+    },
+    {
+      "dexNumber": 134,
+      "variant": "normal",
+      "frame": 145,
+      "box": [
+        117,
+        535,
+        251,
+        669
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 153,
+      "variant": "normal",
+      "frame": 145,
+      "box": [
+        279,
+        535,
+        413,
+        669
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 1,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        117,
+        104,
+        251,
+        238
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 2,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        279,
+        104,
+        413,
+        238
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 3,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        441,
+        104,
+        575,
+        238
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 4,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        117,
+        281,
+        251,
+        415
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 5,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        279,
+        281,
+        413,
+        415
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 6,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        441,
+        281,
+        575,
+        415
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 7,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        117,
+        459,
+        251,
+        593
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 8,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        279,
+        459,
+        413,
+        593
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 9,
+      "variant": "normal",
+      "frame": 0,
+      "box": [
+        441,
+        459,
+        575,
+        593
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 28,
+      "variant": "normal",
+      "frame": 50,
+      "box": [
+        117,
+        279,
+        251,
+        413
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 29,
+      "variant": "normal",
+      "frame": 50,
+      "box": [
+        279,
+        279,
+        413,
+        413
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 31,
+      "variant": "normal",
+      "frame": 50,
+      "box": [
+        117,
+        457,
+        251,
+        591
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 32,
+      "variant": "normal",
+      "frame": 50,
+      "box": [
+        279,
+        457,
+        413,
+        591
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 33,
+      "variant": "normal",
+      "frame": 50,
+      "box": [
+        441,
+        457,
+        575,
+        591
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 76,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        117,
+        233,
+        251,
+        367
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 77,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        279,
+        233,
+        413,
+        367
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 78,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        441,
+        233,
+        575,
+        367
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 79,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        117,
+        411,
+        251,
+        545
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 80,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        279,
+        411,
+        413,
+        545
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 81,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        441,
+        411,
+        575,
+        545
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 82,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        117,
+        589,
+        251,
+        723
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 83,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        279,
+        589,
+        413,
+        723
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 84,
+      "variant": "normal",
+      "frame": 100,
+      "box": [
+        441,
+        589,
+        575,
+        723
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 85,
+      "variant": "normal",
+      "frame": 102,
+      "box": [
+        117,
+        584,
+        251,
+        718
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 86,
+      "variant": "normal",
+      "frame": 102,
+      "box": [
+        279,
+        584,
+        413,
+        718
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 87,
+      "variant": "normal",
+      "frame": 102,
+      "box": [
+        441,
+        584,
+        575,
+        718
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 88,
+      "variant": "normal",
+      "frame": 110,
+      "box": [
+        117,
+        195,
+        251,
+        329
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 89,
+      "variant": "normal",
+      "frame": 110,
+      "box": [
+        279,
+        195,
+        413,
+        329
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 91,
+      "variant": "normal",
+      "frame": 110,
+      "box": [
+        117,
+        373,
+        251,
+        507
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 94,
+      "variant": "normal",
+      "frame": 110,
+      "box": [
+        117,
+        550,
+        251,
+        684
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 96,
+      "variant": "normal",
+      "frame": 110,
+      "box": [
+        441,
+        550,
+        575,
+        684
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 103,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        117,
+        187,
+        251,
+        321
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 104,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        279,
+        187,
+        413,
+        321
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 105,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        441,
+        187,
+        575,
+        321
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 106,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        117,
+        365,
+        251,
+        499
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 107,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        279,
+        365,
+        413,
+        499
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 108,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        441,
+        365,
+        575,
+        499
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 112,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        117,
+        720,
+        251,
+        854
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 113,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        279,
+        720,
+        413,
+        854
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 114,
+      "variant": "normal",
+      "frame": 130,
+      "box": [
+        441,
+        720,
+        575,
+        854
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 998,
+      "variant": "normal",
+      "frame": 145,
+      "box": [
+        441,
+        535,
+        575,
+        669
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 999,
+      "variant": "normal",
+      "frame": 145,
+      "box": [
+        117,
+        713,
+        251,
+        847
+      ],
+      "source": "second-recording"
+    },
+    {
+      "dexNumber": 120,
+      "variant": "normal",
+      "frame": 140,
+      "box": [
+        117,
+        565,
+        251,
+        699
+      ],
+      "source": "second-recording"
+    }
+  ]
+}

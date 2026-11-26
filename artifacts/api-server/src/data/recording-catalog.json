@@ -10,7 +10,7 @@
         "fighting"
       ],
       "stage": "Base form",
-      "image": "https://evomon.dat.place/artwork/recording/040-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/040.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/040-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -248,7 +248,7 @@
         "fighting"
       ],
       "stage": "Stage 2",
-      "image": "https://evomon.dat.place/artwork/recording/041-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/041.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/041-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -486,7 +486,7 @@
         "grass"
       ],
       "stage": "Base form",
-      "image": "https://evomon.dat.place/artwork/recording/118-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/118.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/118-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -739,7 +739,7 @@
         "grass"
       ],
       "stage": "Stage 2",
-      "image": "https://evomon.dat.place/artwork/recording/119-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/119.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/119-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -992,7 +992,7 @@
         "fire"
       ],
       "stage": "Unclassified",
-      "image": "https://evomon.dat.place/artwork/recording/120-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/120.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/120-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -1016,7 +1016,7 @@
         "fighting"
       ],
       "stage": "Base form",
-      "image": "https://evomon.dat.place/artwork/recording/121-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/121.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/121-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -1272,7 +1272,7 @@
         "fighting"
       ],
       "stage": "Stage 2",
-      "image": "https://evomon.dat.place/artwork/recording/122-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/122.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/122-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -1527,7 +1527,7 @@
         "bug"
       ],
       "stage": "Base form",
-      "image": "https://evomon.dat.place/artwork/recording/123-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/123.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/123-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -1781,7 +1781,7 @@
         "bug"
       ],
       "stage": "Stage 2",
-      "image": "https://evomon.dat.place/artwork/recording/124-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/124.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/124-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -2036,7 +2036,7 @@
         "dark"
       ],
       "stage": "Unclassified",
-      "image": "https://evomon.dat.place/artwork/recording/153-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/153.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/153-shiny.png",
       "baseStats": {},
       "shinyBaseStats": {},
@@ -2270,65 +2270,383 @@
   ],
   "artwork": {
     "40": {
-      "image": "https://evomon.dat.place/artwork/recording/040-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/040.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/040-shiny.png"
     },
     "41": {
-      "image": "https://evomon.dat.place/artwork/recording/041-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/041.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/041-shiny.png"
     },
     "111": {
-      "image": "https://evomon.dat.place/artwork/recording/111-normal.png"
+      "image": "https://evomon.dat.place/artwork/normal-cards/111.png"
     },
     "118": {
-      "image": "https://evomon.dat.place/artwork/recording/118-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/118.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/118-shiny.png"
     },
     "119": {
-      "image": "https://evomon.dat.place/artwork/recording/119-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/119.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/119-shiny.png"
     },
     "121": {
-      "image": "https://evomon.dat.place/artwork/recording/121-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/121.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/121-shiny.png"
     },
     "122": {
-      "image": "https://evomon.dat.place/artwork/recording/122-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/122.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/122-shiny.png"
     },
     "123": {
-      "image": "https://evomon.dat.place/artwork/recording/123-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/123.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/123-shiny.png"
     },
     "124": {
-      "image": "https://evomon.dat.place/artwork/recording/124-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/124.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/124-shiny.png"
     },
     "153": {
-      "image": "https://evomon.dat.place/artwork/recording/153-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/153.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/153-shiny.png"
     },
     "43": {
-      "shinyImage": "https://evomon.dat.place/artwork/recording/043-shiny.png"
+      "shinyImage": "https://evomon.dat.place/artwork/recording/043-shiny.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/043.png"
     },
     "63": {
-      "shinyImage": "https://evomon.dat.place/artwork/recording/063-shiny.png"
+      "shinyImage": "https://evomon.dat.place/artwork/recording/063-shiny.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/063.png"
     },
     "114": {
-      "shinyImage": "https://evomon.dat.place/artwork/recording/114-shiny.png"
+      "shinyImage": "https://evomon.dat.place/artwork/recording/114-shiny.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/114.png"
     },
     "115": {
-      "shinyImage": "https://evomon.dat.place/artwork/recording/115-shiny.png"
+      "shinyImage": "https://evomon.dat.place/artwork/recording/115-shiny.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/115.png"
     },
     "133": {
-      "shinyImage": "https://evomon.dat.place/artwork/recording/133-shiny.png"
+      "shinyImage": "https://evomon.dat.place/artwork/recording/133-shiny.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/133.png"
     },
     "134": {
-      "shinyImage": "https://evomon.dat.place/artwork/recording/134-shiny.png"
+      "shinyImage": "https://evomon.dat.place/artwork/recording/134-shiny.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/134.png"
     },
     "120": {
-      "image": "https://evomon.dat.place/artwork/recording/120-normal.png",
+      "image": "https://evomon.dat.place/artwork/normal-cards/120.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/120-shiny.png"
+    },
+    "10": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/010.png"
+    },
+    "11": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/011.png"
+    },
+    "12": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/012.png"
+    },
+    "13": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/013.png"
+    },
+    "14": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/014.png"
+    },
+    "15": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/015.png"
+    },
+    "16": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/016.png"
+    },
+    "17": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/017.png"
+    },
+    "18": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/018.png"
+    },
+    "19": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/019.png"
+    },
+    "20": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/020.png"
+    },
+    "21": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/021.png"
+    },
+    "22": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/022.png"
+    },
+    "23": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/023.png"
+    },
+    "24": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/024.png"
+    },
+    "25": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/025.png"
+    },
+    "26": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/026.png"
+    },
+    "27": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/027.png"
+    },
+    "34": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/034.png"
+    },
+    "35": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/035.png"
+    },
+    "36": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/036.png"
+    },
+    "37": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/037.png"
+    },
+    "38": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/038.png"
+    },
+    "39": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/039.png"
+    },
+    "42": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/042.png"
+    },
+    "44": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/044.png"
+    },
+    "45": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/045.png"
+    },
+    "46": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/046.png"
+    },
+    "47": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/047.png"
+    },
+    "48": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/048.png"
+    },
+    "49": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/049.png"
+    },
+    "50": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/050.png"
+    },
+    "51": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/051.png"
+    },
+    "52": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/052.png"
+    },
+    "53": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/053.png"
+    },
+    "54": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/054.png"
+    },
+    "55": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/055.png"
+    },
+    "56": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/056.png"
+    },
+    "57": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/057.png"
+    },
+    "58": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/058.png"
+    },
+    "59": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/059.png"
+    },
+    "60": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/060.png"
+    },
+    "61": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/061.png"
+    },
+    "62": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/062.png"
+    },
+    "64": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/064.png"
+    },
+    "65": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/065.png"
+    },
+    "66": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/066.png"
+    },
+    "67": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/067.png"
+    },
+    "68": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/068.png"
+    },
+    "69": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/069.png"
+    },
+    "70": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/070.png"
+    },
+    "71": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/071.png"
+    },
+    "72": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/072.png"
+    },
+    "73": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/073.png"
+    },
+    "74": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/074.png"
+    },
+    "75": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/075.png"
+    },
+    "97": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/097.png"
+    },
+    "99": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/099.png"
+    },
+    "100": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/100.png"
+    },
+    "101": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/101.png"
+    },
+    "102": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/102.png"
+    },
+    "109": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/109.png"
+    },
+    "110": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/110.png"
+    },
+    "1": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/001.png"
+    },
+    "2": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/002.png"
+    },
+    "3": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/003.png"
+    },
+    "4": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/004.png"
+    },
+    "5": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/005.png"
+    },
+    "6": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/006.png"
+    },
+    "7": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/007.png"
+    },
+    "8": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/008.png"
+    },
+    "9": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/009.png"
+    },
+    "28": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/028.png"
+    },
+    "29": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/029.png"
+    },
+    "31": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/031.png"
+    },
+    "32": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/032.png"
+    },
+    "33": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/033.png"
+    },
+    "76": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/076.png"
+    },
+    "77": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/077.png"
+    },
+    "78": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/078.png"
+    },
+    "79": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/079.png"
+    },
+    "80": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/080.png"
+    },
+    "81": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/081.png"
+    },
+    "82": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/082.png"
+    },
+    "83": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/083.png"
+    },
+    "84": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/084.png"
+    },
+    "85": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/085.png"
+    },
+    "86": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/086.png"
+    },
+    "87": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/087.png"
+    },
+    "88": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/088.png"
+    },
+    "89": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/089.png"
+    },
+    "91": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/091.png"
+    },
+    "94": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/094.png"
+    },
+    "96": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/096.png"
+    },
+    "103": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/103.png"
+    },
+    "104": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/104.png"
+    },
+    "105": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/105.png"
+    },
+    "106": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/106.png"
+    },
+    "107": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/107.png"
+    },
+    "108": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/108.png"
+    },
+    "112": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/112.png"
+    },
+    "113": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/113.png"
+    },
+    "998": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/998.png"
+    },
+    "999": {
+      "image": "https://evomon.dat.place/artwork/normal-cards/999.png"
     }
   }
 }
