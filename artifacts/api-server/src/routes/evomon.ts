@@ -706,6 +706,10 @@ async function createCatalog(): Promise<unknown> {
     const moves = supplied.moves.map((move) => ({ ...move, tags: move.tags as MoveTag[] }));
     if (!existing) mons.push({ ...supplied, moves });
     else {
+      if (supplied.evolutionLine.length > 1) {
+        existing.evolutionLine = [...supplied.evolutionLine];
+        existing.stage = supplied.stage;
+      }
       if (moves.length) existing.moves = moves;
       if (supplied.legendaryTrait) {
         existing.legendaryTrait = supplied.legendaryTrait;

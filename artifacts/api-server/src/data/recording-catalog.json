@@ -9,7 +9,7 @@
         "normal",
         "fighting"
       ],
-      "stage": "Unclassified",
+      "stage": "Base form",
       "image": "https://evomon.dat.place/artwork/recording/040-normal.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/040-shiny.png",
       "baseStats": {},
@@ -20,7 +20,8 @@
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
-        "Bonkoo"
+        "Bonkoo",
+        "Titanking"
       ],
       "moves": [
         {
@@ -246,7 +247,7 @@
         "normal",
         "fighting"
       ],
-      "stage": "Unclassified",
+      "stage": "Stage 2",
       "image": "https://evomon.dat.place/artwork/recording/041-normal.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/041-shiny.png",
       "baseStats": {},
@@ -257,6 +258,7 @@
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
+        "Bonkoo",
         "Titanking"
       ],
       "moves": [
@@ -483,7 +485,7 @@
         "dark",
         "grass"
       ],
-      "stage": "Unclassified",
+      "stage": "Base form",
       "image": "https://evomon.dat.place/artwork/recording/118-normal.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/118-shiny.png",
       "baseStats": {},
@@ -494,7 +496,8 @@
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
-        "Pumpkling"
+        "Pumpkling",
+        "Pumphex"
       ],
       "moves": [
         {
@@ -705,7 +708,7 @@
         "dark",
         "grass"
       ],
-      "stage": "Unclassified",
+      "stage": "Stage 2",
       "image": "https://evomon.dat.place/artwork/recording/119-normal.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/119-shiny.png",
       "baseStats": {},
@@ -716,6 +719,7 @@
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
+        "Pumpkling",
         "Pumphex"
       ],
       "moves": [
@@ -951,7 +955,7 @@
         "light",
         "fighting"
       ],
-      "stage": "Unclassified",
+      "stage": "Base form",
       "image": "https://evomon.dat.place/artwork/recording/121-normal.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/121-shiny.png",
       "baseStats": {},
@@ -962,7 +966,8 @@
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
-        "Armorb"
+        "Armorb",
+        "Lumiknight"
       ],
       "moves": [],
       "sourceUrl": "https://evomon.dat.place/"
@@ -975,7 +980,7 @@
         "light",
         "fighting"
       ],
-      "stage": "Unclassified",
+      "stage": "Stage 2",
       "image": "https://evomon.dat.place/artwork/recording/122-normal.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/122-shiny.png",
       "baseStats": {},
@@ -986,6 +991,7 @@
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
+        "Armorb",
         "Lumiknight"
       ],
       "moves": [],
@@ -998,7 +1004,7 @@
       "element": [
         "bug"
       ],
-      "stage": "Unclassified",
+      "stage": "Base form",
       "image": "https://evomon.dat.place/artwork/recording/123-normal.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/123-shiny.png",
       "baseStats": {},
@@ -1009,7 +1015,8 @@
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
-        "Sweetsting"
+        "Sweetsting",
+        "Stingsweet Queen"
       ],
       "moves": [],
       "sourceUrl": "https://evomon.dat.place/"
@@ -1021,7 +1028,7 @@
       "element": [
         "bug"
       ],
-      "stage": "Unclassified",
+      "stage": "Stage 2",
       "image": "https://evomon.dat.place/artwork/recording/124-normal.png",
       "shinyImage": "https://evomon.dat.place/artwork/recording/124-shiny.png",
       "baseStats": {},
@@ -1032,6 +1039,7 @@
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
+        "Sweetsting",
         "Stingsweet Queen"
       ],
       "moves": [],

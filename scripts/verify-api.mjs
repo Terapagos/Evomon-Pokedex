@@ -61,6 +61,8 @@ for (const expected of recording.entries) {
   assert.equal(matches.length, 1, `${expected.name}: expected one catalog entry`);
   assert.equal(matches[0].name, expected.name);
   assert.deepEqual(matches[0].element, expected.element);
+  assert.deepEqual(matches[0].evolutionLine, expected.evolutionLine, `${expected.name}: preserve confirmed evolution line`);
+  assert.equal(matches[0].stage, expected.stage, `${expected.name}: preserve confirmed evolution stage`);
   assert.deepEqual(matches[0].baseStats, {}, 'Unseen stats must stay unrecorded');
   assert.deepEqual(matches[0].moves, expected.moves, `${expected.name}: preserve recorded moves and leave unseen moves unrecorded`);
   assert.equal(matches[0].legendaryTrait, expected.legendaryTrait, `${expected.name}: preserve recorded legendary trait`);
