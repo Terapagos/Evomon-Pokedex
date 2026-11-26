@@ -162,13 +162,18 @@ function EvomonRow({ entry, index, variant }: { entry: Evomon; index: number; va
   );
 }
 
+function CollectionTabs() {
+  const [location] = useLocation();
+  return <nav className="collection-tabs" aria-label="Primary navigation">
+    <Link href="/" aria-current={location === '/' ? 'page' : undefined}>Catalog</Link>
+    <Link href="/skills" aria-current={location === '/skills' ? 'page' : undefined}>Skills</Link>
+  </nav>;
+}
+
 function Device({ children }: { children: ReactNode }) {
   return (
     <section className="pokedex-device" aria-label="Evomon collection">
-      <nav className="collection-tabs" aria-label="Primary navigation">
-        <Link href="/" aria-current="page">Catalog</Link>
-        <Link href="/skills">Skills</Link>
-      </nav>
+      <CollectionTabs />
       <div className="device-bezel">
         {children}
       </div>
@@ -478,19 +483,11 @@ function Skills() {
   }, [selected, selectedKey]);
 
   return (
-    <Shell>
-      <main className="skills-main">
-        <section className="skills-intro fade-up">
-          <div>
-            <p className="eyebrow">Skill archive / field index</p>
-            <h1 className="font-display">Find the <em>right move.</em></h1>
-          </div>
-          <p className="intro-copy">Filter by what a skill does, then open its record to see the base Mon for each evolution line that learns it.</p>
-          <div className="intro-index"><span>SKILLS</span><b>{skills.length || '—'}</b><span>{catalog.length || '—'} MON</span></div>
-        </section>
+    <div className="app-shell minimal-skills">
+      <main className="skills-main" aria-label="Skills">
         <ErrorNotice />
         <section className="skill-device" aria-label="Evomon skill archive">
-          <div className="skill-device-top"><span>EVOMON // SKILL INDEX</span><span className="device-led" /><span>{skills.length} DOCUMENTED SKILLS</span></div>
+          <CollectionTabs />
           <div className="skill-screen">
             <div className="skill-toolbar">
               <div className="control-search">
@@ -498,18 +495,18 @@ function Skills() {
                 <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search skill, effect, or element" aria-label="Search skills, effects, or elements" data-testid="input-search-skills" />
                 {query && <button type="button" className="clear-search" onClick={() => setQuery('')} aria-label="Clear skill search" data-testid="button-clear-skill-search"><X size={15} /></button>}
               </div>
-              <div className="skill-attributes" role="group" aria-label="Filter by skill attribute or type">
-                <button type="button" className={attribute === 'all' ? 'selected' : ''} onClick={() => setAttribute('all')} aria-pressed={attribute === 'all'} data-testid="button-skill-attribute-all">All <span>{skills.length}</span></button>
-                <button type="button" className={attribute === 'ultimate' ? 'selected' : ''} onClick={() => setAttribute('ultimate')} aria-pressed={attribute === 'ultimate'} data-testid="button-skill-attribute-ultimate">Ultimate <span>{ultimateCount}</span></button>
-                {SKILL_ATTRIBUTES.map((tag) => <button type="button" className={attribute === tag ? 'selected' : ''} onClick={() => setAttribute(tag)} aria-pressed={attribute === tag} key={tag} data-testid={`button-skill-attribute-${tag.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>{tag} <span>{attributeCounts[tag] ?? 0}</span></button>)}
-              </div>
+              <label className="skill-filter"><span>Type</span><select aria-label="Filter by skill attribute or type" value={attribute} onChange={(event) => setAttribute(event.target.value as typeof attribute)}>
+                <option value="all">All skills ({skills.length})</option>
+                <option value="ultimate">Ultimate ({ultimateCount})</option>
+                {SKILL_ATTRIBUTES.map((tag) => <option value={tag} key={tag}>{tag} ({attributeCounts[tag] ?? 0})</option>)}
+              </select></label>
             </div>
             {isLoading
               ? <div className="skill-loading" data-testid="status-skills-loading">Loading skill records…</div>
               : filtered.length
                 ? <div className="skill-browser">
                   <div className="skill-results" role="listbox" aria-label="Skill results" data-testid="skill-results">
-                    <div className="skill-results-heading"><span>{filtered.length} MATCHES</span><span>SELECT A RECORD</span></div>
+                    <div className="skill-results-heading">{filtered.length} skills</div>
                     {filtered.map(({ key, move, displayName, ultimateRange, learners }) => {
                       const elementStyle = skillElementStyleFor(move.element);
                       const resultLevel = move.unlockLevel !== null ? `Lv.${move.unlockLevel}` : move.slot === 'ultimate' ? 'ULT' : 'Skill cache';
@@ -532,10 +529,9 @@ function Skills() {
                 </div>
                 : <div className="skill-empty" data-testid="status-skills-empty"><span className="eyebrow">SCAN COMPLETE / NO MATCH</span><h2 className="font-display">Adjust the filter.</h2><p>No documented skill matches that search and attribute combination.</p></div>}
           </div>
-          <div className="skill-device-footer"><span>ATTRIBUTE FILTERS SHOW DOCUMENTED SKILLS ONLY</span><span>FIELD INDEX / 01</span></div>
         </section>
       </main>
-    </Shell>
+    </div>
   );
 }
 
