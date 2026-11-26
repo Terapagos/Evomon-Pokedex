@@ -316,10 +316,10 @@ function BattleMoveFace({ move, style }: { move: EvomonMove; style: BattleMoveSt
 function MoveCard({ move }: { move: EvomonMove }) {
   return (
     <article className="move-card minimal-move" data-testid={`move-${move.name.toLowerCase().replaceAll(/[^a-z0-9]+/g, '-')}`}>
-      <div className="minimal-move-heading"><h3>{move.name}</h3><span>{move.slot === 'ultimate' ? 'Ultimate � ' : ''}{move.unlockLevel === null ? 'Skill cache' : `Lv. ${move.unlockLevel}`}</span></div>
+      <div className="minimal-move-heading"><h3>{move.name}</h3><span>{move.slot === 'ultimate' ? 'Ultimate - ' : ''}{move.unlockLevel === null ? 'Skill cache' : `Lv. ${move.unlockLevel}`}</span></div>
       <div className="minimal-move-type"><span>{move.element}</span><span>{move.category}</span></div>
       <p className="move-description">{move.description}</p>
-      <div className="minimal-move-meta"><span>Power <b>{move.power ?? '�'}</b></span><span>Uses <b>{move.uses ?? '�'}</b></span></div>
+      <div className="minimal-move-meta"><span>Power <b>{move.power ?? '-'}</b></span><span>Uses <b>{move.uses ?? '-'}</b></span></div>
       <div className="move-tags" aria-label={`${move.name} classifications`}>{move.tags.map((tag) => <span className="move-tag" key={tag}>{tag}</span>)}</div>
       {move.obtained && <p className="minimal-move-source">{move.obtained}</p>}
     </article>
