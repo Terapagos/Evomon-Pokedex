@@ -702,9 +702,10 @@ async function createCatalog(): Promise<unknown> {
   // Add only identities visible in the recording. Future wiki records take
   // precedence for details that could not be observed in the recording.
   for (const supplied of recordingCatalog.entries) {
-    if (!mons.some((mon) => mon.dexNumber === supplied.dexNumber || mon.id === supplied.id)) {
-      mons.push({ ...supplied, moves: [] });
-    }
+    const existing = mons.find((mon) => mon.dexNumber === supplied.dexNumber || mon.id === supplied.id);
+    const moves = supplied.moves.map((move) => ({ ...move, tags: move.tags as MoveTag[] }));
+    if (!existing) mons.push({ ...supplied, moves });
+    else if (moves.length) existing.moves = moves;
   }
   const recordedArtwork = recordingCatalog.artwork as Record<string, { image?: string; shinyImage?: string }>;
   for (const mon of mons) Object.assign(mon, recordedArtwork[String(mon.dexNumber)] ?? {});

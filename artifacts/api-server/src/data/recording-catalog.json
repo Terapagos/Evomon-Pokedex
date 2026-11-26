@@ -22,7 +22,220 @@
       "evolutionLine": [
         "Bonkoo"
       ],
-      "moves": [],
+      "moves": [
+        {
+          "name": "Hone 1",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases ATK by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Intimidate",
+          "element": "normal",
+          "category": "status",
+          "description": "Lowers the target's Atk by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Flash Strike",
+          "element": "normal",
+          "category": "special",
+          "description": "Deals Special damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 10,
+          "slot": "level",
+          "power": "40",
+          "uses": 30,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Sonic Punch",
+          "element": "fighting",
+          "category": "physical",
+          "description": "Deals Physical damage to the target with +1 Priority.",
+          "obtained": "via Level up.",
+          "unlockLevel": 20,
+          "slot": "level",
+          "power": "50",
+          "uses": 30,
+          "tags": [
+            "Physical",
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Savage Slam",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 40,
+          "slot": "level",
+          "power": "75",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Confuse",
+          "element": "normal",
+          "category": "status",
+          "description": "Inflicts [Confusion] to one target, with a 25% chance.",
+          "obtained": "via Level up.",
+          "unlockLevel": 50,
+          "slot": "level",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Status condition",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Sharp Claw",
+          "element": "fighting",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 60,
+          "slot": "level",
+          "power": "80",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "True Hit",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and inflicts 80 fixed damage.",
+          "obtained": "via Level up.",
+          "unlockLevel": 70,
+          "slot": "level",
+          "power": "20",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Elbow Smash",
+          "element": "fighting",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and gains +5 Power per Atk stage raised on your Evomon.",
+          "obtained": "via Level up.",
+          "unlockLevel": 90,
+          "slot": "level",
+          "power": "75",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "All-Out Attack",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "via Skill shop and Level up.",
+          "unlockLevel": 100,
+          "slot": "level",
+          "power": "100",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Protect",
+          "element": "normal",
+          "category": "status",
+          "description": "Grants +1 Priority and becomes immune to damage this turn. When hit, reduce attacker 1 PP.",
+          "obtained": "via Level up.",
+          "unlockLevel": 120,
+          "slot": "level",
+          "power": "—",
+          "uses": 3,
+          "tags": [
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Gravity Crush",
+          "element": "normal",
+          "category": "special",
+          "description": "Deals Special damage to the target, and inflicts 25 fixed damage.",
+          "obtained": "via Level up.",
+          "unlockLevel": 140,
+          "slot": "level",
+          "power": "110",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Battle Stance",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases Atk by 5 and Def by 5.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Shared Fate 3",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target; Also deals 100% of the damage dealt to Evomon.",
+          "obtained": "Owner-supplied Shared Fate III screenshot; earlier ranks unrecorded.",
+          "unlockLevel": 150,
+          "slot": "ultimate",
+          "power": "320",
+          "uses": null,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        }
+      ],
       "sourceUrl": "https://evomon.dat.place/"
     },
     {
@@ -46,7 +259,220 @@
       "evolutionLine": [
         "Titanking"
       ],
-      "moves": [],
+      "moves": [
+        {
+          "name": "Hone 1",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases ATK by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Intimidate",
+          "element": "normal",
+          "category": "status",
+          "description": "Lowers the target's Atk by 5.",
+          "obtained": "via Level up.",
+          "unlockLevel": 1,
+          "slot": "level",
+          "power": "—",
+          "uses": 15,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Flash Strike",
+          "element": "normal",
+          "category": "special",
+          "description": "Deals Special damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 10,
+          "slot": "level",
+          "power": "40",
+          "uses": 30,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Sonic Punch",
+          "element": "fighting",
+          "category": "physical",
+          "description": "Deals Physical damage to the target with +1 Priority.",
+          "obtained": "via Level up.",
+          "unlockLevel": 20,
+          "slot": "level",
+          "power": "50",
+          "uses": 30,
+          "tags": [
+            "Physical",
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Savage Slam",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to one target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 40,
+          "slot": "level",
+          "power": "75",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Confuse",
+          "element": "normal",
+          "category": "status",
+          "description": "Inflicts [Confusion] to one target, with a 25% chance.",
+          "obtained": "via Level up.",
+          "unlockLevel": 50,
+          "slot": "level",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Status condition",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Sharp Claw",
+          "element": "fighting",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "via Level up.",
+          "unlockLevel": 60,
+          "slot": "level",
+          "power": "80",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "True Hit",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and inflicts 80 fixed damage.",
+          "obtained": "via Level up.",
+          "unlockLevel": 70,
+          "slot": "level",
+          "power": "20",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Elbow Smash",
+          "element": "fighting",
+          "category": "physical",
+          "description": "Deals Physical damage to the target, and gains +5 Power per Atk stage raised on your Evomon.",
+          "obtained": "via Level up.",
+          "unlockLevel": 90,
+          "slot": "level",
+          "power": "75",
+          "uses": 15,
+          "tags": [
+            "Physical",
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "All-Out Attack",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target.",
+          "obtained": "via Skill shop and Level up.",
+          "unlockLevel": 100,
+          "slot": "level",
+          "power": "100",
+          "uses": 10,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Protect",
+          "element": "normal",
+          "category": "status",
+          "description": "Grants +1 Priority and becomes immune to damage this turn. When hit, reduce attacker 1 PP.",
+          "obtained": "via Level up.",
+          "unlockLevel": 120,
+          "slot": "level",
+          "power": "—",
+          "uses": 3,
+          "tags": [
+            "Priority",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Gravity Crush",
+          "element": "normal",
+          "category": "special",
+          "description": "Deals Special damage to the target, and inflicts 25 fixed damage.",
+          "obtained": "via Level up.",
+          "unlockLevel": 140,
+          "slot": "level",
+          "power": "110",
+          "uses": 5,
+          "tags": [
+            "Sp. Atk",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Battle Stance",
+          "element": "normal",
+          "category": "status",
+          "description": "Increases Atk by 5 and Def by 5.",
+          "obtained": "Skill Cache (owner-confirmed).",
+          "unlockLevel": null,
+          "slot": "cache",
+          "power": "—",
+          "uses": 10,
+          "tags": [
+            "Support",
+            "Single target"
+          ]
+        },
+        {
+          "name": "Shared Fate 3",
+          "element": "normal",
+          "category": "physical",
+          "description": "Deals Physical damage to the target; Also deals 100% of the damage dealt to Evomon.",
+          "obtained": "Owner-supplied Shared Fate III screenshot; earlier ranks unrecorded.",
+          "unlockLevel": 150,
+          "slot": "ultimate",
+          "power": "320",
+          "uses": null,
+          "tags": [
+            "Physical",
+            "Single target"
+          ]
+        }
+      ],
       "sourceUrl": "https://evomon.dat.place/"
     },
     {

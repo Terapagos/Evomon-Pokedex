@@ -62,7 +62,7 @@ for (const expected of recording.entries) {
   assert.equal(matches[0].name, expected.name);
   assert.deepEqual(matches[0].element, expected.element);
   assert.deepEqual(matches[0].baseStats, {}, 'Unseen stats must stay unrecorded');
-  assert.deepEqual(matches[0].moves, [], 'Unseen moves must stay unrecorded');
+  assert.deepEqual(matches[0].moves, expected.moves, `${expected.name}: preserve recorded moves and leave unseen moves unrecorded`);
 }
 for (const [number, artwork] of Object.entries(recording.artwork)) {
   const mon = catalog.mons.find((entry) => entry.dexNumber === Number(number));
