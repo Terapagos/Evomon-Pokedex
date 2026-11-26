@@ -705,7 +705,13 @@ async function createCatalog(): Promise<unknown> {
     const existing = mons.find((mon) => mon.dexNumber === supplied.dexNumber || mon.id === supplied.id);
     const moves = supplied.moves.map((move) => ({ ...move, tags: move.tags as MoveTag[] }));
     if (!existing) mons.push({ ...supplied, moves });
-    else if (moves.length) existing.moves = moves;
+    else {
+      if (moves.length) existing.moves = moves;
+      if (supplied.legendaryTrait) {
+        existing.legendaryTrait = supplied.legendaryTrait;
+        existing.legendaryTraitEffect = supplied.legendaryTraitEffect;
+      }
+    }
   }
   const recordedArtwork = recordingCatalog.artwork as Record<string, { image?: string; shinyImage?: string }>;
   for (const mon of mons) Object.assign(mon, recordedArtwork[String(mon.dexNumber)] ?? {});

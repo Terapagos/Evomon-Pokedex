@@ -15,8 +15,8 @@
       "baseStats": {},
       "shinyBaseStats": {},
       "shinyStatsRecorded": false,
-      "legendaryTrait": null,
-      "legendaryTraitEffect": null,
+      "legendaryTrait": "CheatDeath",
+      "legendaryTraitEffect": "Survives the first fatal hit with 1 HP.",
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
@@ -252,8 +252,8 @@
       "baseStats": {},
       "shinyBaseStats": {},
       "shinyStatsRecorded": false,
-      "legendaryTrait": null,
-      "legendaryTraitEffect": null,
+      "legendaryTrait": "CheatDeath",
+      "legendaryTraitEffect": "Survives the first fatal hit with 1 HP.",
       "catchLocation": "Not recorded",
       "eventStatus": "Not recorded",
       "evolutionLine": [
